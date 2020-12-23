@@ -23,13 +23,25 @@ void ThEarCutTriangulationBuilder::EarCut(double const* points, int numPoints, i
 	using Point = std::array<Coord, 2>;
 	std::vector<std::vector<Point>> polygon;
 
-	// Fill polygon structure with actual data. Any winding order works.
-	// The first polyline defines the main polygon.
-	//polygon.push_back({ {100, 0}, {100, 100}, {0, 100}, {0, 0} });
-	// Following polylines define holes.
-	//polygon.push_back({ {75, 25}, {75, 75}, {25, 75}, {25, 25} });
-
-	// 
+	// Parse inputs
+	int i = 0;
+	for (int j = 0; j < numIndices; j++)
+	{
+		std::vector<Point> polyline;
+		for (; i < indices[j]; i++)
+		{
+			Point point = Point{ points[2 * i], points[2 * i + 1] };
+			polyline.push_back(point);
+		}
+		polygon.push_back(polyline);
+	}
+	std::vector<Point> polyline;
+	for (; i < numPoints; i++)
+	{
+		Point point = Point{ points[2 * i], points[2 * i + 1] };
+		polyline.push_back(point);
+	}
+	polygon.push_back(polyline);
 
 	// Run tessellation
 	// Returns array of indices that refer to the vertices of the input polygon.
