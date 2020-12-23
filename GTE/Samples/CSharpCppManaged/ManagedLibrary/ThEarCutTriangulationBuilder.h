@@ -10,9 +10,9 @@ namespace CLI
 	public:
 		ThEarCutTriangulationBuilder();
 
-		void EarCut(
+	public:
+		array<int>^ EarCut(
 			array<double>^ points, int numPoints,
 			array<int>^ indices, int numIndices);
-
 	};
 }

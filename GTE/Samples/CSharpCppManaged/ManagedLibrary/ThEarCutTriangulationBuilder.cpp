@@ -7,7 +7,7 @@ namespace CLI
 	{
 	}
 
-	void ThEarCutTriangulationBuilder::EarCut(
+	array<int>^ ThEarCutTriangulationBuilder::EarCut(
 		array<double>^ points, int numPoints,
 		array<int>^ indices, int numIndices)
 	{
@@ -18,5 +18,13 @@ namespace CLI
 			pinIndices = &indices[0];
 		}
 		mInstance->EarCut(pinPoints, numPoints, pinIndices, numIndices);
+		gte::N* data = mInstance->Results.data();
+		int length = (int)mInstance->Results.size();
+		array<int>^ results = gcnew array<int>(length);
+		for (int i = 0; i < length; i++)
+		{
+			results[i] = *(data + i);
+		}
+		return results;
 	}
 }

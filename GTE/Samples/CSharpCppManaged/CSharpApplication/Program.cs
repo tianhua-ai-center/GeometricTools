@@ -34,7 +34,7 @@ namespace CSharpApplication
             };
             var indices = new int[] { 4 };
             var builder = new ThEarCutTriangulationBuilder();
-            builder.EarCut(points, 8, indices, 1);
+            var results = builder.EarCut(points, 8, indices, 1);
         }
     }
 }
