@@ -126,10 +126,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CppLibrary.h" />
+    <ClInclude Include="earcut.hpp" />
     <ClInclude Include="MinimumVolumeBox.h" />
+    <ClInclude Include="ThEarCutTriangulationBuilder.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MinimumVolumeBox.cpp" />
+    <ClCompile Include="ThEarCutTriangulationBuilder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
