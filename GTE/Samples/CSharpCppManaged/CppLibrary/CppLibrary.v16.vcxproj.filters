@@ -14,9 +14,6 @@
     <ClInclude Include="CppLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MinimumVolumeBox.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="earcut.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -25,9 +22,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MinimumVolumeBox.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

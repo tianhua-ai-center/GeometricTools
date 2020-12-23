@@ -14,18 +14,12 @@
     <ClInclude Include="ManagedObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MinimumVolumeBox.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ThEarCutTriangulationBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MinimumVolumeBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp">

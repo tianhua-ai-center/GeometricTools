@@ -138,12 +138,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ManagedObject.h" />
-    <ClInclude Include="MinimumVolumeBox.h" />
     <ClInclude Include="ThEarCutTriangulationBuilder.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="MinimumVolumeBox.cpp" />
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
