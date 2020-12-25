@@ -26,6 +26,12 @@
     <ClInclude Include="polydecomp\Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ThPolygonDecomposer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="polydecomp\polydecomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp">
@@ -38,6 +44,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="polydecomp\polydecomp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThPolygonDecomposer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

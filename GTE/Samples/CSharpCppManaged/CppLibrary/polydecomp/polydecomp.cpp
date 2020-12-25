@@ -7,12 +7,7 @@
 #include <algorithm>
 #include <limits>
 #include "Point.h"
-
-typedef vector<Point> Polygon;
-
-bool isReflex(const Polygon &p, const int &i);
-void makeCCW(Polygon &poly);
-void decomposePoly(Polygon poly);
+#include "polydecomp.h"
 
 void makeCCW(Polygon &poly) {
     int br = 0;
@@ -155,4 +150,5 @@ void decomposePoly(Polygon poly) {
             return;
         }
     }
+    polys.push_back(poly);
 }

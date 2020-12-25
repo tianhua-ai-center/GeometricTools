@@ -129,13 +129,16 @@
     <ClInclude Include="earcut.hpp" />
     <ClInclude Include="polydecomp\common.h" />
     <ClInclude Include="polydecomp\Point.h" />
+    <ClInclude Include="polydecomp\polydecomp.h" />
     <ClInclude Include="ThEarCutTriangulationBuilder.h" />
+    <ClInclude Include="ThPolygonDecomposer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="polydecomp\common.cpp" />
     <ClCompile Include="polydecomp\polydecomp.cpp" />
     <ClCompile Include="polydecomp\Point.cpp" />
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp" />
+    <ClCompile Include="ThPolygonDecomposer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
