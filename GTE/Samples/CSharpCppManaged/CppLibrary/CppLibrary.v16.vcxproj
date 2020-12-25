@@ -133,7 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="polydecomp\common.cpp" />
-    <ClCompile Include="polydecomp\main.cpp" />
+    <ClCompile Include="polydecomp\polydecomp.cpp" />
     <ClCompile Include="polydecomp\Point.cpp" />
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp" />
   </ItemGroup>

@@ -34,10 +34,10 @@
     <ClCompile Include="polydecomp\common.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="polydecomp\main.cpp">
+    <ClCompile Include="polydecomp\Point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="polydecomp\Point.cpp">
+    <ClCompile Include="polydecomp\polydecomp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
