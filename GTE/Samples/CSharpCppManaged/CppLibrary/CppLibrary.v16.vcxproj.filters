@@ -20,9 +20,24 @@
     <ClInclude Include="ThEarCutTriangulationBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="polydecomp\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="polydecomp\Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polydecomp\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polydecomp\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polydecomp\Point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
