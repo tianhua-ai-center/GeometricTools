@@ -15,12 +15,11 @@ namespace CLI
 		for (size_t i = 0; i < mInstance->Results.size(); i++)
 		{
 			std::vector<double> poly = mInstance->Results[i];
-			array<double>^ vertices = gcnew array<double>(poly.size());
+			results[i] = gcnew array<double>(poly.size());
 			for (size_t j = 0; j < poly.size(); j++)
 			{
-				vertices[j] == poly[j];
+				results[i][j] = poly[j];
 			}
-			results[i] == vertices;
 		}
 		return results;
 	}

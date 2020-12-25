@@ -28,6 +28,7 @@ namespace CSharpApplication
     {
         static void Main(string[] args)
         {
+            // EarCut
             var points = new double[]
             {
                 0,0, 100,0, 100,100, 0,100,  20,20, 80,20, 80,80, 20,80
@@ -35,6 +36,14 @@ namespace CSharpApplication
             var indices = new int[] { 4 };
             var builder = new ThEarCutTriangulationBuilder();
             var results = builder.EarCut(points, 8, indices, 1);
+
+            // Poly Decompse
+            var points2 = new double[]
+            {
+                -1,1, -1,0, 1,0, 1,1, 0.5,0.5
+            };
+            var decomposer = new ThPolygonDecomposer();
+            var results2 = decomposer.Decompose(points2, 5);
         }
     }
 }

@@ -21,7 +21,7 @@ int wrap(const int &a, const int &b);
 Scalar srand(const Scalar &min, const Scalar &max);
 
 template<class T>
-T& at(vector<T> v, int i) {
+const T& at(const vector<T>& v, int i) {
     return v[wrap(i, v.size())];
 };
 
