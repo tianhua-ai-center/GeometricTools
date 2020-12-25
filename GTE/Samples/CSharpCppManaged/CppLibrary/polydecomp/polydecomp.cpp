@@ -56,7 +56,7 @@ void swap(int &a, int &b) {
 void decomposePoly(Polygon poly) {
     Point upperInt, lowerInt, p, closestVert;
     Scalar upperDist, lowerDist, d, closestDist;
-    int upperIndex, lowerIndex, closestIndex;
+    int upperIndex = 0, lowerIndex = 0, closestIndex = 0;
     Polygon lowerPoly, upperPoly;
 
     for (int i = 0; i < poly.size(); ++i) {
