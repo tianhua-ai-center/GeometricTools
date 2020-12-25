@@ -9,6 +9,8 @@
 #include "Point.h"
 #include "polydecomp.h"
 
+MultiPolygon polys;
+
 void makeCCW(Polygon &poly) {
     int br = 0;
 

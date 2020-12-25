@@ -17,12 +17,18 @@
     <ClInclude Include="ThEarCutTriangulationBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ThPolygonDecomposer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThPolygonDecomposer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -45,7 +45,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -139,10 +139,12 @@
   <ItemGroup>
     <ClInclude Include="ManagedObject.h" />
     <ClInclude Include="ThEarCutTriangulationBuilder.h" />
+    <ClInclude Include="ThPolygonDecomposer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp" />
+    <ClCompile Include="ThPolygonDecomposer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CppLibrary\CppLibrary.v16.vcxproj">

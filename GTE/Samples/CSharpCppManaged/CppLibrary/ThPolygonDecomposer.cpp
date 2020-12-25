@@ -1,4 +1,6 @@
+#include <vector>
 #include "ThPolygonDecomposer.h"
+#include "polydecomp/polydecomp.h"
 using namespace gte;
 
 ThPolygonDecomposer::ThPolygonDecomposer()
@@ -21,6 +23,16 @@ ThPolygonDecomposer::Decompose(double const* points, int numPoints)
 	// Decompose into convex polygons
 	decomposePoly(polygon);
 
-	// Keep the results
-	Results = polys;
+	// Pack the results
+	for (size_t i = 0; i < polys.size(); i++)
+	{
+		Polygon poly = polys[i];
+		std::vector<double> vertices;
+		for (size_t j = 0; j < poly.size(); j++)
+		{
+			vertices.push_back(poly[j].x);
+			vertices.push_back(poly[j].y);
+		}
+		Results.push_back(vertices);
+	}
 }

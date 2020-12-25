@@ -2,7 +2,6 @@
 #include <array>
 #include <vector>
 #include <cstdint>
-#include "polydecomp/polydecomp.h"
 
 namespace gte
 {
@@ -15,6 +14,6 @@ namespace gte
 		void Decompose(double const* points, int numPoints);
 
 	public:
-		vector<Polygon> Results;
+		std::vector<std::vector<double>> Results;
 	};
 }

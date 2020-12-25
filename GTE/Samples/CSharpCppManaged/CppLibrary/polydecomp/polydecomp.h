@@ -8,8 +8,9 @@
 #include "Point.h"
 
 typedef vector<Point> Polygon;
+typedef vector<Polygon> MultiPolygon;
 
-vector<Polygon> polys;
+extern MultiPolygon polys;
 
 bool isReflex(const Polygon& p, const int& i);
 void makeCCW(Polygon& poly);
