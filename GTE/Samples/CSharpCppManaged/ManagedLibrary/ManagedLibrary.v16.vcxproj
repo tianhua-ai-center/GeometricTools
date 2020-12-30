@@ -139,11 +139,13 @@
   <ItemGroup>
     <ClInclude Include="ManagedObject.h" />
     <ClInclude Include="ThEarCutTriangulationBuilder.h" />
+    <ClInclude Include="ThMaximumInscribedCircle.h" />
     <ClInclude Include="ThPolygonDecomposer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp" />
+    <ClCompile Include="ThMaximumInscribedCircle.cpp" />
     <ClCompile Include="ThPolygonDecomposer.cpp" />
   </ItemGroup>
   <ItemGroup>
