@@ -125,6 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="concaveman\concaveman.h" />
     <ClInclude Include="CppLibrary.h" />
     <ClInclude Include="earcut.hpp" />
     <ClInclude Include="mapbox\feature.hpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="ThPolygonDecomposer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="concaveman\concaveman.cpp" />
     <ClCompile Include="polydecomp\common.cpp" />
     <ClCompile Include="polydecomp\polydecomp.cpp" />
     <ClCompile Include="polydecomp\Point.cpp" />
