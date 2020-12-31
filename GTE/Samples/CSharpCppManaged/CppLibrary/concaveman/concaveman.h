@@ -19,6 +19,7 @@
 #include <limits>
 #include <set>
 #include <queue>
+#include <tuple>
 #include <assert.h>
 
 //#define DEBUG // uncomment to dump debug info to screen
@@ -209,7 +210,7 @@ public:
 
         m_bounds = updated_bounds(bounds);
         if (m_children.size() < MAX_CHILDREN) {
-            auto r = make_unique<type>(data, bounds);
+            auto r = std::make_unique<type>(data, bounds);
             m_children.push_back(std::move(r));
             return;
         }
@@ -231,7 +232,7 @@ public:
             return;
         }
 
-        auto leaf = make_unique<type>(best_child.get().data(),
+        auto leaf = std::make_unique<type>(best_child.get().data(),
             best_child.get().bounds());
         best_child.get().m_is_leaf = false;
         best_child.get().m_data = data_type();
