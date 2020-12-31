@@ -104,8 +104,6 @@
     <ClInclude Include="psimpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-
-
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp">
