@@ -47,7 +47,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -125,7 +125,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="concaveman\concaveman.h" />
     <ClInclude Include="CppLibrary.h" />
     <ClInclude Include="earcut.hpp" />
     <ClInclude Include="mapbox\feature.hpp" />
@@ -158,7 +157,6 @@
     <ClInclude Include="ThPolygonDecomposer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="concaveman\concaveman.cpp" />
     <ClCompile Include="polydecomp\common.cpp" />
     <ClCompile Include="polydecomp\polydecomp.cpp" />
     <ClCompile Include="polydecomp\Point.cpp" />

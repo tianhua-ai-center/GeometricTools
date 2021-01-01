@@ -124,5 +124,8 @@
     <ClCompile Include="ThMaximumInscribedCircle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="concaveman\concaveman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
