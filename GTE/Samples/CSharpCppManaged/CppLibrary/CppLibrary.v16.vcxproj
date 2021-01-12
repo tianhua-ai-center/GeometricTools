@@ -130,6 +130,7 @@
     <ClInclude Include="polydecomp\common.h" />
     <ClInclude Include="polydecomp\Point.h" />
     <ClInclude Include="polydecomp\polydecomp.h" />
+    <ClInclude Include="psimpl.h" />
     <ClInclude Include="ThEarCutTriangulationBuilder.h" />
     <ClInclude Include="ThPolygonDecomposer.h" />
   </ItemGroup>
