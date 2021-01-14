@@ -104,6 +104,15 @@
     <ClInclude Include="polylabel.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="prepair\definitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prepair\PolygonRepair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prepair\TriangleInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp">
@@ -122,6 +131,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ThMaximumInscribedCircle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="prepair\PolygonRepair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="prepair\prepair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="prepair\TriangleInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

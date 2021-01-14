@@ -117,7 +117,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(GTE4_PATH);($(BOOST_DIR);$(CGAL_DIR)\include;$(CGAL_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_DIR);$(GDAL_DIR)\include;$(CGAL_DIR)\include;$(CGAL_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -153,7 +153,7 @@
     <ClInclude Include="polydecomp\polydecomp.h" />
     <ClInclude Include="prepair\definitions.h" />
     <ClInclude Include="prepair\PolygonRepair.h" />
-    <ClInclude Include="prepair\TriangleInfo.h" /> 
+    <ClInclude Include="prepair\TriangleInfo.h" />
     <ClInclude Include="polylabel.hpp" />
     <ClInclude Include="psimpl.h" />
     <ClInclude Include="ThEarCutTriangulationBuilder.h" />
