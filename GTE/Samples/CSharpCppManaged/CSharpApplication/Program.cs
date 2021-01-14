@@ -44,6 +44,14 @@ namespace CSharpApplication
             };
             var decomposer = new ThPolygonDecomposer();
             var results2 = decomposer.Decompose(points2, 5);
+
+            // MaximumInscribedCircle
+            var points3 = new double[]
+            {
+                0,0, 100,0, 100,100, 0,100,
+            };
+            var circle = new ThMaximumInscribedCircle();
+            var results3 = circle.GetCenter(points3, 4, 1.0);
         }
     }
 }

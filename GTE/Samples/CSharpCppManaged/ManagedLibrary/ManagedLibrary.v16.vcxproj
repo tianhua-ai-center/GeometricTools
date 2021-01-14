@@ -52,7 +52,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -139,11 +139,13 @@
   <ItemGroup>
     <ClInclude Include="ManagedObject.h" />
     <ClInclude Include="ThEarCutTriangulationBuilder.h" />
+    <ClInclude Include="ThMaximumInscribedCircle.h" />
     <ClInclude Include="ThPolygonDecomposer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp" />
+    <ClCompile Include="ThMaximumInscribedCircle.cpp" />
     <ClCompile Include="ThPolygonDecomposer.cpp" />
   </ItemGroup>
   <ItemGroup>
