@@ -82,7 +82,7 @@ int main (int argc, const char * argv[]) {
     else if (strcmp(argv[argNum], "--wkt") == 0) {
       unsigned int bufferSize = 100000000;
       char *inputWKT = (char *)malloc(bufferSize*sizeof(char));
-      strcpy(inputWKT, argv[argNum+1]);
+      strcpy_s(inputWKT, bufferSize * sizeof(char), argv[argNum+1]);
       ++argNum;
       OGRErr err = OGRGeometryFactory::createFromWkt(&inputWKT, NULL, &geometry);
       if (err != OGRERR_NONE) {
