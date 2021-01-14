@@ -41,7 +41,7 @@ int main (int argc, const char * argv[]) {
     return(0);
   }
   
-  OGRGeometry *geometry;
+  OGRGeometry *geometry = NULL;
   
   for (int argNum = 1; argNum < argc; ++argNum) {
     //-- whether to compute the robustness or not
