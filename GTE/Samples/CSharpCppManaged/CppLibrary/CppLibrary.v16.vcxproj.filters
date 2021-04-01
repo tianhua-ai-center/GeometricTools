@@ -113,6 +113,9 @@
     <ClInclude Include="prepair\TriangleInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="concaveman\concaveman.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ThEarCutTriangulationBuilder.cpp">
@@ -140,6 +143,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="prepair\TriangleInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="concaveman\concaveman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
