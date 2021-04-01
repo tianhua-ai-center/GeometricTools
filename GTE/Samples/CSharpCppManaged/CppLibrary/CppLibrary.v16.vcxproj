@@ -167,6 +167,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_65_DIR);$(CGAL_48_DIR)\include;$(CGAL_48_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
@@ -228,6 +229,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_65_DIR);$(CGAL_48_DIR)\include;$(CGAL_48_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -244,9 +246,11 @@
     <ClInclude Include="concaveman\concaveman.h" />
     <ClInclude Include="CppLibrary.h" />
     <ClInclude Include="psimpl.h" />
+    <ClInclude Include="ThWashPointLayoutEngine.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="concaveman\concaveman.cpp" />
+    <ClCompile Include="ThWashPointLayoutEngine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
