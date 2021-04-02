@@ -243,13 +243,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="concaveman\concaveman.h" />
     <ClInclude Include="CppLibrary.h" />
-    <ClInclude Include="psimpl.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="concaveman\concaveman.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
