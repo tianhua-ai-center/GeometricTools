@@ -71,6 +71,6 @@ namespace CLI
 		}
 
 	public:
-		void Layout(ThWashGeoData^ data, ThWashParam^ parameter);
+		cli::array<double>^ Layout(ThWashGeoData^ data, ThWashParam^ parameter);
 	};
 }

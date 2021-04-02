@@ -14,8 +14,14 @@ namespace CLI
 		mInstance->SetContent(content);
 	}
 
-	void ThWashPointLayoutEngine::Layout(ThWashGeoData^ data, ThWashParam^ parameter)
+	cli::array<double>^ ThWashPointLayoutEngine::Layout(ThWashGeoData^ data, ThWashParam^ parameter)
 	{
-		mInstance->Layout(data->GetInstance(), parameter->GetInstance());
+		auto points = mInstance->Layout(data->GetInstance(), parameter->GetInstance());
+		auto results = gcnew cli::array<double>(points.size());
+		for (size_t i = 0; i < points.size(); i++)
+		{
+			results[i] = points[i];
+		}
+		return results;
 	}
 }
