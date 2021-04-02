@@ -1,14 +1,9 @@
 #pragma once
-#include <array>
-#include <list>
 #include <vector>
-#include <cstdint>
 #include <string>
 #include <memory>
-#include "WPL/include/IO.h"
-#include "WPL/include/Basic.h"
-#include "WPL/include/GeoData.h"
-#include "WPL/include/WPLEngine.h"
+
+struct GeoData;
 
 namespace gte
 {
@@ -45,6 +40,6 @@ namespace gte
 		ThWashPointLayoutEngine();
 
 	public:
-		std::vector<Point> Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter);
+		std::vector<double> Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter);
 	};
 }

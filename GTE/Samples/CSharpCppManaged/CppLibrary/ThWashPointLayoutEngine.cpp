@@ -23,9 +23,16 @@ ThWashPointLayoutEngine::ThWashPointLayoutEngine()
 	//
 }
 
-std::vector<Point> ThWashPointLayoutEngine::Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter)
+std::vector<double> ThWashPointLayoutEngine::Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter)
 {
 	Param parameter;
 	std::unique_ptr<WashingPtLayoutEngine> engine(new WashingPtLayoutEngine());
-	return engine->layout(pGeoData->Get(), &parameter);
+	auto points = engine->layout(pGeoData->Get(), &parameter);
+	auto results = std::vector<double>(points.size() * 2);
+	for (auto point : points)
+	{
+		results.push_back(DOUBLE(point.x()));
+		results.push_back(DOUBLE(point.y()));
+	}
+	return results;
 }
