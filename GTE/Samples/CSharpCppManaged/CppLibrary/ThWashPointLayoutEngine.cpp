@@ -35,9 +35,8 @@ ThWashPointLayoutEngine::ThWashPointLayoutEngine()
 
 std::vector<double> ThWashPointLayoutEngine::Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter)
 {
-	Param parameter;
 	std::unique_ptr<WashingPtLayoutEngine> engine(new WashingPtLayoutEngine());
-	auto points = engine->layout(pGeoData->Get(), &parameter);
+	auto points = engine->layout(pGeoData->Get(), pParameter->Get());
 	auto results = std::vector<double>(points.size() * 2);
 	for (auto point : points)
 	{
