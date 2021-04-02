@@ -11,7 +11,13 @@ ThWashGeoData::ThWashGeoData()
 {
 }
 
-void ThWashGeoData::SetContent(const std::string& geojson)
+void ThWashGeoData::ReadFromFile(const std::string& path)
+{
+	std::unique_ptr<GeojsonIO> io(new GeojsonIO);
+	Content.reset(io->read_from_file(path));
+}
+
+void ThWashGeoData::ReadFromContent(const std::string& geojson)
 {
 	std::unique_ptr<GeojsonIO> io(new GeojsonIO);
 	Content.reset(io->read_from_content(geojson));

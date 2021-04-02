@@ -67,11 +67,17 @@ namespace CLI
 		mInstance->Get()->extend_park = extend_park;
 	}
 
-	ThWashGeoData::ThWashGeoData(String^ geojson):ManagedObject(new gte::ThWashGeoData())
+	void ThWashGeoData::ReadFromFile(String^ path)
+	{
+		std::string filename;
+		MarshalString(path, filename);
+		mInstance->ReadFromFile(filename);
+	}
+	void ThWashGeoData::ReadFromContent(String^ geojson)
 	{
 		std::string content;
 		MarshalString(geojson, content);
-		mInstance->SetContent(content);
+		mInstance->ReadFromContent(content);
 	}
 
 	cli::array<double>^ ThWashPointLayoutEngine::Layout(ThWashGeoData^ data, ThWashParam^ parameter)

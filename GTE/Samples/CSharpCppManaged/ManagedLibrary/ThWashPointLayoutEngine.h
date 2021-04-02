@@ -8,7 +8,13 @@ namespace CLI
 	public ref class ThWashGeoData : public ManagedObject<gte::ThWashGeoData>
 	{
 	public:
-		ThWashGeoData(String^ geojson);
+		ThWashGeoData::ThWashGeoData() :ManagedObject(new gte::ThWashGeoData())
+		{
+			//
+		}
+	public:
+		void ReadFromFile(String^ path);
+		void ReadFromContent(String^ geojson);
 	};
 
 	public ref class ThWashParam : public ManagedObject<gte::ThWashParam>
@@ -16,7 +22,7 @@ namespace CLI
 	public:
 		ThWashParam() : ManagedObject(new gte::ThWashParam())
 		{
-
+			//
 		}
 	public:
 		property int R {

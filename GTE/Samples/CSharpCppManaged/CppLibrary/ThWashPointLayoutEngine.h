@@ -12,9 +12,9 @@ namespace gte
 	{
 	public:
 		ThWashGeoData();
-
 	public:
-		void SetContent(const std::string& geojson);
+		void ReadFromFile(const std::string& path);
+		void ReadFromContent(const std::string& geojson);
 	public:
 		GeoData* Get()
 		{
