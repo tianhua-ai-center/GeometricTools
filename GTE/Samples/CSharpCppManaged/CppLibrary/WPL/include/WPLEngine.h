@@ -5,7 +5,7 @@
 
 class WashingPtLayoutEngine {
 public:
-	list<Point> layout(GeoData* data, Param* args);
-	void check(GeoData* data, Param* args, list<Point>* pts);
+	vector<Point> layout(GeoData* data, Param* args);
+	void check(GeoData* data, Param* args, vector<Point>* pts);
 };
 

@@ -1,23 +1,42 @@
 #pragma once
 #include <array>
+#include <list>
 #include <vector>
 #include <cstdint>
-
-class Param;
-class GeoData;
+#include <string>
+#include <memory>
+#include "WPL/include/IO.h"
+#include "WPL/include/Basic.h"
+#include "WPL/include/GeoData.h"
+#include "WPL/include/WPLEngine.h"
 
 namespace gte
 {
 	class ThWashGeoData
 	{
 	public:
-		GeoData* Convert();
+		ThWashGeoData();
+
+	public:
+		void SetContent(const std::string& geojson);
+	public:
+		GeoData* Get()
+		{
+			return Content.get();
+		}
+	public:
+		std::unique_ptr<GeoData> Content;
 	};
 
 	class ThWashParam
 	{
 	public:
-		Param* Convert();
+		int R;
+		bool protect_arch;
+		bool protect_park;
+		bool protect_other;
+		bool extend_arch;
+		bool extend_park;
 	};
 
 	class ThWashPointLayoutEngine
@@ -26,6 +45,6 @@ namespace gte
 		ThWashPointLayoutEngine();
 
 	public:
-		void Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter);
+		std::vector<Point> Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter);
 	};
 }

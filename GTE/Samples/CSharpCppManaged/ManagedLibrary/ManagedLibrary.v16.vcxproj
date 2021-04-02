@@ -186,6 +186,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL_DIR)\include;$(CGAL_DIR)\auxiliary\gmp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -197,10 +198,11 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(BOOST_65_DIR);$(CGAL_48_DIR)\include;$(CGAL_48_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
+      <AdditionalDependencies>libgmp-10.lib;libmpfr-4.lib;libCGAL-vc120-mt-gd-4.8.lib;libboost_thread-vc120-mt-gd-1_65.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\dev\CGAL-4.8\auxiliary\gmp\lib;C:\local\boost_1_65_0\lib64-msvc-12.0;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -242,11 +244,12 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(CGAL_48_DIR)\include;$(BOOST_65_DIR);$(CGAL_48_DIR)\auxiliary\gmp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
+      <AdditionalDependencies>libgmp-10.lib;libmpfr-4.lib;libCGAL-vc120-mt-4.8.lib;libboost_thread-vc120-mt-1_65.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>C:\dev\CGAL-4.8\auxiliary\gmp\lib;C:\local\boost_1_65_0\lib64-msvc-12.0;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -256,9 +259,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ManagedObject.h" />
+    <ClInclude Include="ThWashInteropUtils.h" />
+    <ClInclude Include="ThWashPointLayoutEngine.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="ThWashInteropUtils.cpp" />
+    <ClCompile Include="ThWashPointLayoutEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CppLibrary\CppLibrary.v16.vcxproj">

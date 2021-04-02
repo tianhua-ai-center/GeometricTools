@@ -1,34 +1,31 @@
 #include <vector>
 #include <memory>
+#include "WPL/include/IO.h"
 #include "WPL/include/Basic.h"
 #include "WPL/include/GeoData.h"
 #include "WPL/include/WPLEngine.h"
 #include "ThWashPointLayoutEngine.h"
 using namespace gte;
 
-GeoData* ThWashGeoData::Convert()
+ThWashGeoData::ThWashGeoData()
 {
-	GeoData* pData = new GeoData();
-	//
-	return pData;
 }
 
-Param* ThWashParam::Convert()
+void ThWashGeoData::SetContent(const std::string& geojson)
 {
-	Param* pParam = new Param();
-	//
-	return pParam;
+	std::unique_ptr<GeojsonIO> io(new GeojsonIO);
+	Content.reset(io->read_from_content(geojson));
 }
+
 
 ThWashPointLayoutEngine::ThWashPointLayoutEngine()
 {
 	//
 }
 
-void ThWashPointLayoutEngine::Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter)
+std::vector<Point> ThWashPointLayoutEngine::Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter)
 {
-	std::unique_ptr<GeoData> data(pGeoData->Convert());
-	std::unique_ptr<Param> parameter(pParameter->Convert());
+	Param parameter;
 	std::unique_ptr<WashingPtLayoutEngine> engine(new WashingPtLayoutEngine());
-	engine->layout(pGeoData->Convert(), pParameter->Convert());
+	return engine->layout(pGeoData->Get(), &parameter);
 }
