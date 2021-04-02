@@ -7,6 +7,66 @@
 
 namespace CLI
 {
+	int ThWashParam::R::get()
+	{
+		return mInstance->Get()->R;
+	}
+
+	void ThWashParam::R::set(int r)
+	{
+		mInstance->Get()->R = r;
+	}
+
+	bool ThWashParam::protect_arch::get()
+	{
+		return mInstance->Get()->protect_arch;
+	}
+
+	void ThWashParam::protect_arch::set(bool protect_arch)
+	{
+		mInstance->Get()->protect_arch = protect_arch;
+	}
+
+	bool ThWashParam::protect_park::get()
+	{
+		return mInstance->Get()->protect_park;
+	}
+
+	void ThWashParam::protect_park::set(bool protect_park)
+	{
+		mInstance->Get()->protect_park = protect_park;
+	}
+
+	bool ThWashParam::protect_other::get()
+	{
+		return mInstance->Get()->protect_other;
+	}
+
+	void ThWashParam::protect_other::set(bool protect_other)
+	{
+		mInstance->Get()->protect_other = protect_other;
+	}
+
+	bool ThWashParam::extend_arch::get()
+	{
+		return mInstance->Get()->extend_arch;
+	}
+
+	void ThWashParam::extend_arch::set(bool extend_arch)
+	{
+		mInstance->Get()->extend_arch = extend_arch;
+	}
+
+	bool ThWashParam::extend_park::get()
+	{
+		return mInstance->Get()->extend_park;
+	}
+
+	void ThWashParam::extend_park::set(bool extend_park)
+	{
+		mInstance->Get()->extend_park = extend_park;
+	}
+
 	ThWashGeoData::ThWashGeoData(String^ geojson):ManagedObject(new gte::ThWashGeoData())
 	{
 		std::string content;

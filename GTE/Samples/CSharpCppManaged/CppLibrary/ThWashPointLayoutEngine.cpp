@@ -17,6 +17,10 @@ void ThWashGeoData::SetContent(const std::string& geojson)
 	Content.reset(io->read_from_content(geojson));
 }
 
+ThWashParam::ThWashParam()
+{
+	Parameter.reset(new Param());
+}
 
 ThWashPointLayoutEngine::ThWashPointLayoutEngine()
 {

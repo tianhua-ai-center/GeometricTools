@@ -20,45 +20,28 @@ namespace CLI
 		}
 	public:
 		property int R {
-			void set(int r)
-			{
-				mInstance->R = r;
-			}
+			int get();
+			void set(int r);
 		}
-		property bool protect_arch
-		{
-			void set(bool protect_arch)
-			{
-				mInstance->protect_arch = protect_arch;
-			}
+		property bool protect_arch {
+			bool get();
+			void set(bool protect_arch);
 		}
-		property bool protect_park
-		{
-			void set(bool protect_park)
-			{
-				mInstance->protect_park = protect_park;
-			}
+		property bool protect_park {
+			bool get();
+			void set(bool protect_park);
 		}
-		property bool protect_other
-		{
-			void set(bool protect_other)
-			{
-				mInstance->protect_other = protect_other;
-			}
+		property bool protect_other {
+			bool get();
+			void set(bool protect_other);
 		}
-		property bool extend_arch
-		{
-			void set(bool extend_arch)
-			{
-				mInstance->extend_arch = extend_arch;
-			}
+		property bool extend_arch {
+			bool get();
+			void set(bool extend_arch);
 		}
-		property bool extend_park
-		{
-			void set(bool extend_park)
-			{
-				mInstance->extend_park = extend_park;
-			}
+		property bool extend_park {
+			bool get();
+			void set(bool extend_park);
 		}
 	};
 

@@ -3,6 +3,7 @@
 #include <string>
 #include <memory>
 
+struct Param;
 struct GeoData;
 
 namespace gte
@@ -26,12 +27,14 @@ namespace gte
 	class ThWashParam
 	{
 	public:
-		int R;
-		bool protect_arch;
-		bool protect_park;
-		bool protect_other;
-		bool extend_arch;
-		bool extend_park;
+		ThWashParam();
+	public:
+		Param* Get()
+		{
+			return Parameter.get();
+		}
+	public:
+		std::unique_ptr<Param> Parameter;
 	};
 
 	class ThWashPointLayoutEngine
