@@ -1,0 +1,6 @@
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/mpbox/geometry"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/mpbox/geometry
+	url = https://github.com/mapbox/geometry.hpp.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/mpbox/variant"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/mpbox/variant
+	url = https://github.com/mapbox/variant.git
