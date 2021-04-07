@@ -28,6 +28,8 @@ GDAL_DIR = "C:\dev\GDAL-3.2.1"
 
 CGAL_DIR = "C:\dev\CGAL-5.0.2"
 
+CGAL_DIR_GMP = "C:\dev\CGAL-5.0.2\auxiliary\gmp"
+
 GTE4_PATH = "path\GeometricTools\GTE"
 
 Visual Studio Community 2013
@@ -38,4 +40,8 @@ C:\local\boost_1_65_0
 
 BOOST_65_DIR = "C:\local\boost_1_65_0"
 
-CGAL_48_DIR = "C:\dev\CGAL-5.0.2"
+BOOST_65_LIBRARYDIR = "C:\local\boost_1_65_0\lib64-msvc-12.0"
+
+CGAL_48_DIR = "C:\dev\CGAL-4.8"
+
+CGAL_48_GMP = "C:\dev\CGAL-4.8\auxiliary\gmp"
