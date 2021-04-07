@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-ACAD2016|Win32">
+      <Configuration>Debug-ACAD2016</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug-ACAD2016|x64">
+      <Configuration>Debug-ACAD2016</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-ACAD2016|Win32">
+      <Configuration>Release-ACAD2016</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-ACAD2016|x64">
+      <Configuration>Release-ACAD2016</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
@@ -31,7 +47,20 @@
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-ACAD2016|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2016|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
@@ -44,10 +73,23 @@
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-ACAD2016|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2016|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -59,18 +101,42 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-ACAD2016|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2016|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-ACAD2016|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2016|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(GTE4_PATH)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-ACAD2016|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
@@ -94,7 +160,37 @@
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
     </Lib>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-ACAD2016|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_65_DIR);$(CGAL_48_DIR)\include;$(CGAL_48_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <AdditionalDependencies>WashingPtLayout2013.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(GTE4_PATH)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2016|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
@@ -117,61 +213,42 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_DIR);$(GDAL_DIR)\include;$(CGAL_DIR)\include;$(CGAL_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_DIR);$(GDAL_DIR)\include;$(CGAL_DIR)\include;$(CGAL_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2016|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_65_DIR);$(CGAL_48_DIR)\include;$(CGAL_48_GMP)\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="concaveman\concaveman.h" />
     <ClInclude Include="CppLibrary.h" />
-    <ClInclude Include="earcut.hpp" />
-    <ClInclude Include="mapbox\feature.hpp" />
-    <ClInclude Include="mapbox\geometry.hpp" />
-    <ClInclude Include="mapbox\geometry\box.hpp" />
-    <ClInclude Include="mapbox\geometry\empty.hpp" />
-    <ClInclude Include="mapbox\geometry\envelope.hpp" />
-    <ClInclude Include="mapbox\geometry\for_each_point.hpp" />
-    <ClInclude Include="mapbox\geometry\geometry.hpp" />
-    <ClInclude Include="mapbox\geometry\line_string.hpp" />
-    <ClInclude Include="mapbox\geometry\multi_line_string.hpp" />
-    <ClInclude Include="mapbox\geometry\multi_point.hpp" />
-    <ClInclude Include="mapbox\geometry\multi_polygon.hpp" />
-    <ClInclude Include="mapbox\geometry\point.hpp" />
-    <ClInclude Include="mapbox\geometry\point_arithmetic.hpp" />
-    <ClInclude Include="mapbox\geometry\polygon.hpp" />
-    <ClInclude Include="mapbox\geometry_io.hpp" />
-    <ClInclude Include="mapbox\optional.hpp" />
-    <ClInclude Include="mapbox\recursive_wrapper.hpp" />
-    <ClInclude Include="mapbox\variant.hpp" />
-    <ClInclude Include="mapbox\variant_cast.hpp" />
-    <ClInclude Include="mapbox\variant_io.hpp" />
-    <ClInclude Include="mapbox\variant_visitor.hpp" />
-    <ClInclude Include="polydecomp\common.h" />
-    <ClInclude Include="polydecomp\Point.h" />
-    <ClInclude Include="polydecomp\polydecomp.h" />
-    <ClInclude Include="prepair\definitions.h" />
-    <ClInclude Include="prepair\PolygonRepair.h" />
-    <ClInclude Include="prepair\TriangleInfo.h" />
-    <ClInclude Include="polylabel.hpp" />
-    <ClInclude Include="psimpl.h" />
-    <ClInclude Include="ThEarCutTriangulationBuilder.h" />
-    <ClInclude Include="ThMaximumInscribedCircle.h" />
-    <ClInclude Include="ThPolygonDecomposer.h" />
+    <ClInclude Include="ThWashPointLayoutEngine.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="concaveman\concaveman.cpp" />
-    <ClCompile Include="polydecomp\common.cpp" />
-    <ClCompile Include="polydecomp\polydecomp.cpp" />
-    <ClCompile Include="polydecomp\Point.cpp" />
-    <ClCompile Include="prepair\PolygonRepair.cpp" />
-    <ClCompile Include="prepair\prepair.cpp" />
-    <ClCompile Include="prepair\TriangleInfo.cpp" />
-    <ClCompile Include="ThEarCutTriangulationBuilder.cpp" />
-    <ClCompile Include="ThMaximumInscribedCircle.cpp" />
-    <ClCompile Include="ThPolygonDecomposer.cpp" />
+    <ClCompile Include="ThWashPointLayoutEngine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
