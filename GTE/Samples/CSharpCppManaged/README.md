@@ -8,40 +8,22 @@
 
 ## Build Environment ##
 
-Visual Studio Community 2019 
+Visual Studio Community 2013
 
 ## Environment  Setup
 
 ### Step 1: Install these libraries, for example
 
-C:\dev\CGAL-5.0.2
-
-C:\dev\GDAL-3.2.1
-
-C:\local\boost_1_75_0
-
-### Step 2: Setup the environment variables 
-
-BOOST_DIR = "C:\local\boost_1_75_0"
-
-GDAL_DIR = "C:\dev\GDAL-3.2.1"
-
-CGAL_DIR = "C:\dev\CGAL-5.0.2"
-
-CGAL_DIR_GMP = "C:\dev\CGAL-5.0.2\auxiliary\gmp"
-
-GTE4_PATH = "path\GeometricTools\GTE"
-
-Visual Studio Community 2013
-
-C:\dev\CGAL-4.8
+C:\dev\CGAL-4.9.1
 
 C:\local\boost_1_65_0
 
-BOOST_65_DIR = "C:\local\boost_1_65_0"
+### Step 2: Setup the environment variables 
 
-BOOST_65_LIBRARYDIR = "C:\local\boost_1_65_0\lib64-msvc-12.0"
+BOOST_DIR = "C:\local\boost_1_65_0"
 
-CGAL_48_DIR = "C:\dev\CGAL-4.8"
+BOOST_LIBRARYDIR = "C:\local\boost_1_65_0\lib64-msvc-12.0"
 
-CGAL_48_GMP = "C:\dev\CGAL-4.8\auxiliary\gmp"
+CGAL4_DIR = "C:\dev\CGAL-4.9.1"
+
+CGAL4_GMP = "C:\dev\CGAL-4.9.1\auxiliary\gmp"
