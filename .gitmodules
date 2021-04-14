@@ -1,9 +1,3 @@
-[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/mpbox/geometry"]
-	path = GTE/Samples/CSharpCppManaged/CppLibrary/mpbox/geometry
-	url = https://github.com/mapbox/geometry.hpp.git
-[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/mpbox/variant"]
-	path = GTE/Samples/CSharpCppManaged/CppLibrary/mpbox/variant
-	url = https://github.com/mapbox/variant.git
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/WPL"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/WPL
 	url = https://github.com/Junlin-Yin/WashingPtLayout.git
