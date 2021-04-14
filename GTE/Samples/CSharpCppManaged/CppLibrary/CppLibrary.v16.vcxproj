@@ -230,7 +230,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\WPL\include;.\mpbox\variant\include;.\mpbox\\geometry\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\WPL\include;.\mapbox\variant\include;.\mapbox\geometry\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -248,27 +248,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CppLibrary.h" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\feature.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\box.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\empty.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\envelope.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\for_each_point.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\geometry.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\line_string.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\multi_line_string.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\multi_point.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\multi_polygon.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\point.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\point_arithmetic.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry\polygon.hpp" />
-    <ClInclude Include="mpbox\geometry\include\mapbox\geometry_io.hpp" />
-    <ClInclude Include="mpbox\variant\include\mapbox\optional.hpp" />
-    <ClInclude Include="mpbox\variant\include\mapbox\recursive_wrapper.hpp" />
-    <ClInclude Include="mpbox\variant\include\mapbox\variant.hpp" />
-    <ClInclude Include="mpbox\variant\include\mapbox\variant_cast.hpp" />
-    <ClInclude Include="mpbox\variant\include\mapbox\variant_io.hpp" />
-    <ClInclude Include="mpbox\variant\include\mapbox\variant_visitor.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\feature.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\box.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\empty.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\envelope.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\for_each_point.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\geometry.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\line_string.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\multi_line_string.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\multi_point.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\multi_polygon.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\point.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\point_arithmetic.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry\polygon.hpp" />
+    <ClInclude Include="mapbox\geometry\include\mapbox\geometry_io.hpp" />
+    <ClInclude Include="mapbox\variant\include\mapbox\optional.hpp" />
+    <ClInclude Include="mapbox\variant\include\mapbox\recursive_wrapper.hpp" />
+    <ClInclude Include="mapbox\variant\include\mapbox\variant.hpp" />
+    <ClInclude Include="mapbox\variant\include\mapbox\variant_cast.hpp" />
+    <ClInclude Include="mapbox\variant\include\mapbox\variant_io.hpp" />
+    <ClInclude Include="mapbox\variant\include\mapbox\variant_visitor.hpp" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
     <ClInclude Include="WPL\include\Basic.h" />
     <ClInclude Include="WPL\include\GeoData.h" />
