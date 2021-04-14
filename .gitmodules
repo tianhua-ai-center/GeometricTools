@@ -7,6 +7,3 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/mapbox\\variant"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/mapbox\\variant
 	url = https://github.com/mapbox/variant.git
-[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/mapbox\\geojson"]
-	path = GTE/Samples/CSharpCppManaged/CppLibrary/mapbox\\geojson
-	url = https://github.com/mapbox/geojson-cpp.git
