@@ -230,7 +230,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\WPL\include;.\mapbox\variant\include;.\mapbox\geometry\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\include;.\WPL\include;.\mapbox\variant\include;.\mapbox\geometry\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -271,7 +271,9 @@
     <ClInclude Include="mapbox\variant\include\mapbox\variant_visitor.hpp" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
     <ClInclude Include="WPL\include\Basic.h" />
+    <ClInclude Include="WPL\include\CGALDef.h" />
     <ClInclude Include="WPL\include\GeoData.h" />
+    <ClInclude Include="WPL\include\GeoJSONParser.h" />
     <ClInclude Include="WPL\include\IO.h" />
     <ClInclude Include="WPL\include\WPLEngine.h" />
     <ClInclude Include="WPL\include\WPLLocate.h" />
@@ -280,6 +282,7 @@
   <ItemGroup>
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
     <ClCompile Include="WPL\src\GeoData.cpp" />
+    <ClCompile Include="WPL\src\GeoJSONParser.cpp" />
     <ClCompile Include="WPL\src\IO.cpp" />
     <ClCompile Include="WPL\src\WPLEngine.cpp" />
     <ClCompile Include="WPL\src\WPLLocate.cpp" />
