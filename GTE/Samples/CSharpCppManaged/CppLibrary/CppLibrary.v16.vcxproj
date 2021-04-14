@@ -270,6 +270,14 @@
     <ClInclude Include="mapbox\variant\include\mapbox\variant_io.hpp" />
     <ClInclude Include="mapbox\variant\include\mapbox\variant_visitor.hpp" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
+    <ClInclude Include="tudelft3d\pprepair\definitions\CGALDefinitions.h" />
+    <ClInclude Include="tudelft3d\pprepair\definitions\definitions.h" />
+    <ClInclude Include="tudelft3d\pprepair\FaceInfo.h" />
+    <ClInclude Include="tudelft3d\pprepair\PlanarPartition.h" />
+    <ClInclude Include="tudelft3d\pprepair\PolygonHandle.h" />
+    <ClInclude Include="tudelft3d\prepair\definitions.h" />
+    <ClInclude Include="tudelft3d\prepair\PolygonRepair.h" />
+    <ClInclude Include="tudelft3d\prepair\TriangleInfo.h" />
     <ClInclude Include="WPL\include\Basic.h" />
     <ClInclude Include="WPL\include\CGALDef.h" />
     <ClInclude Include="WPL\include\GeoData.h" />
@@ -281,6 +289,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
+    <ClCompile Include="tudelft3d\pprepair\FaceInfo.cpp" />
+    <ClCompile Include="tudelft3d\pprepair\PlanarPartition.cpp" />
+    <ClCompile Include="tudelft3d\pprepair\PolygonHandle.cpp" />
+    <ClCompile Include="tudelft3d\pprepair\pprepair.cpp" />
+    <ClCompile Include="tudelft3d\prepair\PolygonRepair.cpp" />
+    <ClCompile Include="tudelft3d\prepair\prepair.cpp" />
+    <ClCompile Include="tudelft3d\prepair\TriangleInfo.cpp" />
     <ClCompile Include="WPL\src\GeoData.cpp" />
     <ClCompile Include="WPL\src\GeoJSONParser.cpp" />
     <ClCompile Include="WPL\src\IO.cpp" />
