@@ -1,9 +1,11 @@
 #include "ThPolyPartition.h"
 #include "ogr_geometry.h"
+#include <memory>
 #include ".\polypartition\src\polypartition.h"
+
 using namespace gte;
 
-void ToTPPLPolyList(const OGRPolygon* polygon, TPPLPolyList& polys)
+void ToTPPLPolyList(const OGRPolygon* polygon, TPPLPolyList* polys)
 {
 	//
 	auto shell = polygon->getExteriorRing();
@@ -15,7 +17,7 @@ void ToTPPLPolyList(const OGRPolygon* polygon, TPPLPolyList& polys)
 		(*tplShellPoly)[i].x = shell->getX(i);
 		(*tplShellPoly)[i].y = shell->getY(i);
 	}
-	polys.push_back(*tplShellPoly);
+	polys->push_back(*tplShellPoly);
 
 	int numHoles = polygon->getNumInteriorRings();
 	for (int i =0;i< numHoles;i++)
@@ -29,7 +31,7 @@ void ToTPPLPolyList(const OGRPolygon* polygon, TPPLPolyList& polys)
 			(*tplHolePoly)[j].x = hole->getX(j);
 			(*tplHolePoly)[j].y = hole->getY(j);
 		}
-		polys.push_back(*tplHolePoly);
+		polys->push_back(*tplHolePoly);
 	}
 }
 
@@ -40,19 +42,20 @@ ThPolyPartition::ThPolyPartition()
 bool 
 ThPolyPartition::Triangulate_EC(const OGRPolygon* polygon)
 {
-	TPPLPolyList poly;
+	TPPLPolyList* poly;
 	ToTPPLPolyList(polygon, poly);
 
 	TPPLPolyList* triangles = new TPPLPolyList();
-	if (poly.size() == 1)
+	int res = -1;
+	if (poly->size() == 1)
 	{
-		mPartition->Triangulate_EC(&poly.front(), triangles);
+		res = mPartition->Triangulate_EC(&poly->front(), triangles);
 	}
 	else
 	{
-		mPartition->Triangulate_EC(&poly, triangles);
+		res = mPartition->Triangulate_EC(poly, triangles);
 	}
-	return false;
+	return res > 1 ? true : false;
 }
 
 bool 
