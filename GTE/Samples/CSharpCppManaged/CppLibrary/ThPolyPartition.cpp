@@ -1,12 +1,8 @@
 #include "ThPolyPartition.h"
 #include "ogr_geometry.h"
-#include ".\polypartition\src\polypartition.h"
+#include "polypartition.h"
 
 using namespace gte;
-
-ThPolygon::ThPolygon()
-{
-}
 
 OGRLinearRing* ToOGRLinearRing(std::vector<double> coords)
 {
@@ -26,17 +22,6 @@ void ToCoordinates(const OGRLinearRing* ring, std::vector<double>& coordinates)
 		coordinates.push_back(ring->getX(i));
 		coordinates.push_back(ring->getY(i));
 	}
-}
-
-OGRPolygon* ThPolygon::ToOGRPolygon(std::vector<double> shell, std::vector<std::vector<double>> holes)
-{
-	std::unique_ptr<OGRPolygon> polygon((OGRPolygon*)OGRGeometryFactory::createGeometry(wkbPolygon));
-	polygon->addRing(ToOGRLinearRing(shell));
-	for (auto hole : holes)
-	{
-		polygon->addRing(ToOGRLinearRing(hole));
-	}
-	return polygon.release();
 }
 
 OGRPolygon* ToOGRPolygon(const TPPLPoly& poly)
@@ -89,20 +74,32 @@ ThPolyPartition::ThPolyPartition()
 }
 
 bool 
+ThPolyPartition::Triangulate_EC(const std::string& wkt)
+{
+	OGRGeometry* geometry = ToOGRGeometry(wkt);
+	if (geometry->getGeometryType() == wkbPolygon)
+	{
+		return Triangulate_EC((OGRPolygon*)geometry);
+	}
+	return false;
+}
+
+bool 
 ThPolyPartition::Triangulate_EC(const OGRPolygon* polygon)
 {
 	TPPLPolyList* poly;
 	ToTPPLPolyList(polygon, poly);
 
+	TPPLPartition partitioner;
 	TPPLPolyList* triangles = new TPPLPolyList();
 	int res = -1;
 	if (poly->size() == 1)
 	{
-		res = mPartition->Triangulate_EC(&poly->front(), triangles);
+		res = partitioner.Triangulate_EC(&poly->front(), triangles);
 	}
 	else
 	{
-		res = mPartition->Triangulate_EC(poly, triangles);
+		res = partitioner.Triangulate_EC(poly, triangles);
 	}
 
 	for (TPPLPolyList::iterator i= triangles->begin() ; i!= triangles->end();++i)
@@ -117,6 +114,54 @@ bool
 ThPolyPartition::Triangulate_OPT(const OGRPolygon* polygon)
 {
 	return false;
+}
+
+std::string ThPolyPartition::GetPolygons()
+{
+	return ToWKT(mResults.get());
+}
+
+std::string ThPolyPartition::ToWKT(OGRGeometry* geometry)
+{
+	char* outputWKT = nullptr;
+	OGRErr err = geometry->exportToWkt(&outputWKT, wkbVariantIso);
+	if (err == OGRERR_NONE)
+	{
+		return std::string(outputWKT);
+	}
+	return std::string();
+}
+
+OGRGeometry* ThPolyPartition::ToOGRGeometry(const std::string& wkt)
+{
+	OGRGeometry* geometry = nullptr;
+	char* inputWKT = (char*)wkt.c_str();
+	OGRErr err = OGRGeometryFactory::createFromWkt(&inputWKT, NULL, &geometry);
+	if (err != OGRERR_NONE) {
+		switch (err) {
+		case OGRERR_UNSUPPORTED_GEOMETRY_TYPE:
+			std::cerr << "Error: geometry must be Polygon or MultiPolygon" << std::endl;
+			break;
+		case OGRERR_NOT_ENOUGH_DATA:
+		case OGRERR_CORRUPT_DATA:
+			std::cerr << "Error: corrupted input" << std::endl;
+			break;
+		default:
+			std::cerr << "Error: corrupted input" << std::endl;
+			break;
+		}
+		return nullptr;
+	}
+	if (geometry->IsEmpty() == 1) {
+		std::cerr << "Error: empty geometry" << std::endl;
+		return nullptr;
+	}
+	if ((geometry->getGeometryType() != wkbPolygon) &&
+		(geometry->getGeometryType() != wkbMultiPolygon)) {
+		std::cerr << "Error: geometry must be Polygon or MultiPolygon" << std::endl;
+		return nullptr;
+	}
+	return geometry;
 }
 
 //std::vector<std::vector<double>> 

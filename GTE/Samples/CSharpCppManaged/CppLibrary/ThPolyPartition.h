@@ -1,34 +1,30 @@
 #pragma once
 #include <vector>
-#include <list>
 #include <string>
 #include <memory>
+#include <iostream>
 
-class TPPLPartition;
 class OGRPolygon;
+class OGRGeometry;
 class OGRMultiPolygon;
 
 namespace gte
 {
-	class ThPolygon
-	{
-	public:
-		ThPolygon();
-	public:
-		OGRPolygon* ToOGRPolygon(std::vector<double> shell,std::vector<std::vector<double>> holes);
-	};
-
 	class ThPolyPartition
 	{
 	public:
 		ThPolyPartition();
 	public:
+		bool Triangulate_EC(const std::string& wkt);
+	public:
+		std::string GetPolygons();
+	private:
 		bool Triangulate_EC(const OGRPolygon* polygon);
 		bool Triangulate_OPT(const OGRPolygon* polygon);
-	public:
-		//std::vector<std::vector<double>> Results();
+	private:
+		std::string ToWKT(OGRGeometry* geometry);
+		OGRGeometry* ToOGRGeometry(const std::string& wkt);
 	private:
 		std::unique_ptr<OGRMultiPolygon> mResults;
-		std::unique_ptr<TPPLPartition> mPartition;
 	};
 }
