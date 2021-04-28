@@ -166,8 +166,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\include;.\WPL\include;.\mapbox\variant\include;.\mapbox\geometry\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
@@ -292,9 +292,7 @@
     <ClCompile Include="tudelft3d\pprepair\FaceInfo.cpp" />
     <ClCompile Include="tudelft3d\pprepair\PlanarPartition.cpp" />
     <ClCompile Include="tudelft3d\pprepair\PolygonHandle.cpp" />
-    <ClCompile Include="tudelft3d\pprepair\pprepair.cpp" />
     <ClCompile Include="tudelft3d\prepair\PolygonRepair.cpp" />
-    <ClCompile Include="tudelft3d\prepair\prepair.cpp" />
     <ClCompile Include="tudelft3d\prepair\TriangleInfo.cpp" />
     <ClCompile Include="WPL\src\GeoData.cpp" />
     <ClCompile Include="WPL\src\GeoJSONParser.cpp" />
