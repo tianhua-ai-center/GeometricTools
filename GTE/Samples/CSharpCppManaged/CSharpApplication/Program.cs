@@ -1,5 +1,6 @@
 ﻿using System;
-//using CLI;
+using CLI;
+using NetTopologySuite.IO;
 
 // The framework is based on the nicely written article "Creating a C++/CLI wrapper",
 // https://www.red-gate.com/simple-talk/dotnet/net-development/creating-ccli-wrapper/
@@ -28,30 +29,10 @@ namespace CSharpApplication
     {
         static void Main(string[] args)
         {
-            //// EarCut
-            //var points = new double[]
-            //{
-            //    0,0, 100,0, 100,100, 0,100,  20,20, 80,20, 80,80, 20,80
-            //};
-            //var indices = new int[] { 4 };
-            //var builder = new ThEarCutTriangulationBuilder();
-            //var results = builder.EarCut(points, 8, indices, 1);
-
-            //// Poly Decompse
-            //var points2 = new double[]
-            //{
-            //    -1,1, -1,0, 1,0, 1,1, 0.5,0.5
-            //};
-            //var decomposer = new ThPolygonDecomposer();
-            //var results2 = decomposer.Decompose(points2, 5);
-
-            //// MaximumInscribedCircle
-            //var points3 = new double[]
-            //{
-            //    0,0, 100,0, 100,100, 0,100,
-            //};
-            //var circle = new ThMaximumInscribedCircle();
-            //var results3 = circle.GetCenter(points3, 4, 1.0);
+            var prepair = new ThPolygonRepairerMgd();
+            var wkt = prepair.MakeValid("POLYGON((0 0, 10 0, 15 5, 10 0, 10 10, 0 10, 0 0))");
+            var wktReader = new WKTReader();
+            var geometry = wktReader.Read(wkt);
         }
     }
 }

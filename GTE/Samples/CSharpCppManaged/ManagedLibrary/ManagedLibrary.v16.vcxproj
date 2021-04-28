@@ -201,8 +201,8 @@
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary;..\CppLibrary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libgmp-10.lib;libmpfr-4.lib;libboost_thread-vc120-mt-gd-1_65.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(CGAL4_GMP)\lib;$(BOOST_LIBRARYDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib;libboost_thread-vc120-mt-gd-1_65.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CGAL4_GMP)\lib;$(GDAL2_DIR)\lib;$(BOOST_LIBRARYDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -247,9 +247,9 @@
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;..\CppLibrary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libgmp-10.lib;libmpfr-4.lib;libboost_thread-vc120-mt-1_65.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libgmp-10.lib;libmpfr-4.lib;gdal_i.lib;libboost_thread-vc120-mt-1_65.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>$(CGAL4_GMP)\lib;$(BOOST_LIBRARYDIR)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(GDAL2_DIR)\lib;$(CGAL4_GMP)\lib;$(BOOST_LIBRARYDIR)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -259,11 +259,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ManagedObject.h" />
+    <ClInclude Include="ThPolygonRepairerMgd.h" />
     <ClInclude Include="ThWashInteropUtils.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="ThPolygonRepairerMgd.cpp" />
     <ClCompile Include="ThWashInteropUtils.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
   </ItemGroup>
