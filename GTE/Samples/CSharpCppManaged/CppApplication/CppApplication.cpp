@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include "PolygonRepair.h"
 
 int main()
 {
