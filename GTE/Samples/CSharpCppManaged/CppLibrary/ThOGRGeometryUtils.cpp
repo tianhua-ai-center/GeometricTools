@@ -42,6 +42,10 @@ OGRMultiPolygon* ThOGRGeometryUtils::CreateMultiPolygon()
 	return (OGRMultiPolygon*)OGRGeometryFactory::createGeometry(wkbMultiPolygon);
 }
 
+void ThOGRGeometryUtils::ReleaseGeometry(OGRGeometry* geometry)
+{
+	OGRGeometryFactory::destroyGeometry(geometry);
+}
 
 std::string ThOGRGeometryUtils::ToWKT(OGRGeometry* geometry)
 {
@@ -54,7 +58,7 @@ std::string ThOGRGeometryUtils::ToWKT(OGRGeometry* geometry)
 	return std::string();
 }
 
-OGRGeometry* ThOGRGeometryUtils::ToOGRGeometry(const std::string& wkt)
+OGRGeometry* ThOGRGeometryUtils::FromWKT(const std::string& wkt)
 {
 	OGRGeometry* geometry = nullptr;
 	char* inputWKT = (char*)wkt.c_str();

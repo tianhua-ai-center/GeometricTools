@@ -17,11 +17,13 @@ namespace gte
 		static OGRPolygon* CreatePolygon();
 		static OGRLinearRing* CreateLinearRing();
 		static OGRMultiPolygon* CreateMultiPolygon();
+		static void ReleaseGeometry(OGRGeometry* geometry);
+	public:
 		static OGRLinearRing* ToOGRLinearRing(std::vector<double> coords);
 		static void ToCoordinates(const OGRLinearRing* ring, std::vector<double>& coordinates);
 	public:
 		static std::string ToWKT(OGRGeometry* geometry);
-		static OGRGeometry* ToOGRGeometry(const std::string& wkt);
+		static OGRGeometry* FromWKT(const std::string& wkt);
 	};
 }
 

@@ -53,30 +53,34 @@ void ToTPPLPolyList(const OGRPolygon* polygon, TPPLPolyList* polys)
 std::string
 ThPolyPartition::Triangulate_EC(const std::string& wkt)
 {
-	OGRGeometry* geometry = ThOGRGeometryUtils::ToOGRGeometry(wkt);
+	std::string outputWKT;
+	OGRGeometry* geometry = ThOGRGeometryUtils::FromWKT(wkt);
 	if (geometry->getGeometryType() == wkbPolygon)
 	{
-		return ThOGRGeometryUtils::ToWKT(Triangulate_EC((OGRPolygon*)geometry));
+		OGRGeometry* triangles = Triangulate_EC((OGRPolygon*)geometry);
+		outputWKT = ThOGRGeometryUtils::ToWKT(triangles);
+		ThOGRGeometryUtils::ReleaseGeometry(triangles);
 	}
-	return false;
+	ThOGRGeometryUtils::ReleaseGeometry(geometry);
+	return outputWKT;
 }
 
 OGRGeometry*
 ThPolyPartition::Triangulate_EC(const OGRPolygon* polygon)
 {
-	TPPLPolyList* poly = nullptr;
-	ToTPPLPolyList(polygon, poly);
+	auto poly = std::make_unique<TPPLPolyList>();
+	ToTPPLPolyList(polygon, poly.get());
 
 	TPPLPartition partitioner;
-	TPPLPolyList* triangles = new TPPLPolyList();
+	auto triangles = std::make_unique<TPPLPolyList>();
 	int res = -1;
 	if (poly->size() == 1)
 	{
-		res = partitioner.Triangulate_EC(&poly->front(), triangles);
+		res = partitioner.Triangulate_EC(&poly->front(), triangles.get());
 	}
 	else
 	{
-		res = partitioner.Triangulate_EC(poly, triangles);
+		res = partitioner.Triangulate_EC(poly.get(), triangles.get());
 	}
 
 	OGRMultiPolygon* polygons = ThOGRGeometryUtils::CreateMultiPolygon();
