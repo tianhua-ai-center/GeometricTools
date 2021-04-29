@@ -130,7 +130,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(GTE4_PATH)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
@@ -142,7 +141,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(GTE4_PATH)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
@@ -154,7 +152,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_DIR);$(GDAL_DIR)\include;$(CGAL_DIR)\include;$(CGAL_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
@@ -166,7 +163,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\include;.\WPL\include;..\CppLibrary\tudelft3d\prepair</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\include;.\WPL\include;.\polypartition\src;.\tudelft3d\prepair</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Lib>
@@ -185,7 +182,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(GTE4_PATH)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -200,7 +196,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(GTE4_PATH)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -215,7 +210,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(GTE4_PATH);$(BOOST_DIR);$(GDAL_DIR)\include;$(CGAL_DIR)\include;$(CGAL_DIR)\auxiliary\gmp\include;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary;$(GTE4_PATH)\Samples\CSharpCppManaged\CppLibrary\WPL\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -230,8 +224,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\include;.\WPL\include;.\tudelft3d\prepair</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\include;.\WPL\include;.\tudelft3d\prepair;.\polypartition\src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -269,7 +263,10 @@
     <ClInclude Include="mapbox\variant\include\mapbox\variant_cast.hpp" />
     <ClInclude Include="mapbox\variant\include\mapbox\variant_io.hpp" />
     <ClInclude Include="mapbox\variant\include\mapbox\variant_visitor.hpp" />
+    <ClInclude Include="polypartition\src\polypartition.h" />
+    <ClInclude Include="ThOGRGeometryUtils.h" />
     <ClInclude Include="ThPolygonRepairer.h" />
+    <ClInclude Include="ThPolyPartition.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
     <ClInclude Include="tudelft3d\pprepair\definitions\CGALDefinitions.h" />
     <ClInclude Include="tudelft3d\pprepair\definitions\definitions.h" />
@@ -289,7 +286,10 @@
     <ClInclude Include="WPL\include\WPLPreprocess.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="polypartition\src\polypartition.cpp" />
+    <ClCompile Include="ThOGRGeometryUtils.cpp" />
     <ClCompile Include="ThPolygonRepairer.cpp" />
+    <ClCompile Include="ThPolyPartition.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
     <ClCompile Include="tudelft3d\pprepair\FaceInfo.cpp" />
     <ClCompile Include="tudelft3d\pprepair\PlanarPartition.cpp" />
