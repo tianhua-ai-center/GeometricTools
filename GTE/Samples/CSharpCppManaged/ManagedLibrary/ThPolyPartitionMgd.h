@@ -1,5 +1,7 @@
+#pragma once
 #include "ManagedObject.h"
 #include "../CppLibrary/CppLibrary.h"
+using namespace System;
 
 namespace CLI
 {
