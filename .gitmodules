@@ -7,3 +7,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/tudelft3d/pprepair"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/tudelft3d/pprepair
 	url = https://github.com/tudelft3d/pprepair.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/polypartition"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/polypartition
+	url = https://github.com/ivanfratric/polypartition.git
