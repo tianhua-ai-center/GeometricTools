@@ -9,5 +9,6 @@ String^ MarshalNativeString(std::string& os);
 void MarshalString(String^ s, std::string& os);
 void MarshalString(String^ s, std::wstring& os);
 
-cli::array<Byte>^ MarshalNativeBindaryBuffer(const std::vector<unsigned char>& vector);
+// https://www.chriswirz.com/software/managed-to-un-managed-byte-arrays-in-c-sharp
+cli::array<Byte>^ MarshalNativeBindaryBuffer(std::vector<unsigned char>& vector);
 void MarshalBindaryBuffer(cli::array<Byte>^ buffer, std::vector<unsigned char>& vector);
