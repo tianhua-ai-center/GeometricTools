@@ -31,6 +31,8 @@ void ToTPPLPolyList(const OGRPolygon* polygon, TPPLPolyList* polys)
 		poly[i].x = shell->getX(i);
 		poly[i].y = shell->getY(i);
 	}
+	poly.SetHole(false);
+	poly.SetOrientation(TPPL_ORIENTATION_CCW);
 	polys->push_back(poly);
 
 	// ´¦ÀíHoles
@@ -46,6 +48,8 @@ void ToTPPLPolyList(const OGRPolygon* polygon, TPPLPolyList* polys)
 			poly[j].x = hole->getX(j);
 			poly[j].y = hole->getY(j);
 		}
+		poly.SetHole(true);
+		poly.SetOrientation(TPPL_ORIENTATION_CW);
 		polys->push_back(poly);
 	}
 }
