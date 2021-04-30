@@ -14,6 +14,7 @@ namespace CLI
 		}
 	public:
 		String^ MakeValid(String^ wkt);
+		cli::array<Byte>^ MakeValid(cli::array<Byte>^ wkb);
 	};
 }
 

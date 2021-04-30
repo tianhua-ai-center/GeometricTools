@@ -8,6 +8,14 @@ namespace CLI
 		std::string inputWKT;
 		MarshalString(wkt, inputWKT);
 		std::string outputWKT = mInstance->MakeValid(inputWKT);
-		return gcnew String(outputWKT.c_str());
+		return MarshalNativeString(outputWKT);
+	}
+
+	cli::array<Byte>^ ThPolygonRepairerMgd::MakeValid(cli::array<Byte>^ wkb)
+	{
+		std::vector<unsigned char> inputWKB;
+		MarshalBindaryBuffer(wkb, inputWKB);
+		std::vector<unsigned char> outputWKB = mInstance->MakeValid(inputWKB);
+		return MarshalNativeBindaryBuffer(outputWKB);
 	}
 }

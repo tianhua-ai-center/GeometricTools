@@ -58,11 +58,56 @@ std::string ThOGRGeometryUtils::ToWKT(OGRGeometry* geometry)
 	return std::string();
 }
 
+std::vector<unsigned char> ThOGRGeometryUtils::ToWKB(OGRGeometry* geometry)
+{
+	unsigned char* outputWKB = new unsigned char[geometry->WkbSize()];
+	OGRErr err = geometry->exportToWkb(wkbNDR, outputWKB, wkbVariantIso);
+	if (err == OGRERR_NONE)
+	{
+		auto result = std::vector<unsigned char>(outputWKB, outputWKB + geometry->WkbSize());
+		delete[] outputWKB;
+		return result;
+	}
+	return std::vector<unsigned char>();
+}
+
 OGRGeometry* ThOGRGeometryUtils::FromWKT(const std::string& wkt)
 {
 	OGRGeometry* geometry = nullptr;
 	char* inputWKT = (char*)wkt.c_str();
 	OGRErr err = OGRGeometryFactory::createFromWkt(&inputWKT, NULL, &geometry);
+	if (err != OGRERR_NONE) {
+		switch (err) {
+		case OGRERR_UNSUPPORTED_GEOMETRY_TYPE:
+			std::cerr << "Error: geometry must be Polygon or MultiPolygon" << std::endl;
+			break;
+		case OGRERR_NOT_ENOUGH_DATA:
+		case OGRERR_CORRUPT_DATA:
+			std::cerr << "Error: corrupted input" << std::endl;
+			break;
+		default:
+			std::cerr << "Error: corrupted input" << std::endl;
+			break;
+		}
+		return nullptr;
+	}
+	if (geometry->IsEmpty() == 1) {
+		std::cerr << "Error: empty geometry" << std::endl;
+		return nullptr;
+	}
+	if ((geometry->getGeometryType() != wkbPolygon) &&
+		(geometry->getGeometryType() != wkbMultiPolygon)) {
+		std::cerr << "Error: geometry must be Polygon or MultiPolygon" << std::endl;
+		return nullptr;
+	}
+	return geometry;
+}
+
+OGRGeometry* ThOGRGeometryUtils::FromWKB(const std::vector<unsigned char>& wkb)
+{
+	OGRGeometry* geometry = nullptr;
+	unsigned char* inputWKB = (unsigned char*)wkb.data();
+	OGRErr err = OGRGeometryFactory::createFromWkb(inputWKB, NULL, &geometry, wkb.size(), wkbVariantIso);
 	if (err != OGRERR_NONE) {
 		switch (err) {
 		case OGRERR_UNSUPPORTED_GEOMETRY_TYPE:

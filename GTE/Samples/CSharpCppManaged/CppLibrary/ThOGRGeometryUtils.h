@@ -24,6 +24,9 @@ namespace gte
 	public:
 		static std::string ToWKT(OGRGeometry* geometry);
 		static OGRGeometry* FromWKT(const std::string& wkt);
+
+		static std::vector<unsigned char> ToWKB(OGRGeometry* geometry);
+		static OGRGeometry* FromWKB(const std::vector<unsigned char>& wkb);
 	};
 }
 
