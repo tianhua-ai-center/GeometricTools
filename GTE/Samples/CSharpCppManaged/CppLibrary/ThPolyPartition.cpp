@@ -87,25 +87,17 @@ ThPolyPartition::Triangulate_EC(std::vector<unsigned char>& wkb)
 OGRGeometry*
 ThPolyPartition::Triangulate_EC(const OGRPolygon* polygon)
 {
-	auto poly = std::make_unique<TPPLPolyList>();
-	ToTPPLPolyList(polygon, poly.get());
+	TPPLPolyList poly;
+	ToTPPLPolyList(polygon, &poly);
 
+	TPPLPolyList triangles;
 	TPPLPartition partitioner;
-	auto triangles = std::make_unique<TPPLPolyList>();
-	int res = -1;
-	if (poly->size() == 1)
-	{
-		res = partitioner.Triangulate_EC(&poly->front(), triangles.get());
-	}
-	else
-	{
-		res = partitioner.Triangulate_EC(poly.get(), triangles.get());
-	}
+	partitioner.Triangulate_EC(&poly, &triangles);
 
 	OGRMultiPolygon* polygons = ThOGRGeometryUtils::CreateMultiPolygon();
-	for (TPPLPolyList::iterator i= triangles->begin() ; i!= triangles->end();++i)
+	for (auto iter = triangles.begin() ; iter != triangles.end(); ++iter)
 	{
-		polygons->addGeometry(ToOGRPolygon(*i));
+		polygons->addGeometry(ToOGRPolygon(*iter));
 	}
 	return polygons;
 }
