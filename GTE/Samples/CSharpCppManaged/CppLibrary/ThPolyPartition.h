@@ -13,6 +13,7 @@ namespace gte
 	{
 	public:
 		std::string Triangulate_EC(const std::string& wkt);
+		std::vector<unsigned char> Triangulate_EC(std::vector<unsigned char>& wkb);
 	private:
 		OGRGeometry* Triangulate_EC(const OGRPolygon* polygon);
 	};

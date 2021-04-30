@@ -14,5 +14,6 @@ namespace CLI
 		}
 	public:
 		String^ TriangulateEC(String^ wkt);
+		cli::array<Byte>^ TriangulateEC(cli::array<Byte>^ wkb);
 	};
 }

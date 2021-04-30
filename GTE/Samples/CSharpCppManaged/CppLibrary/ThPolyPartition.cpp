@@ -69,6 +69,21 @@ ThPolyPartition::Triangulate_EC(const std::string& wkt)
 	return outputWKT;
 }
 
+std::vector<unsigned char> 
+ThPolyPartition::Triangulate_EC(std::vector<unsigned char>& wkb)
+{
+	std::vector<unsigned char> outputWKB;
+	OGRGeometry* geometry = ThOGRGeometryUtils::FromWKB(wkb);
+	if (geometry->getGeometryType() == wkbPolygon)
+	{
+		OGRGeometry* triangles = Triangulate_EC((OGRPolygon*)geometry);
+		outputWKB = ThOGRGeometryUtils::ToWKB(triangles);
+		ThOGRGeometryUtils::ReleaseGeometry(triangles);
+	}
+	ThOGRGeometryUtils::ReleaseGeometry(geometry);
+	return outputWKB;
+}
+
 OGRGeometry*
 ThPolyPartition::Triangulate_EC(const OGRPolygon* polygon)
 {
