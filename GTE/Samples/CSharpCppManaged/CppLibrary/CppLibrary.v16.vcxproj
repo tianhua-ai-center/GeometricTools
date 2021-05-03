@@ -266,7 +266,7 @@
     <ClInclude Include="polypartition\src\polypartition.h" />
     <ClInclude Include="ThCGALKernel.h" />
     <ClInclude Include="ThCGALUtils.h" />
-    <ClInclude Include="ThOGRGeometryUtils.h" />
+    <ClInclude Include="ThOGRUtils.h" />
     <ClInclude Include="ThPolygonRepairer.h" />
     <ClInclude Include="ThPolyPartition.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
@@ -290,7 +290,7 @@
   <ItemGroup>
     <ClCompile Include="polypartition\src\polypartition.cpp" />
     <ClCompile Include="ThCGALUtils.cpp" />
-    <ClCompile Include="ThOGRGeometryUtils.cpp" />
+    <ClCompile Include="ThOGRUtils.cpp" />
     <ClCompile Include="ThPolygonRepairer.cpp" />
     <ClCompile Include="ThPolyPartition.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />

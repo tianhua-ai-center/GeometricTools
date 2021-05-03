@@ -1,10 +1,10 @@
-#include "ThOGRGeometryUtils.h"
+#include "ThOGRUtils.h"
 #include "ogr_geometry.h"
 
-using namespace gte;
+using namespace THOGR;
 
 OGRLinearRing* 
-ThOGRGeometryUtils::ToOGRLinearRing(std::vector<double> coords)
+ThOGRUtils::ToOGRLinearRing(std::vector<double> coords)
 {
 	OGRLinearRing* ring = CreateLinearRing();
 	for (int i = 0; i < coords.size(); i += 2)
@@ -16,7 +16,7 @@ ThOGRGeometryUtils::ToOGRLinearRing(std::vector<double> coords)
 }
 
 void 
-ThOGRGeometryUtils::ToCoordinates(const OGRLinearRing* ring, std::vector<double>& coordinates)
+ThOGRUtils::ToCoordinates(const OGRLinearRing* ring, std::vector<double>& coordinates)
 {
 	for (int i = 0; i < ring->getNumPoints(); i++)
 	{
@@ -26,28 +26,28 @@ ThOGRGeometryUtils::ToCoordinates(const OGRLinearRing* ring, std::vector<double>
 }
 
 OGRPolygon* 
-ThOGRGeometryUtils::CreatePolygon()
+ThOGRUtils::CreatePolygon()
 {
 	return (OGRPolygon*)OGRGeometryFactory::createGeometry(wkbPolygon);
 }
 
 OGRLinearRing* 
-ThOGRGeometryUtils::CreateLinearRing()
+ThOGRUtils::CreateLinearRing()
 {
 	return (OGRLinearRing*)OGRGeometryFactory::createGeometry(wkbLinearRing);
 }
 
-OGRMultiPolygon* ThOGRGeometryUtils::CreateMultiPolygon()
+OGRMultiPolygon* ThOGRUtils::CreateMultiPolygon()
 {
 	return (OGRMultiPolygon*)OGRGeometryFactory::createGeometry(wkbMultiPolygon);
 }
 
-void ThOGRGeometryUtils::ReleaseGeometry(OGRGeometry* geometry)
+void ThOGRUtils::ReleaseGeometry(OGRGeometry* geometry)
 {
 	OGRGeometryFactory::destroyGeometry(geometry);
 }
 
-std::string ThOGRGeometryUtils::ToWKT(OGRGeometry* geometry)
+std::string ThOGRUtils::ToWKT(OGRGeometry* geometry)
 {
 	char* outputWKT = nullptr;
 	OGRErr err = geometry->exportToWkt(&outputWKT, wkbVariantIso);
@@ -58,7 +58,7 @@ std::string ThOGRGeometryUtils::ToWKT(OGRGeometry* geometry)
 	return std::string();
 }
 
-std::vector<unsigned char> ThOGRGeometryUtils::ToWKB(OGRGeometry* geometry)
+std::vector<unsigned char> ThOGRUtils::ToWKB(OGRGeometry* geometry)
 {
 	unsigned char* outputWKB = new unsigned char[geometry->WkbSize()];
 	OGRErr err = geometry->exportToWkb(wkbNDR, outputWKB, wkbVariantIso);
@@ -71,7 +71,7 @@ std::vector<unsigned char> ThOGRGeometryUtils::ToWKB(OGRGeometry* geometry)
 	return std::vector<unsigned char>();
 }
 
-OGRGeometry* ThOGRGeometryUtils::FromWKT(const std::string& wkt)
+OGRGeometry* ThOGRUtils::FromWKT(const std::string& wkt)
 {
 	OGRGeometry* geometry = nullptr;
 	char* inputWKT = (char*)wkt.c_str();
@@ -103,7 +103,7 @@ OGRGeometry* ThOGRGeometryUtils::FromWKT(const std::string& wkt)
 	return geometry;
 }
 
-OGRGeometry* ThOGRGeometryUtils::FromWKB(const std::vector<unsigned char>& wkb)
+OGRGeometry* ThOGRUtils::FromWKB(const std::vector<unsigned char>& wkb)
 {
 	OGRGeometry* geometry = nullptr;
 	unsigned char* inputWKB = (unsigned char*)wkb.data();

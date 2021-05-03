@@ -9,9 +9,9 @@ class OGRGeometry;
 class OGRLinearRing;
 class OGRMultiPolygon;
 
-namespace gte
+namespace THOGR
 {
-	class ThOGRGeometryUtils
+	class ThOGRUtils
 	{
 	public:
 		static OGRPolygon* CreatePolygon();

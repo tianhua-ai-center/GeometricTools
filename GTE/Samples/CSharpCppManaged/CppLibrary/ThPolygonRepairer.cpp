@@ -1,22 +1,23 @@
 #include "ThPolygonRepairer.h"
-#include "ThOGRGeometryUtils.h"
+#include "ThOGRUtils.h"
 #include "ogr_geometry.h"
 #include "PolygonRepair.h"
 
 using namespace gte;
+using namespace THOGR;
 
 std::string ThPolygonRepairer::MakeValid(const std::string& wkt)
 {
     PolygonRepair prepair;
-    OGRGeometry* geometry = ThOGRGeometryUtils::FromWKT(wkt);
+    OGRGeometry* geometry = ThOGRUtils::FromWKT(wkt);
     OGRMultiPolygon* outPolygons = prepair.repairOddEven(geometry, false);
-    return ThOGRGeometryUtils::ToWKT(outPolygons);
+    return ThOGRUtils::ToWKT(outPolygons);
 }
 
 std::vector<unsigned char> ThPolygonRepairer::MakeValid(std::vector<unsigned char>& wkb)
 {
     PolygonRepair prepair;
-    OGRGeometry* geometry = ThOGRGeometryUtils::FromWKB(wkb);
+    OGRGeometry* geometry = ThOGRUtils::FromWKB(wkb);
     OGRMultiPolygon* outPolygons = prepair.repairOddEven(geometry, false);
-    return ThOGRGeometryUtils::ToWKB(outPolygons);
+    return ThOGRUtils::ToWKB(outPolygons);
 }

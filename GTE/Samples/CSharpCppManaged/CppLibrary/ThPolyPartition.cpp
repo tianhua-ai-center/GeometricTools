@@ -1,20 +1,21 @@
 #include "ThPolyPartition.h"
-#include "ThOGRGeometryUtils.h"
+#include "ThOGRUtils.h"
 #include "ogr_geometry.h"
 #include "polypartition.h"
 
 using namespace gte;
+using namespace THOGR;
 
 OGRPolygon* ToOGRPolygon(const TPPLPoly& poly)
 {
 	std::vector<double> coords;
-	OGRPolygon* polygon = ThOGRGeometryUtils::CreatePolygon();
+	OGRPolygon* polygon = ThOGRUtils::CreatePolygon();
 	for (int i =0;i<poly.GetNumPoints();i++)
 	{
 		coords.push_back(poly.GetPoint(i).x);
 		coords.push_back(poly.GetPoint(i).y);
 	}
-	polygon->addRing(ThOGRGeometryUtils::ToOGRLinearRing(coords));
+	polygon->addRing(ThOGRUtils::ToOGRLinearRing(coords));
 	return polygon;
 }
 
@@ -58,14 +59,14 @@ std::string
 ThPolyPartition::Triangulate_EC(const std::string& wkt)
 {
 	std::string outputWKT;
-	OGRGeometry* geometry = ThOGRGeometryUtils::FromWKT(wkt);
+	OGRGeometry* geometry = ThOGRUtils::FromWKT(wkt);
 	if (geometry->getGeometryType() == wkbPolygon)
 	{
 		OGRGeometry* triangles = Triangulate_EC((OGRPolygon*)geometry);
-		outputWKT = ThOGRGeometryUtils::ToWKT(triangles);
-		ThOGRGeometryUtils::ReleaseGeometry(triangles);
+		outputWKT = ThOGRUtils::ToWKT(triangles);
+		ThOGRUtils::ReleaseGeometry(triangles);
 	}
-	ThOGRGeometryUtils::ReleaseGeometry(geometry);
+	ThOGRUtils::ReleaseGeometry(geometry);
 	return outputWKT;
 }
 
@@ -73,14 +74,14 @@ std::vector<unsigned char>
 ThPolyPartition::Triangulate_EC(std::vector<unsigned char>& wkb)
 {
 	std::vector<unsigned char> outputWKB;
-	OGRGeometry* geometry = ThOGRGeometryUtils::FromWKB(wkb);
+	OGRGeometry* geometry = ThOGRUtils::FromWKB(wkb);
 	if (geometry->getGeometryType() == wkbPolygon)
 	{
 		OGRGeometry* triangles = Triangulate_EC((OGRPolygon*)geometry);
-		outputWKB = ThOGRGeometryUtils::ToWKB(triangles);
-		ThOGRGeometryUtils::ReleaseGeometry(triangles);
+		outputWKB = ThOGRUtils::ToWKB(triangles);
+		ThOGRUtils::ReleaseGeometry(triangles);
 	}
-	ThOGRGeometryUtils::ReleaseGeometry(geometry);
+	ThOGRUtils::ReleaseGeometry(geometry);
 	return outputWKB;
 }
 
@@ -94,7 +95,7 @@ ThPolyPartition::Triangulate_EC(const OGRPolygon* polygon)
 	TPPLPartition partitioner;
 	partitioner.Triangulate_EC(&poly, &triangles);
 
-	OGRMultiPolygon* polygons = ThOGRGeometryUtils::CreateMultiPolygon();
+	OGRMultiPolygon* polygons = ThOGRUtils::CreateMultiPolygon();
 	for (auto iter = triangles.begin() ; iter != triangles.end(); ++iter)
 	{
 		polygons->addGeometry(ToOGRPolygon(*iter));

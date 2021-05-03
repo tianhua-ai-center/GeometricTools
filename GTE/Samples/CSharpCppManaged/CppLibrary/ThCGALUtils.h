@@ -15,11 +15,13 @@ namespace THCGAL
 	class ThCGALUtils
 	{
 	public:
-		static OGRPolygon* CreatePolygon();
-		static OGRLinearRing* CreateLinearRing();
-	public:
 		static OGRPolygon* CreatePolygon(const Polygon& cgal);
-		static OGRPolygon* CreatePolygon(const Polygon_with_holes& cgal);
 		static OGRLinearRing* CreateLinearRing(const Polygon& cgal);
+		static OGRPolygon* CreatePolygon(const Polygon_with_holes& cgal);
+	public:
+		static Polygon ToCGALPolygon(const OGRPolygon* ogr);
+		static Polygon_with_holes ToCGALPolygonEx(const OGRPolygon* ogr);
+	private:
+		static Polygon ToCGALPolygon(const OGRLinearRing* ogr);
 	};
 }

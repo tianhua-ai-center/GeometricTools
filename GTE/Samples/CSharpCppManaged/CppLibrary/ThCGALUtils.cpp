@@ -1,12 +1,14 @@
 #include "ThCGALUtils.h"
+#include "ThOGRUtils.h"
 #include "ogr_geometry.h"
 
+using namespace THOGR;
 using namespace THCGAL;
 
 OGRPolygon* 
 ThCGALUtils::CreatePolygon(const Polygon& cgal)
 {
-	OGRPolygon* polygon = CreatePolygon();
+	OGRPolygon* polygon = ThOGRUtils::CreatePolygon();
 	polygon->addRing(CreateLinearRing(cgal));
 	return polygon;
 }
@@ -14,7 +16,7 @@ ThCGALUtils::CreatePolygon(const Polygon& cgal)
 OGRLinearRing* 
 ThCGALUtils::CreateLinearRing(const Polygon& cgal)
 {
-	OGRLinearRing* ring = CreateLinearRing();
+	OGRLinearRing* ring = ThOGRUtils::CreateLinearRing();
 	for (auto ei = cgal.edges_begin(); ei != cgal.edges_end(); ++ei) {
 		ring->addPoint(DOUBLE(ei->source().x()), DOUBLE(ei->source().y()));
 	}
@@ -26,7 +28,7 @@ OGRPolygon*
 ThCGALUtils::CreatePolygon(const Polygon_with_holes& cgal)
 {
 	// Shell
-	OGRPolygon* polygon = CreatePolygon();
+	OGRPolygon* polygon = ThOGRUtils::CreatePolygon();
 	polygon->addRing(CreateLinearRing(cgal.outer_boundary()));
 
 	// Holes
@@ -38,14 +40,35 @@ ThCGALUtils::CreatePolygon(const Polygon_with_holes& cgal)
 	return polygon;
 }
 
-OGRPolygon*
-ThCGALUtils::CreatePolygon()
+Polygon
+ThCGALUtils::ToCGALPolygon(const OGRPolygon* ogr)
 {
-	return (OGRPolygon*)OGRGeometryFactory::createGeometry(wkbPolygon);
+	return ToCGALPolygon(ogr->getExteriorRing());
 }
 
-OGRLinearRing*
-ThCGALUtils::CreateLinearRing()
+Polygon_with_holes
+ThCGALUtils::ToCGALPolygonEx(const OGRPolygon* ogr)
 {
-	return (OGRLinearRing*)OGRGeometryFactory::createGeometry(wkbLinearRing);
+	// Shell
+	Polygon shell = ToCGALPolygon(ogr->getExteriorRing());
+
+	// Holes
+	std::vector<Polygon> holes;
+	for (int i = 0; i < ogr->getNumInteriorRings(); i++)
+	{
+		holes.push_back(ToCGALPolygon(ogr->getInteriorRing(i)));
+	}
+
+	return Polygon_with_holes(shell, holes.begin(), holes.end());
+}
+
+Polygon
+ThCGALUtils::ToCGALPolygon(const OGRLinearRing* ogr)
+{
+	std::vector<Point> coordinates;
+	for (int i = 0; i < ogr->getNumPoints(); i++)
+	{
+		coordinates.push_back(Point(ogr->getX(i), ogr->getY(i)));
+	}
+	return Polygon(coordinates.begin(), coordinates.end());
 }
