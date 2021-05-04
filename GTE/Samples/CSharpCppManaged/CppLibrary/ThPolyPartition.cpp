@@ -103,3 +103,51 @@ ThPolyPartition::Triangulate_EC(const OGRPolygon* polygon)
 	return polygons;
 }
 
+std::string
+ThPolyPartition::ConvexPartition_HM(const std::string& wkt)
+{
+	std::string outputWKT;
+	OGRGeometry* geometry = ThOGRUtils::FromWKT(wkt);
+	if (geometry->getGeometryType() == wkbPolygon)
+	{
+		OGRGeometry* triangles = ConvexPartition_HM((OGRPolygon*)geometry);
+		outputWKT = ThOGRUtils::ToWKT(triangles);
+		ThOGRUtils::ReleaseGeometry(triangles);
+	}
+	ThOGRUtils::ReleaseGeometry(geometry);
+	return outputWKT;
+}
+
+std::vector<unsigned char>
+ThPolyPartition::ConvexPartition_HM(std::vector<unsigned char>& wkb)
+{
+	std::vector<unsigned char> outputWKB;
+	OGRGeometry* geometry = ThOGRUtils::FromWKB(wkb);
+	if (geometry->getGeometryType() == wkbPolygon)
+	{
+		OGRGeometry* triangles = ConvexPartition_HM((OGRPolygon*)geometry);
+		outputWKB = ThOGRUtils::ToWKB(triangles);
+		ThOGRUtils::ReleaseGeometry(triangles);
+	}
+	ThOGRUtils::ReleaseGeometry(geometry);
+	return outputWKB;
+}
+
+OGRGeometry* 
+ThPolyPartition::ConvexPartition_HM(const OGRPolygon* polygon)
+{
+	TPPLPolyList poly;
+	ToTPPLPolyList(polygon, &poly);
+
+	TPPLPolyList triangles;
+	TPPLPartition partitioner;
+	partitioner.ConvexPartition_HM(&poly, &triangles);
+
+	OGRMultiPolygon* polygons = ThOGRUtils::CreateMultiPolygon();
+	for (auto iter = triangles.begin(); iter != triangles.end(); ++iter)
+	{
+		polygons->addGeometry(ToOGRPolygon(*iter));
+	}
+	return polygons;
+}
+
