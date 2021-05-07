@@ -13,7 +13,9 @@ namespace CLI
 			//
 		}
 	public:
+		String^ HMPartition(String^ wkt);
 		String^ TriangulateEC(String^ wkt);
+		cli::array<Byte>^ HMPartition(cli::array<Byte>^ wkb);
 		cli::array<Byte>^ TriangulateEC(cli::array<Byte>^ wkb);
 	};
 }
