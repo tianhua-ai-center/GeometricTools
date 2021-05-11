@@ -10,3 +10,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/polypartition"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/polypartition
 	url = https://github.com/ivanfratric/polypartition.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/Hydrant"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/Hydrant
+	url = https://github.com/nsdhome/validate.git

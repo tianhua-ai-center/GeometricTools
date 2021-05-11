@@ -163,7 +163,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\polypartition\src;.\tudelft3d\prepair</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\polypartition\src;.\tudelft3d\prepair</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Lib>
@@ -242,6 +242,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CppLibrary.h" />
+    <ClInclude Include="Hydrant\include\CGALDef.h" />
+    <ClInclude Include="Hydrant\include\connected_components.h" />
+    <ClInclude Include="Hydrant\include\directed_graph.h" />
+    <ClInclude Include="Hydrant\include\interface.h" />
+    <ClInclude Include="Hydrant\include\poly.h" />
     <ClInclude Include="mapbox\geometry\include\mapbox\feature.hpp" />
     <ClInclude Include="mapbox\geometry\include\mapbox\geometry.hpp" />
     <ClInclude Include="mapbox\geometry\include\mapbox\geometry\box.hpp" />
@@ -288,6 +293,10 @@
     <ClInclude Include="WPL\include\WPLPreprocess.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Hydrant\src\connected_components.cpp" />
+    <ClCompile Include="Hydrant\src\directed_graph.cpp" />
+    <ClCompile Include="Hydrant\src\interface.cpp" />
+    <ClCompile Include="Hydrant\src\poly.cpp" />
     <ClCompile Include="polypartition\src\polypartition.cpp" />
     <ClCompile Include="ThCGALUtils.cpp" />
     <ClCompile Include="ThOGRUtils.cpp" />
