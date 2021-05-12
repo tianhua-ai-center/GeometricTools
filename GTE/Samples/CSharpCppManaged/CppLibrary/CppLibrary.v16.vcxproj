@@ -245,8 +245,9 @@
     <ClInclude Include="Hydrant\include\CGALDef.h" />
     <ClInclude Include="Hydrant\include\connected_components.h" />
     <ClInclude Include="Hydrant\include\directed_graph.h" />
-    <ClInclude Include="Hydrant\include\interface.h" />
     <ClInclude Include="Hydrant\include\poly.h" />
+    <ClInclude Include="Hydrant\include\stdafx.h" />
+    <ClInclude Include="Hydrant\include\valdata.h" />
     <ClInclude Include="mapbox\geometry\include\mapbox\feature.hpp" />
     <ClInclude Include="mapbox\geometry\include\mapbox\geometry.hpp" />
     <ClInclude Include="mapbox\geometry\include\mapbox\geometry\box.hpp" />
@@ -295,7 +296,6 @@
   <ItemGroup>
     <ClCompile Include="Hydrant\src\connected_components.cpp" />
     <ClCompile Include="Hydrant\src\directed_graph.cpp" />
-    <ClCompile Include="Hydrant\src\interface.cpp" />
     <ClCompile Include="Hydrant\src\poly.cpp" />
     <ClCompile Include="polypartition\src\polypartition.cpp" />
     <ClCompile Include="ThCGALUtils.cpp" />
