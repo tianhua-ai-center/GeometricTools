@@ -4,7 +4,7 @@
 using namespace THOGR;
 
 OGRLinearRing* 
-ThOGRUtils::ToOGRLinearRing(std::vector<double> coords)
+ThOGRUtils::ToOGRLinearRing(const std::vector<double>& coords)
 {
 	OGRLinearRing* ring = CreateLinearRing();
 	for (int i = 0; i < coords.size(); i += 2)

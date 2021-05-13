@@ -19,7 +19,7 @@ namespace THOGR
 		static OGRMultiPolygon* CreateMultiPolygon();
 		static void ReleaseGeometry(OGRGeometry* geometry);
 	public:
-		static OGRLinearRing* ToOGRLinearRing(std::vector<double> coords);
+		static OGRLinearRing* ToOGRLinearRing(const std::vector<double>& coords);
 		static void ToCoordinates(const OGRLinearRing* ring, std::vector<double>& coordinates);
 	public:
 		static std::string ToWKT(OGRGeometry* geometry);
