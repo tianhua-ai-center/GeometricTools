@@ -13,3 +13,7 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/Hydrant"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/Hydrant
 	url = https://github.com/nsdhome/validate.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/jsoncpp"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/jsoncpp
+	url = https://github.com/open-source-parsers/jsoncpp.git
+	branch = 0.y.z
