@@ -107,7 +107,7 @@ OGRGeometry* ThOGRUtils::FromWKB(const std::vector<unsigned char>& wkb)
 {
 	OGRGeometry* geometry = nullptr;
 	unsigned char* inputWKB = (unsigned char*)wkb.data();
-	OGRErr err = OGRGeometryFactory::createFromWkb(inputWKB, NULL, &geometry, wkb.size(), wkbVariantIso);
+	OGRErr err = OGRGeometryFactory::createFromWkb(inputWKB, NULL, &geometry, (int)wkb.size(), wkbVariantIso);
 	if (err != OGRERR_NONE) {
 		switch (err) {
 		case OGRERR_UNSUPPORTED_GEOMETRY_TYPE:
