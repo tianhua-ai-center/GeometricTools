@@ -7,6 +7,10 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/tudelft3d/pprepair"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/tudelft3d/pprepair
 	url = https://github.com/tudelft3d/pprepair.git
-[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/polypartition"]
-	path = GTE/Samples/CSharpCppManaged/CppLibrary/polypartition
-	url = https://github.com/ivanfratric/polypartition.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/Hydrant"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/Hydrant
+	url = https://github.com/nsdhome/validate.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/jsoncpp"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/jsoncpp
+	url = https://github.com/open-source-parsers/jsoncpp.git
+	branch = 0.y.z

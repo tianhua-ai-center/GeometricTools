@@ -201,7 +201,7 @@
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;..\CppLibrary;..\CppLibrary\polypartition\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib;libboost_thread-vc120-mt-gd-1_65.lib</AdditionalDependencies>
+      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(CGAL4_GMP)\lib;$(GDAL2_DIR)\v120\lib;$(BOOST_LIBRARYDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -247,7 +247,7 @@
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;..\CppLibrary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libgmp-10.lib;libmpfr-4.lib;gdal_i.lib;libboost_thread-vc120-mt-1_65.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>$(GDAL2_DIR)\v120\lib;$(CGAL4_GMP)\lib;$(BOOST_LIBRARYDIR)</AdditionalLibraryDirectories>
     </Link>
@@ -259,15 +259,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ManagedObject.h" />
+    <ClInclude Include="ThHydrantEngineMgd.h" />
     <ClInclude Include="ThPolygonRepairerMgd.h" />
-    <ClInclude Include="ThPolyPartitionMgd.h" />
     <ClInclude Include="ThWashInteropUtils.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="ThHydrantEngineMgd.cpp" />
     <ClCompile Include="ThPolygonRepairerMgd.cpp" />
-    <ClCompile Include="ThPolyPartitionMgd.cpp" />
     <ClCompile Include="ThWashInteropUtils.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
   </ItemGroup>

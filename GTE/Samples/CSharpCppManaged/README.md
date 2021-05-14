@@ -14,20 +14,18 @@ Visual Studio Community 2013 Update 3
 
 ### Step 1: Install these libraries, for example
 
-C:\dev\CGAL-4.9.1
+C:\dev\CGAL-4.12.0
 
 C:\dev\GDAL-2.2.3
 
-C:\local\boost_1_65_0
+C:\local\boost_1_70_0
 
 ### Step 2: Setup the environment variables 
 
-BOOST_DIR = "C:\local\boost_1_65_0"
+BOOST_DIR = "C:\local\boost_1_70_0"
 
-BOOST_LIBRARYDIR = "C:\local\boost_1_65_0\lib64-msvc-12.0"
+CGAL4_DIR = "C:\dev\CGAL-4.12.0"
 
-CGAL4_DIR = "C:\dev\CGAL-4.9.1"
-
-CGAL4_GMP = "C:\dev\CGAL-4.9.1\auxiliary\gmp"
+CGAL4_GMP = "C:\dev\CGAL-4.12.0\auxiliary\gmp"
 
 GDAL2_DIR = "C:\dev\GDAL-2.2.3"
