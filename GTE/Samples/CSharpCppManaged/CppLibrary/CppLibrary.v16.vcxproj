@@ -304,6 +304,7 @@
     <ClInclude Include="WPL\include\GeoData.h" />
     <ClInclude Include="WPL\include\GeoJSONParser.h" />
     <ClInclude Include="WPL\include\IO.h" />
+    <ClInclude Include="WPL\include\stdafx.h" />
     <ClInclude Include="WPL\include\WPLEngine.h" />
     <ClInclude Include="WPL\include\WPLLocate.h" />
     <ClInclude Include="WPL\include\WPLPreprocess.h" />
