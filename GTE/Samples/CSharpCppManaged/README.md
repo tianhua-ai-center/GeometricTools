@@ -18,13 +18,11 @@ C:\dev\CGAL-4.12.0
 
 C:\dev\GDAL-2.2.3
 
-C:\local\boost_1_65_0
+C:\local\boost_1_70_0
 
 ### Step 2: Setup the environment variables 
 
-BOOST_DIR = "C:\local\boost_1_65_0"
-
-BOOST_LIBRARYDIR = "C:\local\boost_1_65_0\lib64-msvc-12.0"
+BOOST_DIR = "C:\local\boost_1_70_0"
 
 CGAL4_DIR = "C:\dev\CGAL-4.12.0"
 
