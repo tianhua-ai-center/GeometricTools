@@ -163,7 +163,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -225,7 +225,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -288,6 +288,7 @@
     <ClInclude Include="ThGeometry.h" />
     <ClInclude Include="ThGeometryUtils.h" />
     <ClInclude Include="ThHydrantEngine.h" />
+    <ClInclude Include="ThMPolygonRepairer.h" />
     <ClInclude Include="ThOGRUtils.h" />
     <ClInclude Include="ThPolygonRepairer.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
@@ -321,6 +322,7 @@
     <ClCompile Include="ThCGALUtils.cpp" />
     <ClCompile Include="ThGeometryUtils.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />
+    <ClCompile Include="ThMPolygonRepairer.cpp" />
     <ClCompile Include="ThOGRUtils.cpp" />
     <ClCompile Include="ThPolygonRepairer.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />

@@ -1,12 +1,9 @@
 #pragma once
-
-#include <vector>
-#include <string>
-#include <memory>
+#include "stdafx.h"
 
 namespace gte
 {
-	class ThPolygonRepairer
+	class ThMPolygonRepairer
 	{
 	public:
 		std::string MakeValid(const std::string& wkt);

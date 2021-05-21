@@ -262,6 +262,7 @@
     <ClInclude Include="clix.hpp" />
     <ClInclude Include="ManagedObject.h" />
     <ClInclude Include="ThHydrantEngineMgd.h" />
+    <ClInclude Include="ThMPolygonRepairerMgd.h" />
     <ClInclude Include="ThPolygonRepairerMgd.h" />
     <ClInclude Include="ThWashInteropUtils.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
@@ -269,6 +270,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="ThHydrantEngineMgd.cpp" />
+    <ClCompile Include="ThMPolygonRepairerMgd.cpp" />
     <ClCompile Include="ThPolygonRepairerMgd.cpp" />
     <ClCompile Include="ThWashInteropUtils.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
