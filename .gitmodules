@@ -17,3 +17,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/Tianhua_Grouping_Pipe"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/Tianhua_Grouping_Pipe
 	url = https://github.com/zjj1997zju/Tianhua_Grouping_Pipe.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/GroupingPipe"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/GroupingPipe
+	url = https://github.com/zjj1997zju/Tianhua_Grouping_Pipe.git
