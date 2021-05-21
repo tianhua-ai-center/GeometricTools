@@ -3,11 +3,17 @@
 
 namespace gte
 {
+	struct ThMPolygonRepairContext
+	{
+		//
+	};
+
+
 	class ThMPolygonRepairer
 	{
 	public:
-		std::string MakeValid(const std::string& wkt);
-		std::vector<unsigned char> MakeValid(std::vector<unsigned char>& wkb);
+		std::string MakeValid(const std::string& wkt, const ThMPolygonRepairContext& context);
+		std::vector<unsigned char> MakeValid(std::vector<unsigned char>& wkb, const ThMPolygonRepairContext& context);
 	};
 }
 
