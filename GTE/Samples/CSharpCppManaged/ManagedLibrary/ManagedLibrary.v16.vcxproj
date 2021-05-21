@@ -259,6 +259,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clix.hpp" />
     <ClInclude Include="ManagedObject.h" />
     <ClInclude Include="ThHydrantEngineMgd.h" />
     <ClInclude Include="ThPolygonRepairerMgd.h" />

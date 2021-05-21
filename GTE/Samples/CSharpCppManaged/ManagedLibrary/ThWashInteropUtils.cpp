@@ -1,19 +1,12 @@
 #include "ThWashInteropUtils.h"
+#include "clix.hpp"
 
 void MarshalString(String^ s, std::string& os) {
-	using namespace Runtime::InteropServices;
-	const char* chars =
-		(const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
-	os = chars;
-	Marshal::FreeHGlobal(IntPtr((void*)chars));
+	os = clix::marshalString<clix::E_UTF8>(s);
 }
 
 void MarshalString(String^ s, std::wstring& os) {
-	using namespace Runtime::InteropServices;
-	const wchar_t* chars =
-		(const wchar_t*)(Marshal::StringToHGlobalUni(s)).ToPointer();
-	os = chars;
-	Marshal::FreeHGlobal(IntPtr((void*)chars));
+	os = clix::marshalString<clix::E_UTF16>(s);
 }
 
 String^ MarshalNativeString(std::string& os)

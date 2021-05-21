@@ -164,7 +164,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Lib>
@@ -226,7 +226,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -294,6 +294,7 @@
     <ClInclude Include="tudelft3d\pprepair\definitions\CGALDefinitions.h" />
     <ClInclude Include="tudelft3d\pprepair\definitions\definitions.h" />
     <ClInclude Include="tudelft3d\pprepair\FaceInfo.h" />
+    <ClInclude Include="tudelft3d\pprepair\IOWorker.h" />
     <ClInclude Include="tudelft3d\pprepair\PlanarPartition.h" />
     <ClInclude Include="tudelft3d\pprepair\PolygonHandle.h" />
     <ClInclude Include="tudelft3d\prepair\definitions.h" />
@@ -324,6 +325,7 @@
     <ClCompile Include="ThPolygonRepairer.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
     <ClCompile Include="tudelft3d\pprepair\FaceInfo.cpp" />
+    <ClCompile Include="tudelft3d\pprepair\IOWorker.cpp" />
     <ClCompile Include="tudelft3d\pprepair\PlanarPartition.cpp" />
     <ClCompile Include="tudelft3d\pprepair\PolygonHandle.cpp" />
     <ClCompile Include="tudelft3d\prepair\PolygonRepair.cpp" />
