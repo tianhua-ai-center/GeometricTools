@@ -163,7 +163,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;..\CppLibrary\Tianhua_Grouping_Pipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -291,6 +291,12 @@
     <ClInclude Include="ThOGRUtils.h" />
     <ClInclude Include="ThPolygonRepairer.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
+    <ClInclude Include="Tianhua_Grouping_Pipe\include\graph.h" />
+    <ClInclude Include="Tianhua_Grouping_Pipe\include\grouping.h" />
+    <ClInclude Include="Tianhua_Grouping_Pipe\include\parse.h" />
+    <ClInclude Include="Tianhua_Grouping_Pipe\include\path.h" />
+    <ClInclude Include="Tianhua_Grouping_Pipe\include\region.h" />
+    <ClInclude Include="Tianhua_Grouping_Pipe\include\space_poly.h" />
     <ClInclude Include="tudelft3d\pprepair\definitions\CGALDefinitions.h" />
     <ClInclude Include="tudelft3d\pprepair\definitions\definitions.h" />
     <ClInclude Include="tudelft3d\pprepair\FaceInfo.h" />
@@ -324,6 +330,12 @@
     <ClCompile Include="ThOGRUtils.cpp" />
     <ClCompile Include="ThPolygonRepairer.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
+    <ClCompile Include="Tianhua_Grouping_Pipe\src\graph.cpp" />
+    <ClCompile Include="Tianhua_Grouping_Pipe\src\grouping.cpp" />
+    <ClCompile Include="Tianhua_Grouping_Pipe\src\parse.cpp" />
+    <ClCompile Include="Tianhua_Grouping_Pipe\src\path.cpp" />
+    <ClCompile Include="Tianhua_Grouping_Pipe\src\region.cpp" />
+    <ClCompile Include="Tianhua_Grouping_Pipe\src\space_poly.cpp" />
     <ClCompile Include="tudelft3d\pprepair\FaceInfo.cpp" />
     <ClCompile Include="tudelft3d\pprepair\IOWorker.cpp" />
     <ClCompile Include="tudelft3d\pprepair\PlanarPartition.cpp" />
