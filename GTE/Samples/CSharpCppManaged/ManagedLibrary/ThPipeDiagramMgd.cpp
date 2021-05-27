@@ -2,7 +2,7 @@
 #include "ThPipeDiagramMgd.h"
 #include "ThWashInteropUtils.h"
 #include <region.h>
-using namespace tianhua_zju_grouping_pipe;
+using namespace GroupingPipe;
 namespace CLI
 {
 	/*String^ ThPipeSystemDiagramMgd::ProcessGroupingData(String^ input)
