@@ -32,7 +32,8 @@ namespace CSharpApplication
 
         public void TestProcessMainBranchs()
         {
-            string inputFile = @"D:\DATA\Git\GeometricTools\GTE\Samples\CSharpCppManaged\CppLibrary\GroupingPipe\data\pipe\case-0.geojson";
+            //string inputFile = @"D:\DATA\Git\GeometricTools\GTE\Samples\CSharpCppManaged\CppLibrary\GroupingPipe\data\pipe\case-0.geojson";
+            string inputFile = @"C:\Users\wangwenguang\Desktop\数据图.dwg.Info.geojson";
             string outputFile = @"D:\xx.geojson";
             ProcessMainBranchsByFileName(inputFile, outputFile);
         }
