@@ -225,7 +225,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;..\CppLibrary\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -243,6 +243,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CppLibrary.h" />
+    <ClInclude Include="GroupingPipe\include\graph.h" />
+    <ClInclude Include="GroupingPipe\include\grouping.h" />
+    <ClInclude Include="GroupingPipe\include\parse.h" />
+    <ClInclude Include="GroupingPipe\include\path.h" />
+    <ClInclude Include="GroupingPipe\include\region.h" />
+    <ClInclude Include="GroupingPipe\include\space_poly.h" />
     <ClInclude Include="Hydrant\include\CGALDef.h" />
     <ClInclude Include="Hydrant\include\connected_components.h" />
     <ClInclude Include="Hydrant\include\directed_graph.h" />
@@ -312,6 +318,12 @@
     <ClInclude Include="WPL\include\WPLPreprocess.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GroupingPipe\src\graph.cpp" />
+    <ClCompile Include="GroupingPipe\src\grouping.cpp" />
+    <ClCompile Include="GroupingPipe\src\parse.cpp" />
+    <ClCompile Include="GroupingPipe\src\path.cpp" />
+    <ClCompile Include="GroupingPipe\src\region.cpp" />
+    <ClCompile Include="GroupingPipe\src\space_poly.cpp" />
     <ClCompile Include="Hydrant\src\connected_components.cpp" />
     <ClCompile Include="Hydrant\src\directed_graph.cpp" />
     <ClCompile Include="Hydrant\src\GeoJSON.cpp" />
