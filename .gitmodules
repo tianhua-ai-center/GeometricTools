@@ -14,3 +14,6 @@
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/jsoncpp
 	url = https://github.com/open-source-parsers/jsoncpp.git
 	branch = 0.y.z
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/DCL"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/DCL
+	url = https://github.com/Junlin-Yin/DownConductorLayout.git
