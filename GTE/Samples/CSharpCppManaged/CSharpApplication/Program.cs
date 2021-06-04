@@ -29,10 +29,13 @@ namespace CSharpApplication
     {
         static void Main(string[] args)
         {
-            var prepair = new ThPolygonRepairerMgd();
-            var wkt = prepair.MakeValid("POLYGON((0 0, 10 0, 15 5, 10 0, 10 10, 0 10, 0 0))");
-            var wktReader = new WKTReader();
-            var geometry = wktReader.Read(wkt);
+            //var prepair = new ThPolygonRepairerMgd();
+            //var wkt = prepair.MakeValid("POLYGON((0 0, 10 0, 15 5, 10 0, 10 10, 0 10, 0 0))");
+            //var wktReader = new WKTReader();
+            //var geometry = wktReader.Read(wkt);
+
+            PipeDiagramTest t = new PipeDiagramTest(new CLI.ThPipeSystemDiagramMgd());
+            t.TestProcessMainBranchs();
         }
     }
 }
