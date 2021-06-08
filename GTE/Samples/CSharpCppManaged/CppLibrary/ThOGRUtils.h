@@ -4,9 +4,11 @@
 #include <memory>
 #include <iostream>
 
+class OGRPoint;
 class OGRPolygon;
 class OGRGeometry;
 class OGRLinearRing;
+class OGRMultiPoint;
 class OGRMultiPolygon;
 
 namespace THOGR
@@ -14,8 +16,10 @@ namespace THOGR
 	class ThOGRUtils
 	{
 	public:
+		static OGRPoint* CreatePoint();
 		static OGRPolygon* CreatePolygon();
 		static OGRLinearRing* CreateLinearRing();
+		static OGRMultiPoint* CreateMutliPoint();
 		static OGRMultiPolygon* CreateMultiPolygon();
 		static void ReleaseGeometry(OGRGeometry* geometry);
 	public:

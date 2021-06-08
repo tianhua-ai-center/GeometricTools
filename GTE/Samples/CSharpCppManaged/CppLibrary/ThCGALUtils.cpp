@@ -40,6 +40,20 @@ ThCGALUtils::CreatePolygon(const Polygon_with_holes& cgal)
 	return polygon;
 }
 
+OGRMultiPoint*
+ThCGALUtils::CreateMultiPoint(const std::list<Point> pts)
+{
+	OGRMultiPoint* multiPoint = ThOGRUtils::CreateMutliPoint();
+	for (auto iter = pts.begin(); iter != pts.end(); ++iter)
+	{
+		OGRPoint* point = ThOGRUtils::CreatePoint();
+		point->setX(DOUBLE(iter->x()));
+		point->setY(DOUBLE(iter->y()));
+		multiPoint->addGeometry(point);
+	}
+	return multiPoint;
+}
+
 Polygon
 ThCGALUtils::ToCGALPolygon(const OGRPolygon* ogr)
 {

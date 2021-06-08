@@ -25,6 +25,12 @@ ThOGRUtils::ToCoordinates(const OGRLinearRing* ring, std::vector<double>& coordi
 	}
 }
 
+OGRPoint* 
+ThOGRUtils::CreatePoint()
+{
+	return (OGRPoint*)OGRGeometryFactory::createGeometry(wkbPoint);
+}
+
 OGRPolygon* 
 ThOGRUtils::CreatePolygon()
 {
@@ -40,6 +46,11 @@ ThOGRUtils::CreateLinearRing()
 OGRMultiPolygon* ThOGRUtils::CreateMultiPolygon()
 {
 	return (OGRMultiPolygon*)OGRGeometryFactory::createGeometry(wkbMultiPolygon);
+}
+
+OGRMultiPoint* ThOGRUtils::CreateMutliPoint()
+{
+	return (OGRMultiPoint*)OGRGeometryFactory::createGeometry(wkbMultiPoint);
 }
 
 void ThOGRUtils::ReleaseGeometry(OGRGeometry* geometry)
