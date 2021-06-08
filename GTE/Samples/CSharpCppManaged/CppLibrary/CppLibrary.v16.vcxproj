@@ -289,6 +289,7 @@
     <ClInclude Include="mapbox\variant\include\mapbox\variant_io.hpp" />
     <ClInclude Include="mapbox\variant\include\mapbox\variant_visitor.hpp" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="ThCGALAlphaShape.h" />
     <ClInclude Include="ThCGALKernel.h" />
     <ClInclude Include="ThCGALUtils.h" />
     <ClInclude Include="ThGeometry.h" />
@@ -331,6 +332,7 @@
     <ClCompile Include="jsoncpp\src\lib_json\json_reader.cpp" />
     <ClCompile Include="jsoncpp\src\lib_json\json_value.cpp" />
     <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp" />
+    <ClCompile Include="ThCGALAlphaShape.cpp" />
     <ClCompile Include="ThCGALUtils.cpp" />
     <ClCompile Include="ThGeometryUtils.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />

@@ -30,7 +30,9 @@ namespace THCGAL {
 	typedef TK K;
 #endif
 
+	typedef K::FT	FT;
 	typedef K::Point_2 Point;
+	typedef K::Segment_2 Segment;
 	typedef CGAL::Polygon_2<K> Polygon;
 	typedef CGAL::Polygon_with_holes_2<K> Polygon_with_holes;
 }
