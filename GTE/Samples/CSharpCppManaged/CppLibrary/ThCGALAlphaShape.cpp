@@ -5,9 +5,9 @@
 
 #include "ThCGALKernel.h"
 #include <CGAL/Alpha_shape_2.h>
-#include <CGAL/Alpha_shape_vertex_base_2.h>
 #include <CGAL/Alpha_shape_face_base_2.h>
 #include <CGAL/Delaunay_triangulation_2.h>
+#include <CGAL/Alpha_shape_vertex_base_2.h>
 
 #include <CGAL/algorithm.h>
 #include <CGAL/assertions.h>
@@ -38,8 +38,9 @@ ThCGALAlphaShape::AlphaShape(const std::string& wkt)
 	OGRGeometry* geometry = ThOGRUtils::FromWKT(wkt);
 	if (geometry->getGeometryType() == wkbMultiPoint)
 	{
+		std::list<Point> points;
 		OGRMultiPoint* multiPoint = static_cast<OGRMultiPoint*>(geometry);
-		std::list<Point> points = ThCGALUtils::ToCGALPointSet(multiPoint);
+		ThCGALUtils::ToCGALPointSet(multiPoint, std::back_inserter(points));
 		Alpha_shape_2 engine(points.begin(), points.end(), FT(10000), Alpha_shape_2::GENERAL);
 		std::vector<Segment> segments;
 		alpha_edges(engine, std::back_inserter(segments));

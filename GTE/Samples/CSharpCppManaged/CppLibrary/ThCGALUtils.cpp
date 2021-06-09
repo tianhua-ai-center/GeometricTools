@@ -105,14 +105,12 @@ ThCGALUtils::ToCGALPolygon(const OGRLinearRing* ogr)
 	return Polygon(coordinates.begin(), coordinates.end());
 }
 
-std::list<Point> 
-ThCGALUtils::ToCGALPointSet(const OGRMultiPoint* multiPoint)
+template <class OutputIterator> void
+ThCGALUtils::ToCGALPointSet(const OGRMultiPoint* multiPoint, OutputIterator out)
 {
-	std::list<Point> points;
 	for (int i = 0; i < multiPoint->getNumGeometries(); ++i)
 	{
 		OGRPoint* point = static_cast<OGRPoint*>(const_cast<OGRMultiPoint*>(multiPoint)->getGeometryRef(i));
-		points.push_back(Point(point->getX(), point->getY()));
+		*out++ = Point(point->getX(), point->getY());
 	}
-	return points;
 }
