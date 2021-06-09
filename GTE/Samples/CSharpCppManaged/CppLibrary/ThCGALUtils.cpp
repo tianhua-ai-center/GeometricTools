@@ -40,18 +40,36 @@ ThCGALUtils::CreatePolygon(const Polygon_with_holes& cgal)
 	return polygon;
 }
 
+OGRPoint* ThCGALUtils::CreatePoint(const Point& pt)
+{
+	OGRPoint* point = ThOGRUtils::CreatePoint();
+	point->setX(DOUBLE(pt.x()));
+	point->setY(DOUBLE(pt.y()));
+	return point;
+}
+
 OGRMultiPoint*
-ThCGALUtils::CreateMultiPoint(const std::list<Point> pts)
+ThCGALUtils::CreateMultiPoint(const std::list<Point>& pts)
 {
 	OGRMultiPoint* multiPoint = ThOGRUtils::CreateMutliPoint();
 	for (auto iter = pts.begin(); iter != pts.end(); ++iter)
 	{
-		OGRPoint* point = ThOGRUtils::CreatePoint();
-		point->setX(DOUBLE(iter->x()));
-		point->setY(DOUBLE(iter->y()));
-		multiPoint->addGeometry(point);
+		multiPoint->addGeometry(CreatePoint(*iter));
 	}
 	return multiPoint;
+}
+
+OGRMultiLineString* 
+ThCGALUtils::CreateMultiLineString(const std::vector<Segment>& segments)
+{
+	OGRMultiLineString* multiString = ThOGRUtils::CreateMultiLineString();
+	for (auto iter = segments.begin(); iter != segments.end(); ++iter)
+	{
+		OGRLineString* lineString = ThOGRUtils::CreateLineString();
+		lineString->addPoint(CreatePoint(iter->source()));
+		lineString->addPoint(CreatePoint(iter->target()));
+	}
+	return multiString;
 }
 
 Polygon
@@ -85,4 +103,16 @@ ThCGALUtils::ToCGALPolygon(const OGRLinearRing* ogr)
 		coordinates.push_back(Point(ogr->getX(i), ogr->getY(i)));
 	}
 	return Polygon(coordinates.begin(), coordinates.end());
+}
+
+std::list<Point> 
+ThCGALUtils::ToCGALPointSet(const OGRMultiPoint* multiPoint)
+{
+	std::list<Point> points;
+	for (int i = 0; i < multiPoint->getNumGeometries(); ++i)
+	{
+		OGRPoint* point = static_cast<OGRPoint*>(const_cast<OGRMultiPoint*>(multiPoint)->getGeometryRef(i));
+		points.push_back(Point(point->getX(), point->getY()));
+	}
+	return points;
 }

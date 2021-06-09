@@ -37,6 +37,12 @@ ThOGRUtils::CreatePolygon()
 	return (OGRPolygon*)OGRGeometryFactory::createGeometry(wkbPolygon);
 }
 
+OGRLineString* 
+ThOGRUtils::CreateLineString()
+{
+	return (OGRLineString*)OGRGeometryFactory::createGeometry(wkbLineString);
+}
+
 OGRLinearRing* 
 ThOGRUtils::CreateLinearRing()
 {
@@ -51,6 +57,11 @@ OGRMultiPolygon* ThOGRUtils::CreateMultiPolygon()
 OGRMultiPoint* ThOGRUtils::CreateMutliPoint()
 {
 	return (OGRMultiPoint*)OGRGeometryFactory::createGeometry(wkbMultiPoint);
+}
+
+OGRMultiLineString* ThOGRUtils::CreateMultiLineString()
+{
+	return (OGRMultiLineString*)OGRGeometryFactory::createGeometry(wkbMultiLineString);
 }
 
 void ThOGRUtils::ReleaseGeometry(OGRGeometry* geometry)
