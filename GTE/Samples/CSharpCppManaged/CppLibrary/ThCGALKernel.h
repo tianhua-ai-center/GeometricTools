@@ -33,6 +33,7 @@ namespace THCGAL {
 	typedef K::FT	FT;
 	typedef K::Point_2 Point;
 	typedef K::Segment_2 Segment;
+	typedef K::Iso_rectangle_2 Envelope;
 	typedef CGAL::Polygon_2<K> Polygon;
 	typedef CGAL::Polygon_with_holes_2<K> Polygon_with_holes;
 }

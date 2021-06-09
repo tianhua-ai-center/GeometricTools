@@ -21,6 +21,7 @@ namespace THCGAL
 		static OGRPoint* CreatePoint(const Point& pt);
 		static OGRPolygon* CreatePolygon(const Polygon& cgal);
 		static OGRLinearRing* CreateLinearRing(const Polygon& cgal);
+		static OGRLinearRing* CreateLinearRing(const Envelope& env);
 		static OGRPolygon* CreatePolygon(const Polygon_with_holes& cgal);
 		static OGRMultiPoint* CreateMultiPoint(const std::list<Point>& pts);
 		static OGRMultiLineString* CreateMultiLineString(const std::vector<Segment>& segments);

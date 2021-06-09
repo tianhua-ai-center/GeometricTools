@@ -24,6 +24,18 @@ ThCGALUtils::CreateLinearRing(const Polygon& cgal)
 	return ring;
 }
 
+OGRLinearRing* 
+ThCGALUtils::CreateLinearRing(const Envelope& env)
+{
+	OGRLinearRing* ring = ThOGRUtils::CreateLinearRing();
+	for (int i = 0; i < 4; i++)
+	{
+		ring->addPoint(DOUBLE(env[i].x()), DOUBLE(env[i].y()));
+	}
+	ring->closeRings();
+	return ring;
+}
+
 OGRPolygon* 
 ThCGALUtils::CreatePolygon(const Polygon_with_holes& cgal)
 {
