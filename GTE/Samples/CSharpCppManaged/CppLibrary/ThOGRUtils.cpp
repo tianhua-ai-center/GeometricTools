@@ -118,7 +118,8 @@ OGRGeometry* ThOGRUtils::FromWKT(const std::string& wkt)
 		return nullptr;
 	}
 	if ((geometry->getGeometryType() != wkbPolygon) &&
-		(geometry->getGeometryType() != wkbMultiPolygon)) {
+		(geometry->getGeometryType() != wkbMultiPolygon) &&
+		(geometry->getGeometryType() != wkbMultiPoint)) {
 		std::cerr << "Error: geometry must be Polygon or MultiPolygon" << std::endl;
 		return nullptr;
 	}

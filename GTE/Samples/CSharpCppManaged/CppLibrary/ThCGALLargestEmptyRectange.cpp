@@ -19,7 +19,8 @@ ThCGALLargestEmptyRectange::Build(const std::string& wkt)
 		std::list<Point> points;
 		OGRMultiPoint* multiPoint = static_cast<OGRMultiPoint*>(geometry);
 		ThCGALUtils::ToCGALPointSet(multiPoint, points);
-		CGAL::Largest_empty_iso_rectangle_2<K> builder;
+		Envelope bbox = CGAL::bounding_box(points.begin(), points.end());
+		CGAL::Largest_empty_iso_rectangle_2<K> builder(bbox);
 		builder.insert(points.begin(), points.end());
 		Envelope env = builder.get_largest_empty_iso_rectangle();
 		return ThOGRUtils::ToWKT(ThCGALUtils::CreateLinearRing(env));
