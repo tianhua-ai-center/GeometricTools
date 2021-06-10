@@ -15,5 +15,6 @@ namespace CLI
 		//String^ ProcessGroupingData(String^ input);
 		//String^ ProcessGroupesMerge(String^ input);
 		String^ ProcessMainBranchs(String^ input);
+		String^ ProcessGrouping(String^ input);
 	};
 }

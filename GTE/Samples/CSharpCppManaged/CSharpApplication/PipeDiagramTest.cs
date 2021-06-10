@@ -30,12 +30,26 @@ namespace CSharpApplication
             File.WriteAllText(outputFile, output);
         }
 
+        public void ProcessGroupingByFileName(string inputFile, string outputFile)
+        {
+            string inputGeoJson = File.ReadAllText(inputFile);
+            var output = SystemDiagramMethods.ProcessGrouping(inputGeoJson);
+            File.WriteAllText(outputFile, output);
+        }
+
         public void TestProcessMainBranchs()
         {
             //string inputFile = @"D:\DATA\Git\GeometricTools\GTE\Samples\CSharpCppManaged\CppLibrary\GroupingPipe\data\pipe\case-0.geojson";
-            string inputFile = @"C:\Users\wangwenguang\Desktop\数据图.dwg.Info.geojson";
-            string outputFile = @"D:\xx.geojson";
+            string inputFile = @"C:\Users\wangwenguang\Desktop\test.geojson";
+            string outputFile = @"D:\mainbranch.geojson";
             ProcessMainBranchsByFileName(inputFile, outputFile);
+        }
+
+        public void TestProcessGrouping()
+        {
+            string inputFile = @"C:\Users\wangwenguang\Desktop\test.geojson";
+            string outputFile = @"D:\grouping.geojson";
+            ProcessGroupingByFileName(inputFile, outputFile);
         }
     }
 }
