@@ -17,3 +17,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/DCL"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/DCL
 	url = https://github.com/Junlin-Yin/DownConductorLayout.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/AFAS"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/AFAS
+	url = https://github.com/nsdhome/fire-alarm.git
