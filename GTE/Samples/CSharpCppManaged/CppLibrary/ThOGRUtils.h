@@ -4,19 +4,27 @@
 #include <memory>
 #include <iostream>
 
+class OGRPoint;
 class OGRPolygon;
 class OGRGeometry;
+class OGRLineString;
 class OGRLinearRing;
+class OGRMultiPoint;
 class OGRMultiPolygon;
+class OGRMultiLineString;
 
 namespace THOGR
 {
 	class ThOGRUtils
 	{
 	public:
+		static OGRPoint* CreatePoint();
 		static OGRPolygon* CreatePolygon();
+		static OGRLineString* CreateLineString();
 		static OGRLinearRing* CreateLinearRing();
+		static OGRMultiPoint* CreateMutliPoint();
 		static OGRMultiPolygon* CreateMultiPolygon();
+		static OGRMultiLineString* CreateMultiLineString();
 		static void ReleaseGeometry(OGRGeometry* geometry);
 	public:
 		static OGRLinearRing* ToOGRLinearRing(const std::vector<double>& coords);
