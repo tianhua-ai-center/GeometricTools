@@ -20,3 +20,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/AFAS"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/AFAS
 	url = https://github.com/nsdhome/fire-alarm.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/GroupingPipe"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/GroupingPipe
+	url = https://github.com/zjj1997zju/Tianhua_Grouping_Pipe.git

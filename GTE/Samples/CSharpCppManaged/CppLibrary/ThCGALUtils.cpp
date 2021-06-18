@@ -24,6 +24,18 @@ ThCGALUtils::CreateLinearRing(const Polygon& cgal)
 	return ring;
 }
 
+OGRLinearRing* 
+ThCGALUtils::CreateLinearRing(const Envelope& env)
+{
+	OGRLinearRing* ring = ThOGRUtils::CreateLinearRing();
+	for (int i = 0; i < 4; i++)
+	{
+		ring->addPoint(DOUBLE(env[i].x()), DOUBLE(env[i].y()));
+	}
+	ring->closeRings();
+	return ring;
+}
+
 OGRPolygon* 
 ThCGALUtils::CreatePolygon(const Polygon_with_holes& cgal)
 {
@@ -38,6 +50,38 @@ ThCGALUtils::CreatePolygon(const Polygon_with_holes& cgal)
 	}
 
 	return polygon;
+}
+
+OGRPoint* ThCGALUtils::CreatePoint(const Point& pt)
+{
+	OGRPoint* point = ThOGRUtils::CreatePoint();
+	point->setX(DOUBLE(pt.x()));
+	point->setY(DOUBLE(pt.y()));
+	return point;
+}
+
+OGRMultiPoint*
+ThCGALUtils::CreateMultiPoint(const std::list<Point>& pts)
+{
+	OGRMultiPoint* multiPoint = ThOGRUtils::CreateMutliPoint();
+	for (auto iter = pts.begin(); iter != pts.end(); ++iter)
+	{
+		multiPoint->addGeometry(CreatePoint(*iter));
+	}
+	return multiPoint;
+}
+
+OGRMultiLineString* 
+ThCGALUtils::CreateMultiLineString(const std::vector<Segment>& segments)
+{
+	OGRMultiLineString* multiString = ThOGRUtils::CreateMultiLineString();
+	for (auto iter = segments.begin(); iter != segments.end(); ++iter)
+	{
+		OGRLineString* lineString = ThOGRUtils::CreateLineString();
+		lineString->addPoint(CreatePoint(iter->source()));
+		lineString->addPoint(CreatePoint(iter->target()));
+	}
+	return multiString;
 }
 
 Polygon
@@ -71,4 +115,14 @@ ThCGALUtils::ToCGALPolygon(const OGRLinearRing* ogr)
 		coordinates.push_back(Point(ogr->getX(i), ogr->getY(i)));
 	}
 	return Polygon(coordinates.begin(), coordinates.end());
+}
+
+void 
+ThCGALUtils::ToCGALPointSet(const OGRMultiPoint* multiPoint, std::list<Point>& pts)
+{
+	for (int i = 0; i < multiPoint->getNumGeometries(); ++i)
+	{
+		OGRPoint* point = static_cast<OGRPoint*>(const_cast<OGRMultiPoint*>(multiPoint)->getGeometryRef(i));
+		pts.push_back(Point(point->getX(), point->getY()));
+	}
 }

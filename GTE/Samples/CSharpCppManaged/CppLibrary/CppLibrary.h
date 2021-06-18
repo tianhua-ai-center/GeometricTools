@@ -3,3 +3,4 @@
 #include "ThPolygonRepairer.h"
 #include "ThMPolygonRepairer.h"
 #include "ThWashPointLayoutEngine.h"
+#include "ThCGALAlphaShape.h"

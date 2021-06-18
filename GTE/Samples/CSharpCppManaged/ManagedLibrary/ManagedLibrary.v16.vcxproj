@@ -198,7 +198,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;CGAL_HEADER_ONLY;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;..\CppLibrary;..\CppLibrary\polypartition\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;..\CppLibrary;..\CppLibrary\polypartition\src;..\CppLibrary\GroupingPipe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib</AdditionalDependencies>
@@ -261,6 +261,7 @@
   <ItemGroup>
     <ClInclude Include="clix.hpp" />
     <ClInclude Include="ManagedObject.h" />
+    <ClInclude Include="ThCGALAlphaShapeMgd.h" />
     <ClInclude Include="ThHydrantEngineMgd.h" />
     <ClInclude Include="ThMPolygonRepairerMgd.h" />
     <ClInclude Include="ThPipeDiagramMgd.h" />
@@ -270,6 +271,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="ThCGALAlphaShapeMgd.cpp" />
     <ClCompile Include="ThHydrantEngineMgd.cpp" />
     <ClCompile Include="ThMPolygonRepairerMgd.cpp" />
     <ClCompile Include="ThPipeDiagramMgd.cpp" />
