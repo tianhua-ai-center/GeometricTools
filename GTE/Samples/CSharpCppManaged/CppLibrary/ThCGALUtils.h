@@ -28,8 +28,7 @@ namespace THCGAL
 	public:
 		static Polygon ToCGALPolygon(const OGRPolygon* ogr);
 		static Polygon_with_holes ToCGALPolygonEx(const OGRPolygon* ogr);
-		template <class OutputIterator> 
-		static void ToCGALPointSet(const OGRMultiPoint* multiPoint, OutputIterator out);
+		static void ToCGALPointSet(const OGRMultiPoint* multiPoint, std::list<Point>& pts);
 	private:
 		static Polygon ToCGALPolygon(const OGRLinearRing* ogr);
 	};

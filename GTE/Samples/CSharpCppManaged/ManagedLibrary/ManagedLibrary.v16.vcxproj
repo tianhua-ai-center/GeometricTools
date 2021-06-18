@@ -261,6 +261,7 @@
   <ItemGroup>
     <ClInclude Include="clix.hpp" />
     <ClInclude Include="ManagedObject.h" />
+    <ClInclude Include="ThCGALAlphaShapeMgd.h" />
     <ClInclude Include="ThHydrantEngineMgd.h" />
     <ClInclude Include="ThMPolygonRepairerMgd.h" />
     <ClInclude Include="ThPipeDiagramMgd.h" />
@@ -270,6 +271,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="ThCGALAlphaShapeMgd.cpp" />
     <ClCompile Include="ThHydrantEngineMgd.cpp" />
     <ClCompile Include="ThMPolygonRepairerMgd.cpp" />
     <ClCompile Include="ThPipeDiagramMgd.cpp" />

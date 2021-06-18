@@ -40,7 +40,7 @@ ThCGALAlphaShape::AlphaShape(const std::string& wkt)
 	{
 		std::list<Point> points;
 		OGRMultiPoint* multiPoint = static_cast<OGRMultiPoint*>(geometry);
-		ThCGALUtils::ToCGALPointSet(multiPoint, std::back_inserter(points));
+		ThCGALUtils::ToCGALPointSet(multiPoint, points);
 		Alpha_shape_2 engine(points.begin(), points.end(), FT(10000), Alpha_shape_2::GENERAL);
 		std::vector<Segment> segments;
 		alpha_edges(engine, std::back_inserter(segments));
