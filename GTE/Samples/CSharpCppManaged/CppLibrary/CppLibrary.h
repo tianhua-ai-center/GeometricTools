@@ -4,4 +4,3 @@
 #include "ThMPolygonRepairer.h"
 #include "ThWashPointLayoutEngine.h"
 #include "ThCGALAlphaShape.h"
-#include "ThCGALLargestEmptyRectange.h"
