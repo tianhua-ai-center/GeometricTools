@@ -23,3 +23,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/GroupingPipe"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/GroupingPipe
 	url = https://github.com/zjj1997zju/Tianhua_Grouping_Pipe.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/CenterLine"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/CenterLine
+	url = https://github.com/Asm-Def/PolygonCenterLine_clamping.git
