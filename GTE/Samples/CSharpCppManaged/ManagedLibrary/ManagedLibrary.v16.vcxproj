@@ -284,7 +284,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(CGAL4_GMP)\lib;$(GDAL2_DIR)\v120\lib;$(BOOST_LIBRARYDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CGAL4_GMP)\lib;$(GDAL2_DIR)\v120\lib;$(BOOST_DIR)\lib64-msvc-12.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -358,7 +358,7 @@
     <Link>
       <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>$(GDAL2_DIR)\v120\lib;$(CGAL4_GMP)\lib;$(BOOST_LIBRARYDIR)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(GDAL2_DIR)\v120\lib;$(CGAL4_GMP)\lib;$(BOOST_DIR)\lib64-msvc-12.0</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2018|x64'">
