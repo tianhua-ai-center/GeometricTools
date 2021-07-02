@@ -228,7 +228,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;.\GroupingPipe\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;.\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -246,7 +246,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;.\GroupingPipe\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;.\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -322,7 +322,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;..\CppLibrary\GroupingPipe\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;..\CppLibrary\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -346,7 +346,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;.\WPL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;..\CppLibrary\GroupingPipe\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\tudelft3d\prepair;.\tudelft3d\pprepair;..\CppLibrary\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -364,6 +364,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CppLibrary.h" />
+    <ClInclude Include="DCL\include\CGALUtils.h" />
+    <ClInclude Include="DCL\include\DCData.h" />
+    <ClInclude Include="DCL\include\DCIO.h" />
+    <ClInclude Include="DCL\include\DCLayoutEngine.h" />
+    <ClInclude Include="DCL\include\DCParam.h" />
+    <ClInclude Include="DCL\include\RBush.hpp" />
+    <ClInclude Include="DCL\include\stdafx.h" />
     <ClInclude Include="GroupingPipe\include\graph.h" />
     <ClInclude Include="GroupingPipe\include\grouping.h" />
     <ClInclude Include="GroupingPipe\include\parse.h" />
@@ -433,6 +440,12 @@
     <ClInclude Include="WPL\include\WPLPreprocess.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DCL\src\CGALUtils.cpp" />
+    <ClCompile Include="DCL\src\DCAClassLocator.cpp" />
+    <ClCompile Include="DCL\src\DCBClassLocator.cpp" />
+    <ClCompile Include="DCL\src\DCData.cpp" />
+    <ClCompile Include="DCL\src\DCIO.cpp" />
+    <ClCompile Include="DCL\src\DCLayoutEngine.cpp" />
     <ClCompile Include="GroupingPipe\src\graph.cpp" />
     <ClCompile Include="GroupingPipe\src\grouping.cpp" />
     <ClCompile Include="GroupingPipe\src\parse.cpp" />
