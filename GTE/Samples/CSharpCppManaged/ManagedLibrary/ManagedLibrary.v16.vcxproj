@@ -56,7 +56,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>ManagedLibrary</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -144,7 +144,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2018|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -292,13 +292,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;CGAL_HEADER_ONLY;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;CGAL_HAS_NO_THREADS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;..\CppLibrary;..\CppLibrary\polypartition\src;..\CppLibrary\GroupingPipe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(CGAL5_GMP)\lib;$(GDAL2_DIR)\v140\lib;$(BOOST_LIBRARYDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib;libboost_locale-vc140-mt-gd-x64-1_70.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CGAL5_GMP)\lib;$(GDAL2_DIR)\v140\lib;$(BOOST_DIR)\lib64-msvc-14.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -364,14 +364,14 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-ACAD2018|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;CGAL_HAS_NO_THREADS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;..\CppLibrary;..\CppLibrary\GroupingPipe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;..\CppLibrary;..\CppLibrary\GroupingPipe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib;libboost_locale-vc140-mt-x64-1_70.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>$(GDAL2_DIR)\v120\lib;$(CGAL4_GMP)\lib;$(BOOST_LIBRARYDIR)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(CGAL5_GMP)\lib;$(GDAL2_DIR)\v140\lib;$(BOOST_DIR)\lib64-msvc-14.0</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -384,7 +384,6 @@
     <ClInclude Include="ManagedObject.h" />
     <ClInclude Include="ThCGALAlphaShapeMgd.h" />
     <ClInclude Include="ThHydrantEngineMgd.h" />
-    <ClInclude Include="ThMPolygonRepairerMgd.h" />
     <ClInclude Include="ThPipeDiagramMgd.h" />
     <ClInclude Include="ThPolygonRepairerMgd.h" />
     <ClInclude Include="ThWashInteropUtils.h" />
@@ -394,7 +393,6 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="ThCGALAlphaShapeMgd.cpp" />
     <ClCompile Include="ThHydrantEngineMgd.cpp" />
-    <ClCompile Include="ThMPolygonRepairerMgd.cpp" />
     <ClCompile Include="ThPipeDiagramMgd.cpp" />
     <ClCompile Include="ThPolygonRepairerMgd.cpp" />
     <ClCompile Include="ThWashInteropUtils.cpp" />

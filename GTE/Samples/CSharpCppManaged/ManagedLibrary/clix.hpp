@@ -120,14 +120,14 @@ namespace clix {
 
       private:
         // Converts a byte array based on the selected encoding
-        template<Encoding encoding> static System::String ^decode(array<unsigned char> ^bytes);
-        template<> static System::String ^decode<E_ANSI>(array<unsigned char> ^bytes) {
+        template<Encoding encoding> static System::String ^decode(cli::array<unsigned char> ^bytes);
+        template<> static System::String ^decode<E_ANSI>(cli::array<unsigned char> ^bytes) {
           return System::Text::Encoding::Default->GetString(bytes);
         }
-        template<> static System::String ^decode<E_UTF8>(array<unsigned char> ^bytes) {
+        template<> static System::String ^decode<E_UTF8>(cli::array<unsigned char> ^bytes) {
           return System::Text::Encoding::UTF8->GetString(bytes);
         }
-        template<> static System::String ^decode<E_UTF16>(array<unsigned char> ^bytes) {
+        template<> static System::String ^decode<E_UTF16>(cli::array<unsigned char> ^bytes) {
           return System::Text::Encoding::Unicode->GetString(bytes);
         }
     };
@@ -147,7 +147,7 @@ namespace clix {
         }
 
         // First, we use .NET's encoding classes to convert the string into a byte array
-        array<unsigned char> ^bytes = encode<encoding>(string);
+        cli::array<unsigned char> ^bytes = encode<encoding>(string);
 
         // Then we construct our native string from that byte array
         pin_ptr<unsigned char> pinnedBytes(&bytes[0]);
@@ -167,14 +167,14 @@ namespace clix {
 
       private:
         // Converts a string based on the selected encoding
-        template<Encoding encoding> static array<unsigned char> ^encode(System::String ^string);
-        template<> static array<unsigned char> ^encode<E_ANSI>(System::String ^string) {
+        template<Encoding encoding> static cli::array<unsigned char> ^encode(System::String ^string);
+        template<> static cli::array<unsigned char> ^encode<E_ANSI>(System::String ^string) {
           return System::Text::Encoding::Default->GetBytes(string);
         }
-        template<> static array<unsigned char> ^encode<E_UTF8>(System::String ^string) {
+        template<> static cli::array<unsigned char> ^encode<E_UTF8>(System::String ^string) {
           return System::Text::Encoding::UTF8->GetBytes(string);
         }
-        template<> static array<unsigned char> ^encode<E_UTF16>(System::String ^string) {
+        template<> static cli::array<unsigned char> ^encode<E_UTF16>(System::String ^string) {
           return System::Text::Encoding::Unicode->GetBytes(string);
         }
 
