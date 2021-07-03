@@ -400,8 +400,6 @@
     <ClInclude Include="ThCGALKernel.h" />
     <ClInclude Include="ThCGALUtils.h" />
     <ClInclude Include="ThDCLayoutEngine.h" />
-    <ClInclude Include="ThGeometry.h" />
-    <ClInclude Include="ThGeometryUtils.h" />
     <ClInclude Include="ThHydrantEngine.h" />
     <ClInclude Include="ThOGRUtils.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
@@ -438,7 +436,6 @@
     <ClCompile Include="ThCGALAlphaShape.cpp" />
     <ClCompile Include="ThCGALUtils.cpp" />
     <ClCompile Include="ThDCLayoutEngine.cpp" />
-    <ClCompile Include="ThGeometryUtils.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />
     <ClCompile Include="ThOGRUtils.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
