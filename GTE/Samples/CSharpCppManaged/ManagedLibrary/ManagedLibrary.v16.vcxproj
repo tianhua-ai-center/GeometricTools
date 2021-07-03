@@ -385,7 +385,6 @@
     <ClInclude Include="ThCGALAlphaShapeMgd.h" />
     <ClInclude Include="ThHydrantEngineMgd.h" />
     <ClInclude Include="ThPipeDiagramMgd.h" />
-    <ClInclude Include="ThPolygonRepairerMgd.h" />
     <ClInclude Include="ThWashInteropUtils.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
   </ItemGroup>
@@ -394,7 +393,6 @@
     <ClCompile Include="ThCGALAlphaShapeMgd.cpp" />
     <ClCompile Include="ThHydrantEngineMgd.cpp" />
     <ClCompile Include="ThPipeDiagramMgd.cpp" />
-    <ClCompile Include="ThPolygonRepairerMgd.cpp" />
     <ClCompile Include="ThWashInteropUtils.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
   </ItemGroup>
