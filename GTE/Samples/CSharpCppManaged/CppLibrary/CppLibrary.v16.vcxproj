@@ -399,6 +399,7 @@
     <ClInclude Include="ThCGALAlphaShape.h" />
     <ClInclude Include="ThCGALKernel.h" />
     <ClInclude Include="ThCGALUtils.h" />
+    <ClInclude Include="ThDCLayoutEngine.h" />
     <ClInclude Include="ThGeometry.h" />
     <ClInclude Include="ThGeometryUtils.h" />
     <ClInclude Include="ThHydrantEngine.h" />
@@ -436,6 +437,7 @@
     <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp" />
     <ClCompile Include="ThCGALAlphaShape.cpp" />
     <ClCompile Include="ThCGALUtils.cpp" />
+    <ClCompile Include="ThDCLayoutEngine.cpp" />
     <ClCompile Include="ThGeometryUtils.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />
     <ClCompile Include="ThOGRUtils.cpp" />

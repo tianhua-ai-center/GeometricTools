@@ -1,6 +1,5 @@
 #pragma once
 #include "ThHydrantEngine.h"
-#include "ThPolygonRepairer.h"
-#include "ThMPolygonRepairer.h"
-#include "ThWashPointLayoutEngine.h"
 #include "ThCGALAlphaShape.h"
+#include "ThDCLayoutEngine.h"
+#include "ThWashPointLayoutEngine.h"
