@@ -17,14 +17,14 @@ namespace CLI
         void ReadFromContent(String^ geojson);
     };
 
-	public ref class ThDCParamMgd : public ManagedObject<gte::ThDCParam>
-	{
-	public:
-		ThDCParamMgd(int type) : ManagedObject(new gte::ThDCParam(type))
-		{
-			//
-		}
-	};
+    public ref class ThDCParamMgd : public ManagedObject<gte::ThDCParam>
+    {
+    public:
+        ThDCParamMgd(int type) : ManagedObject(new gte::ThDCParam(type))
+        {
+            //
+        }
+    };
 
 
     public ref class ThDCLayoutEngineMgd : public ManagedObject<gte::ThDCLayoutEngine>

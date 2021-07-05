@@ -278,7 +278,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;CGAL_HEADER_ONLY;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;CGAL_HEADER_ONLY;CGAL_HAS_NO_THREADS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;..\CppLibrary;..\CppLibrary\polypartition\src;..\CppLibrary\GroupingPipe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

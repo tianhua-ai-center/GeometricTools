@@ -1,7 +1,5 @@
 #include "ThDCLayoutEngineMgd.h"
 #include "ThWashInteropUtils.h"
-#include "DCL/include/DCData.h"
-#include "DCL/include/DCParam.h"
 #include "DCL/include/DCLayoutEngine.h"
 
 namespace CLI

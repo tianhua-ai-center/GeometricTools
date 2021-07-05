@@ -231,6 +231,9 @@
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
     </ClCompile>
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
@@ -249,6 +252,9 @@
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
@@ -324,6 +330,9 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -348,6 +357,9 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;DRIVER="GeoJSON";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

@@ -28,9 +28,9 @@ ThDCParam::ThDCParam(int type)
 std::string 
 ThDCLayoutEngine::Run(ThDCData* data, ThDCParam* param)
 {
-	std::unique_ptr<DCLayoutEngine> engine(new DCLayoutEngine());
-	engine->layout(data->Get(), param->Get());
-	std::unique_ptr<DCIO> io(new DCIO);
-	return io->write_to_string(data->Get());
+    std::unique_ptr<DCLayoutEngine> engine(new DCLayoutEngine());
+    engine->layout(data->Get(), param->Get());
+    std::unique_ptr<DCIO> io(new DCIO);
+    return io->write_to_string(data->Get());
 }
 
