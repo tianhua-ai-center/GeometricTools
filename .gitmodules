@@ -20,3 +20,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/CenterLine"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/CenterLine
 	url = https://github.com/Asm-Def/PolygonCenterLine_clamping.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/utfcpp"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/utfcpp
+	url = https://github.com/nemtrif/utfcpp.git
