@@ -415,6 +415,12 @@
     <ClInclude Include="ThHydrantEngine.h" />
     <ClInclude Include="ThOGRUtils.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
+    <ClInclude Include="utfcpp\source\utf8.h" />
+    <ClInclude Include="utfcpp\source\utf8\checked.h" />
+    <ClInclude Include="utfcpp\source\utf8\core.h" />
+    <ClInclude Include="utfcpp\source\utf8\cpp11.h" />
+    <ClInclude Include="utfcpp\source\utf8\cpp17.h" />
+    <ClInclude Include="utfcpp\source\utf8\unchecked.h" />
     <ClInclude Include="WPL\include\Basic.h" />
     <ClInclude Include="WPL\include\CGALDef.h" />
     <ClInclude Include="WPL\include\GeoData.h" />
