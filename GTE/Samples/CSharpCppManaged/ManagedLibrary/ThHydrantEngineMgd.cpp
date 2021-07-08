@@ -31,12 +31,12 @@ namespace CLI
 
 		std::vector<string> regions;
 		mInstance->Validate(geojson, *context->GetInstance(), regions);
-		auto results = gcnew cli::array<String^>(regions.size());
-		for (size_t i = 0; i < regions.size(); i++)
+		int nSize = (int)regions.size();
+		auto results = gcnew cli::array<String^>(nSize);
+		for (int i = 0; i < nSize; i++)
 		{
 			results[i] = MarshalNativeString(regions[i]);
 		}
-
 		return results;
 	}
 }

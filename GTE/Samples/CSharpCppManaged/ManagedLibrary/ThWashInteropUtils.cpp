@@ -23,7 +23,8 @@ void MarshalBindaryBuffer(cli::array<Byte>^ buffer, std::vector<unsigned char>& 
 
 cli::array<Byte>^ MarshalNativeBindaryBuffer(std::vector<unsigned char>& nbuffer)
 {
-	cli::array<Byte>^ buffer = gcnew cli::array<Byte>(nbuffer.size());
-	Marshal::Copy((IntPtr)nbuffer.data(), buffer, 0, nbuffer.size());
+	int nSize = (int)nbuffer.size();
+	cli::array<Byte>^ buffer = gcnew cli::array<Byte>(nSize);
+	Marshal::Copy((IntPtr)nbuffer.data(), buffer, 0, nSize);
 	return buffer;
 }
