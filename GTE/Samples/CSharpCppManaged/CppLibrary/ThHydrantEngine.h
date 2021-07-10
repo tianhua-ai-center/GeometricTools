@@ -3,7 +3,7 @@
 
 namespace gte
 {
-	struct ThProtectionContext
+	struct THMODULE_EXPORT ThProtectionContext
 	{
 		// Ïû»ðË¨Ë®Áú´ø°ë¾¶
 		double hydrant_hose_length;
@@ -11,7 +11,7 @@ namespace gte
 		double hydrant_clearance_radius;
 	};
 
-	class ThHydrantEngine
+	class THMODULE_EXPORT ThHydrantEngine
 	{
 	public:
 		void Validate(const std::string& geojson, const ThProtectionContext& context, std::vector<std::string>& result);
