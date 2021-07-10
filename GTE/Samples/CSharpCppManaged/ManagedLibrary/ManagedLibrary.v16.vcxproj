@@ -382,21 +382,19 @@
   <ItemGroup>
     <ClInclude Include="clix.hpp" />
     <ClInclude Include="ManagedObject.h" />
-    <ClInclude Include="ThCGALAlphaShapeMgd.h" />
     <ClInclude Include="ThDCLayoutEngineMgd.h" />
     <ClInclude Include="ThHydrantEngineMgd.h" />
-    <ClInclude Include="ThPipeDiagramMgd.h" />
+    <ClInclude Include="ThPipeSystemDiagramMgd.h" />
     <ClInclude Include="ThWashInteropUtils.h" />
-    <ClInclude Include="ThWashPointLayoutEngine.h" />
+    <ClInclude Include="ThWashPointLayoutEngineMgd.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="ThCGALAlphaShapeMgd.cpp" />
     <ClCompile Include="ThDCLayoutEngineMgd.cpp" />
     <ClCompile Include="ThHydrantEngineMgd.cpp" />
-    <ClCompile Include="ThPipeDiagramMgd.cpp" />
+    <ClCompile Include="ThPipeSystemDiagramMgd.cpp" />
     <ClCompile Include="ThWashInteropUtils.cpp" />
-    <ClCompile Include="ThWashPointLayoutEngine.cpp" />
+    <ClCompile Include="ThWashPointLayoutEngineMgd.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CppLibrary\CppLibrary.v16.vcxproj">

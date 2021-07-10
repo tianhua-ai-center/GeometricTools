@@ -419,6 +419,7 @@
     <ClInclude Include="ThCGALAlphaShape.h" />
     <ClInclude Include="ThCGALKernel.h" />
     <ClInclude Include="ThCGALUtils.h" />
+    <ClInclude Include="ThCppUtils.h" />
     <ClInclude Include="ThDCLayoutEngine.h" />
     <ClInclude Include="ThHydrantEngine.h" />
     <ClInclude Include="ThOGRUtils.h" />
