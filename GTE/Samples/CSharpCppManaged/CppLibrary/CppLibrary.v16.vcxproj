@@ -422,6 +422,7 @@
     <ClInclude Include="ThDCLayoutEngine.h" />
     <ClInclude Include="ThHydrantEngine.h" />
     <ClInclude Include="ThOGRUtils.h" />
+    <ClInclude Include="ThPipeSystemDiagram.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
     <ClInclude Include="utfcpp\source\utf8.h" />
     <ClInclude Include="utfcpp\source\utf8\checked.h" />
@@ -464,6 +465,7 @@
     <ClCompile Include="ThDCLayoutEngine.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />
     <ClCompile Include="ThOGRUtils.cpp" />
+    <ClCompile Include="ThPipeSystemDiagram.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
     <ClCompile Include="WPL\src\GeoData.cpp" />
     <ClCompile Include="WPL\src\GeoJSONParser.cpp" />
