@@ -2,6 +2,7 @@
 #include "ThOGRUtils.h"
 #include "ogr_geometry.h"
 #include "DCL/include/DCIO.h"
+#include "DCL/include/DCData.h"
 #include "DCL/include/DCParam.h"
 #include "DCL/include/DCLayoutEngine.h"
 

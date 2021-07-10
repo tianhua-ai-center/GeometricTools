@@ -1,11 +1,13 @@
-#include <vector>
-#include <memory>
+#include "ThWashPointLayoutEngine.h"
+#include "ThOGRUtils.h"
+#include "ogr_geometry.h"
 #include "WPL/include/IO.h"
 #include "WPL/include/Basic.h"
 #include "WPL/include/GeoData.h"
 #include "WPL/include/WPLEngine.h"
-#include "ThWashPointLayoutEngine.h"
+
 using namespace gte;
+using namespace THOGR;
 
 ThWashGeoData::ThWashGeoData()
 {
