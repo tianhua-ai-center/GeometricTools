@@ -1,36 +1,36 @@
 #pragma once
 #include "stdafx.h"
 
-struct DCData;
-struct DCParam;
-
 namespace gte
 {
-    struct ThDCData
+    class THMODULE_EXPORT ThDCData
     {
+    public:
+        ThDCData();
+        ~ThDCData();
     public:
         void ReadFromFile(const std::string& path);
         void ReadFromContent(const std::string& geojson);
     public:
-        DCData* Get() { return Content.get(); }
+        void* GetImpl() { return Impl; }
     private:
-        std::unique_ptr<DCData> Content;
+        void* Impl;
     };
 
-    struct ThDCParam
+    class THMODULE_EXPORT ThDCParam
     {
-    public: 
-        ThDCParam(int type);
     public:
-        const DCParam* Get() { return Parameter.get(); }
+        ThDCParam(int type);
+        ~ThDCParam();
+    public:
+        void* GetImpl() { return Impl; }
     private:
-        std::unique_ptr<DCParam> Parameter;
+        void* Impl;
     };
 
-    class ThDCLayoutEngine
+    class THMODULE_EXPORT ThDCLayoutEngine
     {
     public:
         std::string Run(ThDCData* data, ThDCParam* param);
     };
 }
-
