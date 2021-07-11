@@ -228,7 +228,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;$(GDAL2_DIR)\v120\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;DRIVER="GeoJSON";THMODULE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
@@ -243,8 +243,8 @@
       </AdditionalLibraryDirectories>
     </Lib>
     <Link>
-      <AdditionalLibraryDirectories>$(CGAL4_GMP)\lib;$(GDAL2_DIR)\v120\lib;$(BOOST_DIR)\lib64-msvc-12.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gdal_i.lib;libgmp-10.lib;libmpfr-4.lib;libboost_thread-vc120-mt-gd-x64-1_70.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CGAL4_GMP)\lib;$(BOOST_DIR)\lib64-msvc-12.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libgmp-10.lib;libmpfr-4.lib;libboost_thread-vc120-mt-gd-x64-1_70.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-ACAD2018|x64'">
@@ -253,7 +253,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;$(GDAL2_DIR)\v140\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL5_DIR)\include;$(CGAL5_GMP)\include;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;DRIVER="GeoJSON";THMODULE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <FloatingPointModel>Strict</FloatingPointModel>
@@ -268,8 +268,8 @@
       </AdditionalLibraryDirectories>
     </Lib>
     <Link>
-      <AdditionalLibraryDirectories>$(CGAL5_GMP)\lib;$(GDAL2_DIR)\v140\lib;$(BOOST_DIR)\lib64-msvc-14.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gdal_i.lib;libmpfr-4.lib;libgmp-10.lib;libboost_locale-vc140-mt-gd-x64-1_70.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CGAL5_GMP)\lib;$(BOOST_DIR)\lib64-msvc-14.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmpfr-4.lib;libgmp-10.lib;libboost_locale-vc140-mt-gd-x64-1_70.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -416,13 +416,10 @@
     <ClInclude Include="jsoncpp\include\json\writer.h" />
     <ClInclude Include="jsoncpp\src\lib_json\json_tool.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="ThCGALAlphaShape.h" />
     <ClInclude Include="ThCGALKernel.h" />
-    <ClInclude Include="ThCGALUtils.h" />
     <ClInclude Include="ThCppUtils.h" />
     <ClInclude Include="ThDCLayoutEngine.h" />
     <ClInclude Include="ThHydrantEngine.h" />
-    <ClInclude Include="ThOGRUtils.h" />
     <ClInclude Include="ThPipeSystemDiagram.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
     <ClInclude Include="utfcpp\source\utf8.h" />
@@ -434,7 +431,6 @@
     <ClInclude Include="WPL\include\Basic.h" />
     <ClInclude Include="WPL\include\CGALDef.h" />
     <ClInclude Include="WPL\include\GeoData.h" />
-    <ClInclude Include="WPL\include\GeoJSONParser.h" />
     <ClInclude Include="WPL\include\IO.h" />
     <ClInclude Include="WPL\include\stdafx.h" />
     <ClInclude Include="WPL\include\WPLEngine.h" />
@@ -461,15 +457,11 @@
     <ClCompile Include="jsoncpp\src\lib_json\json_reader.cpp" />
     <ClCompile Include="jsoncpp\src\lib_json\json_value.cpp" />
     <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp" />
-    <ClCompile Include="ThCGALAlphaShape.cpp" />
-    <ClCompile Include="ThCGALUtils.cpp" />
     <ClCompile Include="ThDCLayoutEngine.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />
-    <ClCompile Include="ThOGRUtils.cpp" />
     <ClCompile Include="ThPipeSystemDiagram.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
     <ClCompile Include="WPL\src\GeoData.cpp" />
-    <ClCompile Include="WPL\src\GeoJSONParser.cpp" />
     <ClCompile Include="WPL\src\IO.cpp" />
     <ClCompile Include="WPL\src\WPLEngine.cpp" />
     <ClCompile Include="WPL\src\WPLLocate.cpp" />

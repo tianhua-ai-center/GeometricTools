@@ -1,11 +1,8 @@
 #include "ThHydrantEngine.h"
-#include "ThOGRUtils.h"
-#include "ogr_geometry.h"
-#include "GeoJSON.h"
-#include "connected_components.h"
+#include "Hydrant/include/GeoJSON.h"
+#include "Hydrant/include/connected_components.h"
 
 using namespace gte;
-using namespace THOGR;
 
 void 
 ThHydrantEngine::Validate(const std::string& geojson, const ThProtectionContext& context, std::vector<std::string>& result)

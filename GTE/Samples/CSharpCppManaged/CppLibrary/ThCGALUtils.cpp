@@ -61,7 +61,7 @@ OGRPoint* ThCGALUtils::CreatePoint(const Point& pt)
 }
 
 OGRMultiPoint*
-ThCGALUtils::CreateMultiPoint(const std::list<Point>& pts)
+ThCGALUtils::CreateMultiPoint(const std::vector<Point>& pts)
 {
 	OGRMultiPoint* multiPoint = ThOGRUtils::CreateMutliPoint();
 	for (auto iter = pts.begin(); iter != pts.end(); ++iter)
