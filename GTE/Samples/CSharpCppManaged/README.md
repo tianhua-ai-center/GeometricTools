@@ -2,25 +2,25 @@
 
 [CGAL](https://doc.cgal.org/latest/Manual/windows.html)
 
-[GDAL](https://www.gisinternals.com/)
-
 [BOOST](https://sourceforge.net/projects/boost/files/boost-binaries/)
 
 ## Build Environment for AutoCAD 2016 ##
 
+CGAL 4.12.0
+
+boost 1.70.0
+
 Visual Studio Community 2013 Update 3
 
-## Environment  Setup
+## Build Environment for AutoCAD 2018 ##
 
-### Step 1: Install these libraries, for example
+CGAL 5.2.2
 
-C:\dev\CGAL-4.12.0
+boost 1.70.0
 
-C:\dev\GDAL-2.2.3
+Visual Studio Community 2015 Update 3
 
-C:\local\boost_1_70_0
-
-### Step 2: Setup the environment variables 
+## Environment Variables Setup
 
 BOOST_DIR = "C:\local\boost_1_70_0"
 
@@ -28,4 +28,6 @@ CGAL4_DIR = "C:\dev\CGAL-4.12.0"
 
 CGAL4_GMP = "C:\dev\CGAL-4.12.0\auxiliary\gmp"
 
-GDAL2_DIR = "C:\dev\GDAL-2.2.3"
+CGAL5_DIR = "C:\dev\CGAL-5.2.2"
+
+CGAL5_GMP = "C:\dev\CGAL-5.2.2\auxiliary\gmp"

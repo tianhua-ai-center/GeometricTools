@@ -5,10 +5,10 @@ using namespace System;
 
 namespace CLI
 {
-	public ref class ThWashGeoData : public ManagedObject<gte::ThWashGeoData>
+	public ref class ThWashGeoDataMgd : public ManagedObject<gte::ThWashGeoData>
 	{
 	public:
-		ThWashGeoData::ThWashGeoData() :ManagedObject(new gte::ThWashGeoData())
+		ThWashGeoDataMgd() :ManagedObject(new gte::ThWashGeoData())
 		{
 			//
 		}
@@ -17,10 +17,10 @@ namespace CLI
 		void ReadFromContent(String^ geojson);
 	};
 
-	public ref class ThWashParam : public ManagedObject<gte::ThWashParam>
+	public ref class ThWashParamMgd : public ManagedObject<gte::ThWashParam>
 	{
 	public:
-		ThWashParam() : ManagedObject(new gte::ThWashParam())
+		ThWashParamMgd() : ManagedObject(new gte::ThWashParam())
 		{
 			//
 		}
@@ -51,15 +51,15 @@ namespace CLI
 		}
 	};
 
-	public ref class ThWashPointLayoutEngine : public ManagedObject<gte::ThWashPointLayoutEngine>
+	public ref class ThWashPointLayoutEngineMgd : public ManagedObject<gte::ThWashPointLayoutEngine>
 	{
 	public:
-		ThWashPointLayoutEngine() : ManagedObject(new gte::ThWashPointLayoutEngine())
+		ThWashPointLayoutEngineMgd() : ManagedObject(new gte::ThWashPointLayoutEngine())
 		{
 
 		}
 
 	public:
-		cli::array<double>^ Layout(ThWashGeoData^ data, ThWashParam^ parameter);
+		cli::array<double>^ Layout(ThWashGeoDataMgd^ data, ThWashParamMgd^ parameter);
 	};
 }

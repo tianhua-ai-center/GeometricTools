@@ -20,7 +20,7 @@ namespace THCGAL
 		static OGRLinearRing* CreateLinearRing(const Polygon& cgal);
 		static OGRLinearRing* CreateLinearRing(const Envelope& env);
 		static OGRPolygon* CreatePolygon(const Polygon_with_holes& cgal);
-		static OGRMultiPoint* CreateMultiPoint(const std::list<Point>& pts);
+		static OGRMultiPoint* CreateMultiPoint(const std::vector<Point>& pts);
 		static OGRMultiLineString* CreateMultiLineString(const std::vector<Segment>& segments);
 	public:
 		static Polygon ToCGALPolygon(const OGRPolygon* ogr);
