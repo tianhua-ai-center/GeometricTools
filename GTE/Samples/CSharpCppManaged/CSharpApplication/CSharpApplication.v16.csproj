@@ -46,11 +46,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-ACAD2016|AnyCPU'">
     <OutputPath>bin\Release-ACAD2016\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-ACAD2018|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>

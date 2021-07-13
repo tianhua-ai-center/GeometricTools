@@ -35,8 +35,8 @@ namespace CSharpApplication
             //var geometry = wktReader.Read(wkt);
 
             PipeDiagramTest t = new PipeDiagramTest(new CLI.ThPipeSystemDiagramMgd());
-            //t.TestProcessMainBranchs();
-            t.TestProcessGrouping();
+            t.TestProcessMainBranchs();
+            //t.TestProcessGrouping();
         }
     }
 }

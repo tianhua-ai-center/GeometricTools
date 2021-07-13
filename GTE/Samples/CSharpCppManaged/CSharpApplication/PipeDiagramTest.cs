@@ -40,14 +40,14 @@ namespace CSharpApplication
         public void TestProcessMainBranchs()
         {
             //string inputFile = @"D:\DATA\Git\GeometricTools\GTE\Samples\CSharpCppManaged\CppLibrary\GroupingPipe\data\pipe\case-0.geojson";
-            string inputFile = @"C:\Users\wangwenguang\Desktop\test.geojson";
+            string inputFile = @"C:\Users\wangwenguang\Desktop\column_test.geojson";
             string outputFile = @"D:\mainbranch.geojson";
             ProcessMainBranchsByFileName(inputFile, outputFile);
         }
 
         public void TestProcessGrouping()
         {
-            string inputFile = @"C:\Users\wangwenguang\Desktop\test.geojson";
+            string inputFile = @"C:\Users\wangwenguang\Desktop\test_7_9.geojson";
             string outputFile = @"D:\grouping.geojson";
             ProcessGroupingByFileName(inputFile, outputFile);
         }
