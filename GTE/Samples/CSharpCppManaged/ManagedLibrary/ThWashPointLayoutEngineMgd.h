@@ -60,6 +60,6 @@ namespace CLI
 		}
 
 	public:
-		cli::array<double>^ Layout(ThWashGeoDataMgd^ data, ThWashParamMgd^ parameter);
+		String^ Run(ThWashGeoDataMgd^ data, ThWashParamMgd^ parameter);
 	};
 }

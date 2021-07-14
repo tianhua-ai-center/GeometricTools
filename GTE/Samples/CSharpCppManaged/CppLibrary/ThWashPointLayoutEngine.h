@@ -47,6 +47,6 @@ namespace gte
 		ThWashPointLayoutEngine();
 
 	public:
-		std::vector<double> Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter);
+		std::string Run(ThWashGeoData* pGeoData, ThWashParam* pParameter);
 	};
 }

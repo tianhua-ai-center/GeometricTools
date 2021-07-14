@@ -77,14 +77,8 @@ namespace CLI
 		mInstance->ReadFromContent(content);
 	}
 
-	cli::array<double>^ ThWashPointLayoutEngineMgd::Layout(ThWashGeoDataMgd^ data, ThWashParamMgd^ parameter)
+	String^ ThWashPointLayoutEngineMgd::Run(ThWashGeoDataMgd^ data, ThWashParamMgd^ parameter)
 	{
-		auto points = mInstance->Layout(data->GetInstance(), parameter->GetInstance());
-		auto results = gcnew cli::array<double>(points.size());
-		for (size_t i = 0; i < points.size(); i++)
-		{
-			results[i] = points[i];
-		}
-		return results;
+		return MarshalNativeString(mInstance->Run(data->GetInstance(), parameter->GetInstance()));
 	}
 }

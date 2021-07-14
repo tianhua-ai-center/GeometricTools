@@ -108,15 +108,12 @@ ThWashPointLayoutEngine::ThWashPointLayoutEngine()
 	//
 }
 
-std::vector<double> ThWashPointLayoutEngine::Layout(ThWashGeoData* pGeoData, ThWashParam* pParameter)
+std::string ThWashPointLayoutEngine::Run(ThWashGeoData* pGeoData, ThWashParam* pParameter)
 {
+	std::unique_ptr<GeojsonIO> io(new GeojsonIO);
 	std::unique_ptr<WashingPtLayoutEngine> engine(new WashingPtLayoutEngine());
-	auto points = engine->layout(GetInstance<GeoData>(pGeoData->GetImpl()), GetInstance<Param>(pParameter->GetImpl()));
-	auto results = std::vector<double>();
-	for (auto point : points)
-	{
-		results.push_back(DOUBLE(point.x()));
-		results.push_back(DOUBLE(point.y()));
-	}
-	return results;
+	auto points = engine->layout(
+		GetInstance<GeoData>(pGeoData->GetImpl()), 
+		GetInstance<Param>(pParameter->GetImpl()));
+	return io->write_to_string(points);
 }
