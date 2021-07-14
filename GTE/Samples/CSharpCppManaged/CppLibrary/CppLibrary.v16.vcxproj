@@ -393,7 +393,6 @@
     <ClInclude Include="DCL\include\DCIO.h" />
     <ClInclude Include="DCL\include\DCLayoutEngine.h" />
     <ClInclude Include="DCL\include\DCParam.h" />
-    <ClInclude Include="DCL\include\RBush.hpp" />
     <ClInclude Include="DCL\include\stdafx.h" />
     <ClInclude Include="GroupingPipe\include\graph.h" />
     <ClInclude Include="GroupingPipe\include\grouping.h" />
@@ -419,6 +418,7 @@
     <ClInclude Include="jsoncpp\include\json\version.h" />
     <ClInclude Include="jsoncpp\include\json\writer.h" />
     <ClInclude Include="jsoncpp\src\lib_json\json_tool.h" />
+    <ClInclude Include="rbush\RBush.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="ThCGALKernel.h" />
     <ClInclude Include="ThCppExport.h" />
