@@ -16,6 +16,7 @@ ThHydrantEngine::Validate(const std::string& geojson, const ThProtectionContext&
 	parameters.para[0] = context.hydrant_hose_length;
 	parameters.para[1] = context.hydrant_hose_length;
 	parameters.para[2] = context.hydrant_clearance_radius;
+	parameters.para[5] = context.hydrant_clearance_sample_length;
 
 	// 计算保护区域
 	blueprint bp(data, parameters);

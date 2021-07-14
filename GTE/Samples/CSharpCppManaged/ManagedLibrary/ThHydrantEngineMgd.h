@@ -20,6 +20,10 @@ namespace CLI
 			double get();
 			void set(double r);
 		}
+		property double HydrantClearanceSampleLength {
+			double get();
+			void set(double l);
+		}
 	};
 
 	public ref class ThHydrantEngineMgd : public ManagedObject<gte::ThHydrantEngine>
