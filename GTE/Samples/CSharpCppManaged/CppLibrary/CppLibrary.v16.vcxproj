@@ -421,6 +421,7 @@
     <ClInclude Include="jsoncpp\src\lib_json\json_tool.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="ThCGALKernel.h" />
+    <ClInclude Include="ThCppExport.h" />
     <ClInclude Include="ThCppUtils.h" />
     <ClInclude Include="ThDCLayoutEngine.h" />
     <ClInclude Include="ThHydrantEngine.h" />
