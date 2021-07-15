@@ -24,3 +24,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/utfcpp"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/utfcpp
 	url = https://github.com/nemtrif/utfcpp.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/rbush"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/rbush
+	url = https://github.com/cgarreau/rbush-cpp.git

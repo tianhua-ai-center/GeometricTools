@@ -24,6 +24,16 @@ namespace CLI
 		mInstance->hydrant_clearance_radius = r;
 	}
 
+	double ThProtectionContextMgd::HydrantClearanceSampleLength::get()
+	{
+		return mInstance->hydrant_clearance_sample_length;
+	}
+
+	void ThProtectionContextMgd::HydrantClearanceSampleLength::set(double l)
+	{
+		mInstance->hydrant_clearance_sample_length = l;
+	}
+
 	cli::array<String^>^ ThHydrantEngineMgd::Validate(String^ data, ThProtectionContextMgd^ context)
 	{
 		std::string geojson;

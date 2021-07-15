@@ -10,6 +10,8 @@ namespace gte
 		double hydrant_hose_length;
 		// 消火栓水柱半径
 		double hydrant_clearance_radius;
+		// 消火栓水柱采样点
+		double hydrant_clearance_sample_length;
 	};
 
 	class THMODULE_EXPORT ThHydrantEngine
