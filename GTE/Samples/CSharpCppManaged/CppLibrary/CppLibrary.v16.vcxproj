@@ -228,7 +228,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\Centerline\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
@@ -389,6 +389,24 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CenterLine\include\CenterLineSolver.h" />
+    <ClInclude Include="CenterLine\include\CGALDef.h" />
+    <ClInclude Include="CenterLine\include\convertKernel.h" />
+    <ClInclude Include="CenterLine\include\GeoJSON.h" />
+    <ClInclude Include="CenterLine\include\impl\append_collision_events.h" />
+    <ClInclude Include="CenterLine\include\impl\append_line_data.h" />
+    <ClInclude Include="CenterLine\include\impl\calc_interval_on_line.h" />
+    <ClInclude Include="CenterLine\include\impl\connect_segments.h" />
+    <ClInclude Include="CenterLine\include\impl\cut_half_edge.h" />
+    <ClInclude Include="CenterLine\include\impl\cut_half_point.h" />
+    <ClInclude Include="CenterLine\include\impl\EdgeData.h" />
+    <ClInclude Include="CenterLine\include\impl\Event.h" />
+    <ClInclude Include="CenterLine\include\impl\Interval.h" />
+    <ClInclude Include="CenterLine\include\impl\PointData.h" />
+    <ClInclude Include="CenterLine\include\impl\process_event.h" />
+    <ClInclude Include="CenterLine\include\parse.h" />
+    <ClInclude Include="CenterLine\include\PolygonCenterLine.h" />
+    <ClInclude Include="CenterLine\include\valdata.h" />
     <ClInclude Include="CppLibrary.h" />
     <ClInclude Include="DCL\include\CGALUtils.h" />
     <ClInclude Include="DCL\include\DCData.h" />
@@ -445,6 +463,7 @@
     <ClInclude Include="WPL\include\WPLPreprocess.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CenterLine\src\PolygonCenterLine.cpp" />
     <ClCompile Include="DCL\src\CGALUtils.cpp" />
     <ClCompile Include="DCL\src\DCAClassLocator.cpp" />
     <ClCompile Include="DCL\src\DCBClassLocator.cpp" />
