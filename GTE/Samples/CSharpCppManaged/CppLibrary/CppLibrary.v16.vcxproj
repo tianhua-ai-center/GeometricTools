@@ -406,6 +406,7 @@
     <ClInclude Include="CenterLine\include\impl\process_event.h" />
     <ClInclude Include="CenterLine\include\parse.h" />
     <ClInclude Include="CenterLine\include\PolygonCenterLine.h" />
+    <ClInclude Include="CenterLine\include\stdafx.h" />
     <ClInclude Include="CenterLine\include\valdata.h" />
     <ClInclude Include="CppLibrary.h" />
     <ClInclude Include="DCL\include\CGALUtils.h" />
@@ -446,6 +447,7 @@
     <ClInclude Include="ThDCLayoutEngine.h" />
     <ClInclude Include="ThHydrantEngine.h" />
     <ClInclude Include="ThPipeSystemDiagram.h" />
+    <ClInclude Include="ThPolygonCenterLine.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
     <ClInclude Include="utfcpp\source\utf8.h" />
     <ClInclude Include="utfcpp\source\utf8\checked.h" />
@@ -486,6 +488,7 @@
     <ClCompile Include="ThDCLayoutEngine.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />
     <ClCompile Include="ThPipeSystemDiagram.cpp" />
+    <ClCompile Include="ThPolygonCenterLine.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
     <ClCompile Include="WPL\src\GeoData.cpp" />
     <ClCompile Include="WPL\src\IO.cpp" />
