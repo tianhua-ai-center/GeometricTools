@@ -52,6 +52,6 @@ ThDCLayoutEngine::Run(ThDCData* data, ThDCParam* param)
 {
     std::unique_ptr<DCIO> io(new DCIO);
     std::unique_ptr<DCLayoutEngine> spEngine(new DCLayoutEngine());
-    spEngine->layout(GetInstance<DCData>(data->GetImpl()), GetInstance<DCParam>(param->GetImpl()));
+    spEngine->layout(GetInstance<DCData>(data->GetImpl()), *GetInstance<DCParam>(param->GetImpl()));
     return io->write_to_string(GetInstance<DCData>(data->GetImpl()));
 }
