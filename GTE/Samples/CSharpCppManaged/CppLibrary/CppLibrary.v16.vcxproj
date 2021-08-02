@@ -392,7 +392,7 @@
     <ClInclude Include="CenterLine\include\CenterLineSolver.h" />
     <ClInclude Include="CenterLine\include\CGALDef.h" />
     <ClInclude Include="CenterLine\include\convertKernel.h" />
-    <ClInclude Include="CenterLine\include\GeoJSON.h" />
+    <ClInclude Include="CenterLine\include\CenterLineGeoJSON.h" />
     <ClInclude Include="CenterLine\include\impl\append_collision_events.h" />
     <ClInclude Include="CenterLine\include\impl\append_line_data.h" />
     <ClInclude Include="CenterLine\include\impl\calc_interval_on_line.h" />
@@ -405,6 +405,7 @@
     <ClInclude Include="CenterLine\include\impl\PointData.h" />
     <ClInclude Include="CenterLine\include\impl\process_event.h" />
     <ClInclude Include="CenterLine\include\PolygonCenterLine.h" />
+    <ClInclude Include="CenterLine\include\stdafx.h" />
     <ClInclude Include="CenterLine\include\valdata.h" />
     <ClInclude Include="CppLibrary.h" />
     <ClInclude Include="DCL\include\CGALUtils.h" />
@@ -463,6 +464,7 @@
     <ClInclude Include="WPL\include\WPLPreprocess.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CenterLine\src\CenterLineGeoJSON.cpp" />
     <ClCompile Include="CenterLine\src\PolygonCenterLine.cpp" />
     <ClCompile Include="DCL\src\CGALUtils.cpp" />
     <ClCompile Include="DCL\src\DCAClassLocator.cpp" />
