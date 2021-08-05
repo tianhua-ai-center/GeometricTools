@@ -64,6 +64,16 @@ namespace CLI
 		mInstance->setExtend_park(extend_park);
 	}
 
+	ThWashLocateMode ThWashParamMgd::locate_mode::get()
+	{
+		return (ThWashLocateMode)mInstance->getLocate_mode();
+	}
+
+	void ThWashParamMgd::locate_mode::set(ThWashLocateMode mode)
+	{
+		mInstance->setLocate_mode((int)mode);
+	}
+
 	void ThWashGeoDataMgd::ReadFromFile(String^ path)
 	{
 		std::string filename;

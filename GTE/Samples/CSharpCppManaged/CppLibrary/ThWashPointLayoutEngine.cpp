@@ -103,6 +103,16 @@ void ThWashParam::setExtend_park(bool extend_park)
 	GetInstance<Param>(Impl)->extend_park = extend_park;
 }
 
+int ThWashParam::getLocate_mode()
+{
+	return (int)GetInstance<Param>(Impl)->mode;
+}
+
+void ThWashParam::setLocate_mode(int mode)
+{
+	GetInstance<Param>(Impl)->mode = (LocateMode)mode;
+}
+
 ThWashPointLayoutEngine::ThWashPointLayoutEngine()
 {
 	//

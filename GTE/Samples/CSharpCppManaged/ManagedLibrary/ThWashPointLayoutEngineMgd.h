@@ -17,6 +17,14 @@ namespace CLI
 		void ReadFromContent(String^ geojson);
 	};
 
+	public enum ThWashLocateMode
+	{
+		None = 0x00,
+		External = 0x01,
+		Interal = 0x02,
+		All = External | Interal,
+	};
+
 	public ref class ThWashParamMgd : public ManagedObject<gte::ThWashParam>
 	{
 	public:
@@ -48,6 +56,10 @@ namespace CLI
 		property bool extend_park {
 			bool get();
 			void set(bool extend_park);
+		}
+		property ThWashLocateMode locate_mode {
+			ThWashLocateMode get();
+			void set(ThWashLocateMode mode);
 		}
 	};
 

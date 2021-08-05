@@ -36,6 +36,8 @@ namespace gte
 		void setExtend_arch(bool extend_arch);
 		bool getExtend_park();
 		void setExtend_park(bool extend_park);
+		int  getLocate_mode();
+		void setLocate_mode(int mode);
 	public:
 		void* GetImpl() { return Impl; }
 	private:
