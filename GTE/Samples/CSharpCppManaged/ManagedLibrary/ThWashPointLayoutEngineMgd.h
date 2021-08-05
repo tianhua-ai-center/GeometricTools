@@ -17,7 +17,7 @@ namespace CLI
 		void ReadFromContent(String^ geojson);
 	};
 
-	public enum ThWashLocateMode
+	public enum class ThWashLocateMode
 	{
 		None = 0x00,
 		External = 0x01,
