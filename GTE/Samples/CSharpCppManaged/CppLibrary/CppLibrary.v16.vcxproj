@@ -395,6 +395,7 @@
     <ClInclude Include="2dVisibility\include\PolygonData.h" />
     <ClInclude Include="2dVisibility\include\stdafx.h" />
     <ClInclude Include="2dVisibility\include\VisibilityCalculator.h" />
+    <ClInclude Include="CenterLine\include\calculate_partition.h" />
     <ClInclude Include="CenterLine\include\CenterLineSolver.h" />
     <ClInclude Include="CenterLine\include\CGALDef.h" />
     <ClInclude Include="CenterLine\include\convertKernel.h" />
@@ -410,6 +411,7 @@
     <ClInclude Include="CenterLine\include\impl\Interval.h" />
     <ClInclude Include="CenterLine\include\impl\PointData.h" />
     <ClInclude Include="CenterLine\include\impl\process_event.h" />
+    <ClInclude Include="CenterLine\include\PartitionSolver.h" />
     <ClInclude Include="CenterLine\include\PolygonCenterLine.h" />
     <ClInclude Include="CenterLine\include\stdafx.h" />
     <ClInclude Include="CenterLine\include\valdata.h" />
@@ -454,6 +456,7 @@
     <ClInclude Include="ThHydrantEngine.h" />
     <ClInclude Include="ThPipeSystemDiagram.h" />
     <ClInclude Include="ThPolygonCenterLine.h" />
+    <ClInclude Include="ThPolygonPartition.h" />
     <ClInclude Include="ThWashPointLayoutEngine.h" />
     <ClInclude Include="utfcpp\source\utf8.h" />
     <ClInclude Include="utfcpp\source\utf8\checked.h" />
@@ -501,6 +504,7 @@
     <ClCompile Include="ThHydrantEngine.cpp" />
     <ClCompile Include="ThPipeSystemDiagram.cpp" />
     <ClCompile Include="ThPolygonCenterLine.cpp" />
+    <ClCompile Include="ThPolygonPartition.cpp" />
     <ClCompile Include="ThWashPointLayoutEngine.cpp" />
     <ClCompile Include="WPL\src\GeoData.cpp" />
     <ClCompile Include="WPL\src\IO.cpp" />

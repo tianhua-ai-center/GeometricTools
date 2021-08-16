@@ -3,6 +3,7 @@
 #include "ThCGALAlphaShape.h"
 #include "ThDCLayoutEngine.h"
 #include "ThPipeSystemDiagram.h"
+#include "ThPolygonPartition.h"
 #include "ThPolygonCenterLine.h"
 #include "Th2DVisibilityEngine.h"
 #include "ThWashPointLayoutEngine.h"

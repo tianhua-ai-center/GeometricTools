@@ -379,6 +379,7 @@
     <ClInclude Include="ThHydrantEngineMgd.h" />
     <ClInclude Include="ThPipeSystemDiagramMgd.h" />
     <ClInclude Include="ThPolygonCenterLineMgd.h" />
+    <ClInclude Include="ThPolygonPartitionMgd.h" />
     <ClInclude Include="ThWashInteropUtils.h" />
     <ClInclude Include="ThWashPointLayoutEngineMgd.h" />
   </ItemGroup>
@@ -389,6 +390,7 @@
     <ClCompile Include="ThHydrantEngineMgd.cpp" />
     <ClCompile Include="ThPipeSystemDiagramMgd.cpp" />
     <ClCompile Include="ThPolygonCenterLineMgd.cpp" />
+    <ClCompile Include="ThPolygonPartitionMgd.cpp" />
     <ClCompile Include="ThWashInteropUtils.cpp" />
     <ClCompile Include="ThWashPointLayoutEngineMgd.cpp" />
   </ItemGroup>
