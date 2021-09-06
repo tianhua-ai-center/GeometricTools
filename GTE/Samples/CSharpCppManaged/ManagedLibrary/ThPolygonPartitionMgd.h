@@ -14,6 +14,7 @@ namespace CLI
 		}
 	public:
 		String^ Partition(String^ geojson, double r);
+		String^ PartitionUCS(String^ geojson, double eps);
 	};
 }
 

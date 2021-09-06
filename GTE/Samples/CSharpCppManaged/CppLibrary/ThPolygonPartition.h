@@ -8,6 +8,7 @@ namespace gte
     {
     public:
         std::string Partition(const std::string& geojson, double r);
+        std::string PartitionUCS(const std::string& geojson, double eps);
     };
 }
 

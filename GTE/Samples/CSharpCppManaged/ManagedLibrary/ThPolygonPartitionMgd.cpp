@@ -10,4 +10,11 @@ namespace CLI
         MarshalString(input, geojson);
         return MarshalNativeString(mInstance->Partition(geojson, r));
     }
+
+    String^ ThPolygonPartitionMgd::PartitionUCS(String^ input, double eps)
+    {
+        std::string geojson;
+        MarshalString(input, geojson);
+        return MarshalNativeString(mInstance->PartitionUCS(geojson, eps));
+    }
 }
