@@ -31,4 +31,4 @@
 	url = https://github.com/MasterSpark1215/2DVisibility.git
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/CableRouter"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/CableRouter
-	url = https://github.com/doghh/CableRouter
+	url = https://github.com/doghh/CableRouter.git
