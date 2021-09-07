@@ -375,6 +375,7 @@
     <ClInclude Include="clix.hpp" />
     <ClInclude Include="ManagedObject.h" />
     <ClInclude Include="Th2DVisibilityEngineMgd.h" />
+    <ClInclude Include="ThCableRouterMgd.h" />
     <ClInclude Include="ThDCLayoutEngineMgd.h" />
     <ClInclude Include="ThHydrantEngineMgd.h" />
     <ClInclude Include="ThPipeSystemDiagramMgd.h" />
@@ -386,6 +387,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Th2DVisibilityEngineMgd.cpp" />
+    <ClCompile Include="ThCableRouterMgd.cpp" />
     <ClCompile Include="ThDCLayoutEngineMgd.cpp" />
     <ClCompile Include="ThHydrantEngineMgd.cpp" />
     <ClCompile Include="ThPipeSystemDiagramMgd.cpp" />
