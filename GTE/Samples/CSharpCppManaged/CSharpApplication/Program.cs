@@ -34,9 +34,13 @@ namespace CSharpApplication
             //var wktReader = new WKTReader();
             //var geometry = wktReader.Read(wkt);
 
-            PipeDiagramTest t = new PipeDiagramTest(new CLI.ThPipeSystemDiagramMgd());
-            t.TestProcessMainBranchs();
+            //PipeDiagramTest t = new PipeDiagramTest(new CLI.ThPipeSystemDiagramMgd());
+            //t.TestProcessMainBranchs();
             //t.TestProcessGrouping();
+
+            ThCableRouterMgd cableRouter = new ThCableRouterMgd();
+            var strInputGeoJson = "";
+            var routedCables = cableRouter.RouteCable(strInputGeoJson);
         }
     }
 }
