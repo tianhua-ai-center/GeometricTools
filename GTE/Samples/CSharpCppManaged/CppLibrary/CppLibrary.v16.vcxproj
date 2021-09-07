@@ -228,7 +228,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
@@ -254,7 +254,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <FloatingPointModel>Strict</FloatingPointModel>
@@ -338,7 +338,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\libraries\;.\CableRouter\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
       <FloatingPointModel>Strict</FloatingPointModel>
@@ -367,7 +367,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
       <FloatingPointModel>Strict</FloatingPointModel>
@@ -404,7 +404,6 @@
     <ClInclude Include="CableRouter\include\ImmuneSystem.h" />
     <ClInclude Include="CableRouter\include\MapUtils.h" />
     <ClInclude Include="CableRouter\include\RouteEngine.h" />
-    <ClInclude Include="CableRouter\libraries\rbush\RBush.hpp" />
     <ClInclude Include="CenterLine\include\calculate_partition.h" />
     <ClInclude Include="CenterLine\include\CenterLineSolver.h" />
     <ClInclude Include="CenterLine\include\CGALDef.h" />
