@@ -398,11 +398,11 @@
     <ClInclude Include="CableRouter\include\CableRouteEngine.h" />
     <ClInclude Include="CableRouter\include\CR_CGALUtils.h" />
     <ClInclude Include="CableRouter\include\CR_IO.h" />
-    <ClInclude Include="CableRouter\include\CR_Parse.h" />
     <ClInclude Include="CableRouter\include\GETree.h" />
     <ClInclude Include="CableRouter\include\GroupEngine.h" />
     <ClInclude Include="CableRouter\include\ImmuneSystem.h" />
     <ClInclude Include="CableRouter\include\MapUtils.h" />
+    <ClInclude Include="CableRouter\include\OptimizeEngine.h" />
     <ClInclude Include="CableRouter\include\RouteEngine.h" />
     <ClInclude Include="CenterLine\include\calculate_partition.h" />
     <ClInclude Include="CenterLine\include\CenterLineSolver.h" />
@@ -488,10 +488,10 @@
     <ClCompile Include="2dVisibility\src\geojsonIO.cpp" />
     <ClCompile Include="2dVisibility\src\PolygonData.cpp" />
     <ClCompile Include="2dVisibility\src\VisibilityCalculator.cpp" />
+    <ClCompile Include="CableRouter\include\OptimizeEngine.cpp" />
     <ClCompile Include="CableRouter\src\CableRouteEngine.cpp" />
     <ClCompile Include="CableRouter\src\CR_CGALUtils.cpp" />
     <ClCompile Include="CableRouter\src\CR_IO.cpp" />
-    <ClCompile Include="CableRouter\src\CR_Parse.cpp" />
     <ClCompile Include="CableRouter\src\GETree.cpp" />
     <ClCompile Include="CableRouter\src\GroupEngine.cpp" />
     <ClCompile Include="CableRouter\src\ImmuneSystem.cpp" />

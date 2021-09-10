@@ -7,7 +7,7 @@ namespace gte
 	class THMODULE_EXPORT ThCableRouter
 	{
 	public:
-		std::string Route(const std::string& geojson);
+		std::string Route(const std::string& geojson, int maxLoopCnt);
 	};
 }
 

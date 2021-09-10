@@ -40,7 +40,7 @@ namespace CSharpApplication
 
             ThCableRouterMgd cableRouter = new ThCableRouterMgd();
             var strInputGeoJson = "";
-            var routedCables = cableRouter.RouteCable(strInputGeoJson);
+            var routedCables = cableRouter.RouteCable(strInputGeoJson, 25);
         }
     }
 }

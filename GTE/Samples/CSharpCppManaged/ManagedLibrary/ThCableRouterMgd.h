@@ -13,6 +13,6 @@ namespace CLI
 			//
 		}
 	public:
-		String^ RouteCable(String^ geojson);
+		String^ RouteCable(String^ geojson, int loopMaxCnt);
 	};
 }
