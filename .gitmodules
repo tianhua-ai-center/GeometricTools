@@ -32,3 +32,6 @@
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/CableRouter"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/CableRouter
 	url = https://github.com/doghh/CableRouter.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/LGN"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/LGN
+	url = https://github.com/shichongdong/LightningGroundNetwork.git
