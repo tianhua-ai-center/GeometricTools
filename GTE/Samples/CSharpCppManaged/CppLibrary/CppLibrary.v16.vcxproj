@@ -455,11 +455,11 @@
     <ClInclude Include="jsoncpp\include\json\version.h" />
     <ClInclude Include="jsoncpp\include\json\writer.h" />
     <ClInclude Include="jsoncpp\src\lib_json\json_tool.h" />
-    <ClInclude Include="LGN\include\CGALDef.h" />
     <ClInclude Include="LGN\include\columngrid.h" />
     <ClInclude Include="LGN\include\datapross.h" />
-    <ClInclude Include="LGN\include\GeoJSON.h" />
     <ClInclude Include="LGN\include\groundgrid.h" />
+    <ClInclude Include="LGN\include\LGN_CGALDef.h" />
+    <ClInclude Include="LGN\include\LGN_GeoJSON.h" />
     <ClInclude Include="LGN\include\poly.h" />
     <ClInclude Include="LGN\include\stdafx.h" />
     <ClInclude Include="LGN\include\valdata.h" />
@@ -528,8 +528,8 @@
     <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp" />
     <ClCompile Include="LGN\src\columngrid.cpp" />
     <ClCompile Include="LGN\src\datapross.cpp" />
-    <ClCompile Include="LGN\src\GeoJSON.cpp" />
     <ClCompile Include="LGN\src\groundgrid.cpp" />
+    <ClCompile Include="LGN\src\LGN_GeoJSON.cpp" />
     <ClCompile Include="LGN\src\poly.cpp" />
     <ClCompile Include="Th2DVisibilityEngine.cpp" />
     <ClCompile Include="ThCableRouter.cpp" />
