@@ -228,7 +228,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
@@ -455,6 +455,15 @@
     <ClInclude Include="jsoncpp\include\json\version.h" />
     <ClInclude Include="jsoncpp\include\json\writer.h" />
     <ClInclude Include="jsoncpp\src\lib_json\json_tool.h" />
+    <ClInclude Include="LGN\include\columngrid.h" />
+    <ClInclude Include="LGN\include\datapross.h" />
+    <ClInclude Include="LGN\include\groundgrid.h" />
+    <ClInclude Include="LGN\include\LGNGenerator.h" />
+    <ClInclude Include="LGN\include\LGN_CGALDef.h" />
+    <ClInclude Include="LGN\include\LGN_GeoJSON.h" />
+    <ClInclude Include="LGN\include\LGN_poly.h" />
+    <ClInclude Include="LGN\include\LGN_valdata.h" />
+    <ClInclude Include="LGN\include\stdafx.h" />
     <ClInclude Include="rbush\RBush.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Th2DVisibilityEngine.h" />
@@ -518,6 +527,12 @@
     <ClCompile Include="jsoncpp\src\lib_json\json_reader.cpp" />
     <ClCompile Include="jsoncpp\src\lib_json\json_value.cpp" />
     <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp" />
+    <ClCompile Include="LGN\src\columngrid.cpp" />
+    <ClCompile Include="LGN\src\datapross.cpp" />
+    <ClCompile Include="LGN\src\groundgrid.cpp" />
+    <ClCompile Include="LGN\src\LGNGenerator.cpp" />
+    <ClCompile Include="LGN\src\LGN_GeoJSON.cpp" />
+    <ClCompile Include="LGN\src\LGN_poly.cpp" />
     <ClCompile Include="Th2DVisibilityEngine.cpp" />
     <ClCompile Include="ThCableRouter.cpp" />
     <ClCompile Include="ThDCLayoutEngine.cpp" />
