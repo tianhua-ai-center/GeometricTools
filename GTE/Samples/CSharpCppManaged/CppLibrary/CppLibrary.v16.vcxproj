@@ -456,6 +456,7 @@
     <ClInclude Include="jsoncpp\include\json\writer.h" />
     <ClInclude Include="jsoncpp\src\lib_json\json_tool.h" />
     <ClInclude Include="rbush\RBush.hpp" />
+    <ClInclude Include="stdafx.h" />
     <ClInclude Include="Th2DVisibilityEngine.h" />
     <ClInclude Include="ThCableRouter.h" />
     <ClInclude Include="ThCGALKernel.h" />
