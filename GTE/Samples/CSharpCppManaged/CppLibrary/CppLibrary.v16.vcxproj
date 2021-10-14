@@ -424,7 +424,7 @@
     <ClInclude Include="CenterLine\include\PartitionSolver.h" />
     <ClInclude Include="CenterLine\include\PolygonCenterLine.h" />
     <ClInclude Include="CenterLine\include\stdafx.h" />
-    <ClInclude Include="CenterLine\include\valdata.h" />
+    <ClInclude Include="CenterLine\include\UcsPartitionSolver.h" />
     <ClInclude Include="CppLibrary.h" />
     <ClInclude Include="DCL\include\CGALUtils.h" />
     <ClInclude Include="DCL\include\DCData.h" />
