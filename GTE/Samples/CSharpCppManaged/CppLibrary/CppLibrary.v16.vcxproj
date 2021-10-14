@@ -404,6 +404,7 @@
     <ClInclude Include="CableRouter\include\MapUtils.h" />
     <ClInclude Include="CableRouter\include\OptimizeEngine.h" />
     <ClInclude Include="CableRouter\include\RouteEngine.h" />
+    <ClInclude Include="CableRouter\include\stdafx.h" />
     <ClInclude Include="CenterLine\include\calculate_partition.h" />
     <ClInclude Include="CenterLine\include\CenterLineSolver.h" />
     <ClInclude Include="CenterLine\include\CGALDef.h" />
@@ -488,7 +489,6 @@
     <ClCompile Include="2dVisibility\src\geojsonIO.cpp" />
     <ClCompile Include="2dVisibility\src\PolygonData.cpp" />
     <ClCompile Include="2dVisibility\src\VisibilityCalculator.cpp" />
-    <ClCompile Include="CableRouter\include\OptimizeEngine.cpp" />
     <ClCompile Include="CableRouter\src\CableRouteEngine.cpp" />
     <ClCompile Include="CableRouter\src\CR_CGALUtils.cpp" />
     <ClCompile Include="CableRouter\src\CR_IO.cpp" />
@@ -496,6 +496,7 @@
     <ClCompile Include="CableRouter\src\GroupEngine.cpp" />
     <ClCompile Include="CableRouter\src\ImmuneSystem.cpp" />
     <ClCompile Include="CableRouter\src\MapUtils.cpp" />
+    <ClCompile Include="CableRouter\src\OptimizeEngine.cpp" />
     <ClCompile Include="CableRouter\src\RouteEngine.cpp" />
     <ClCompile Include="CenterLine\src\CenterLineGeoJSON.cpp" />
     <ClCompile Include="CenterLine\src\PolygonCenterLine.cpp" />
