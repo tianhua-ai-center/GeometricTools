@@ -400,6 +400,7 @@
     <ClInclude Include="AFAS\include\AFAS_IO.h" />
     <ClInclude Include="AFAS\include\AFAS_rbush_utils.h" />
     <ClInclude Include="AFAS\include\AFAS_set_utils.h" />
+    <ClInclude Include="AFAS\include\AFAS_string_utils.h" />
     <ClInclude Include="AFAS\include\AFAS_utils.h" />
     <ClInclude Include="AFAS\include\AFAS_CGALDef.h" />
     <ClInclude Include="AFAS\include\fire-alarm.h" />
@@ -467,6 +468,7 @@
     <ClInclude Include="rbush\RBush.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Th2DVisibilityEngine.h" />
+    <ClInclude Include="ThAFASPlacementEngine.h" />
     <ClInclude Include="ThCableRouter.h" />
     <ClInclude Include="ThCGALKernel.h" />
     <ClInclude Include="ThCppExport.h" />
@@ -501,6 +503,7 @@
     <ClCompile Include="AFAS\src\AFAS_IO.cpp" />
     <ClCompile Include="AFAS\src\AFAS_rbush_utils.cpp" />
     <ClCompile Include="AFAS\src\AFAS_set_utils.cpp" />
+    <ClCompile Include="AFAS\src\AFAS_string_utils.cpp" />
     <ClCompile Include="AFAS\src\AFAS_utils.cpp" />
     <ClCompile Include="AFAS\src\fire-alarm.cpp" />
     <ClCompile Include="CableRouter\src\CableRouteEngine.cpp" />
@@ -534,6 +537,7 @@
     <ClCompile Include="jsoncpp\src\lib_json\json_value.cpp" />
     <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp" />
     <ClCompile Include="Th2DVisibilityEngine.cpp" />
+    <ClCompile Include="ThAFASPlacementEngine.cpp" />
     <ClCompile Include="ThCableRouter.cpp" />
     <ClCompile Include="ThDCLayoutEngine.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />
