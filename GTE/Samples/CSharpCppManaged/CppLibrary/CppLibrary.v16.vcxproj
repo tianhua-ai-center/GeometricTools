@@ -228,7 +228,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include;.\AFAS\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
@@ -254,7 +254,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include;.\AFAS\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <FloatingPointModel>Strict</FloatingPointModel>
@@ -338,7 +338,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include;.\AFAS\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
       <FloatingPointModel>Strict</FloatingPointModel>
@@ -367,7 +367,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(BOOST_DIR);$(CGAL4_DIR)\include;$(CGAL4_GMP)\include;.\rbush\;.\WPL\include;.\DCL\include;.\Hydrant\include;.\jsoncpp\include;.\GroupingPipe\include;.\CenterLine\include;.\2dVisibility\include;.\CableRouter\include;.\LGN\include;.\AFAS\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>THMODULE_DLL;CGAL_HEADER_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4503;4819</DisableSpecificWarnings>
       <FloatingPointModel>Strict</FloatingPointModel>
@@ -395,6 +395,15 @@
     <ClInclude Include="2dVisibility\include\PolygonData.h" />
     <ClInclude Include="2dVisibility\include\stdafx.h" />
     <ClInclude Include="2dVisibility\include\VisibilityCalculator.h" />
+    <ClInclude Include="AFAS\include\AFAS_cgal_utils.h" />
+    <ClInclude Include="AFAS\include\AFAS_data.h" />
+    <ClInclude Include="AFAS\include\AFAS_IO.h" />
+    <ClInclude Include="AFAS\include\AFAS_rbush_utils.h" />
+    <ClInclude Include="AFAS\include\AFAS_set_utils.h" />
+    <ClInclude Include="AFAS\include\AFAS_string_utils.h" />
+    <ClInclude Include="AFAS\include\AFAS_utils.h" />
+    <ClInclude Include="AFAS\include\AFAS_CGALDef.h" />
+    <ClInclude Include="AFAS\include\fire-alarm.h" />
     <ClInclude Include="CableRouter\include\CableRouteEngine.h" />
     <ClInclude Include="CableRouter\include\CR_CGALUtils.h" />
     <ClInclude Include="CableRouter\include\CR_IO.h" />
@@ -459,6 +468,7 @@
     <ClInclude Include="rbush\RBush.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Th2DVisibilityEngine.h" />
+    <ClInclude Include="ThAFASPlacementEngine.h" />
     <ClInclude Include="ThCableRouter.h" />
     <ClInclude Include="ThCGALKernel.h" />
     <ClInclude Include="ThCppExport.h" />
@@ -489,6 +499,13 @@
     <ClCompile Include="2dVisibility\src\geojsonIO.cpp" />
     <ClCompile Include="2dVisibility\src\PolygonData.cpp" />
     <ClCompile Include="2dVisibility\src\VisibilityCalculator.cpp" />
+    <ClCompile Include="AFAS\src\AFAS_cgal_utils.cpp" />
+    <ClCompile Include="AFAS\src\AFAS_IO.cpp" />
+    <ClCompile Include="AFAS\src\AFAS_rbush_utils.cpp" />
+    <ClCompile Include="AFAS\src\AFAS_set_utils.cpp" />
+    <ClCompile Include="AFAS\src\AFAS_string_utils.cpp" />
+    <ClCompile Include="AFAS\src\AFAS_utils.cpp" />
+    <ClCompile Include="AFAS\src\fire-alarm.cpp" />
     <ClCompile Include="CableRouter\src\CableRouteEngine.cpp" />
     <ClCompile Include="CableRouter\src\CR_CGALUtils.cpp" />
     <ClCompile Include="CableRouter\src\CR_IO.cpp" />
@@ -520,6 +537,7 @@
     <ClCompile Include="jsoncpp\src\lib_json\json_value.cpp" />
     <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp" />
     <ClCompile Include="Th2DVisibilityEngine.cpp" />
+    <ClCompile Include="ThAFASPlacementEngine.cpp" />
     <ClCompile Include="ThCableRouter.cpp" />
     <ClCompile Include="ThDCLayoutEngine.cpp" />
     <ClCompile Include="ThHydrantEngine.cpp" />

@@ -7,3 +7,4 @@
 #include "Th2DVisibilityEngine.h"
 #include "ThWashPointLayoutEngine.h"
 #include "ThCableRouter.h"
+#include "ThAFASPlacementEngine.h"
