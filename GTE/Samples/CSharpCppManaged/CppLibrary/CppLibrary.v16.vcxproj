@@ -417,6 +417,7 @@
     <ClInclude Include="CableRouter\include\RouteEngine.h" />
     <ClInclude Include="CableRouter\include\stdafx.h" />
     <ClInclude Include="CenterLine\include\calculate_partition.h" />
+    <ClInclude Include="CenterLine\include\CenterLineContext.h" />
     <ClInclude Include="CenterLine\include\CenterLineSolver.h" />
     <ClInclude Include="CenterLine\include\CGALDef.h" />
     <ClInclude Include="CenterLine\include\convertKernel.h" />
