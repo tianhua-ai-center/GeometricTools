@@ -4,6 +4,14 @@
 
 namespace CLI
 {
+    public enum class ThAFASPlacementMountModeMgd
+    {
+        // 吊顶
+        Ceiling = 0,
+        // 壁装
+        Wall = 1,
+    };
+
     public ref class ThAFASPlacementContextMgd : public ManagedObject<gte::ThAFASPlacementContext>
     {
     public:
@@ -12,8 +20,22 @@ namespace CLI
             //
         }
     public:
-    };
+        /// <summary>
+        /// 安装模式
+        /// </summary>
+        property ThAFASPlacementMountModeMgd MountMode {
+            ThAFASPlacementMountModeMgd get();
+            void set(ThAFASPlacementMountModeMgd m);
+        }
 
+        /// <summary>
+        /// 步距长度
+        /// </summary>
+        property double StepDistance {
+            double get();
+            void set(double l);
+        }
+    };
 
     public ref class ThAFASPlacementEngineMgd : public ManagedObject<gte::ThAFASPlacementEngine>
     {

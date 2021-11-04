@@ -1,32 +1,39 @@
-#pragma once
+ï»¿#pragma once
 #include "stdafx.h"
 #include "ThCppExport.h"
 
 namespace gte
 {
+    enum ThAFASPlacementMountMode
+    {
+        // åŠé¡¶
+        MountModeCeiling = 0,
+
+        // å£è£…
+        MountModeWall = 1,
+    };
+
     struct THMODULE_EXPORT ThAFASPlacementContext
     {
-        // °²×°Ä£Ê½£º
-        //  0£ºÎü¶¥°²×°
-        //  1£º±Ú×°°²×°
-        int settype = 0;
+        // å®‰è£…æ¨¡å¼ï¼ˆé»˜è®¤ä¸ºå£è£…ï¼‰
+        ThAFASPlacementMountMode mmode = MountModeWall;
 
-        // ²½¾à
+        // æ­¥è·
         double length = 1e4;
 
-        // ¿Õ¼ä²ÉÑù²½¾à
+        // ç©ºé—´é‡‡æ ·æ­¥è·
         double slen = 500;
 
-        // ÃÅ²ÉÑù²½¾à
+        // é—¨é‡‡æ ·æ­¥è·
         double dlen = 100;
 
-        // ¿Õ¼äÄÚËõ
+        // ç©ºé—´å†…ç¼©
         double r0 = 2;
 
-        // ÃÅºÍ´°µÄÍâÀ©
+        // é—¨å’Œçª—çš„å¤–æ‰©
         double r1 = 6;
 
-        // Ç½µÄÍâÀ©
+        // å¢™çš„å¤–æ‰©
         double r2 = 4;
     };
 

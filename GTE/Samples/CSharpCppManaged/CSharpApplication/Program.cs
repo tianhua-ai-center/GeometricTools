@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using CLI;
 using NetTopologySuite.IO;
 
@@ -38,9 +39,19 @@ namespace CSharpApplication
             //t.TestProcessMainBranchs();
             //t.TestProcessGrouping();
 
-            ThCableRouterMgd cableRouter = new ThCableRouterMgd();
-            var strInputGeoJson = "";
-            var routedCables = cableRouter.RouteCable(strInputGeoJson, 25);
+            //ThCableRouterMgd cableRouter = new ThCableRouterMgd();
+            //var strInputGeoJson = "";
+            //var routedCables = cableRouter.RouteCable(strInputGeoJson, 25);
+
+            //
+            var strInputGeoJson = File.ReadAllText("D:\\newtest.geojson");
+            ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
+            ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
+            {
+                StepDistance = 20000,
+                MountMode = ThAFASPlacementMountModeMgd.Wall,
+            };
+            var results = engine.Place(strInputGeoJson, context);
         }
     }
 }
