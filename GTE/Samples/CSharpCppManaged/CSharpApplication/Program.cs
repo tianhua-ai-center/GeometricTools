@@ -1,7 +1,8 @@
-﻿using System;
+﻿using CLI;
 using System.IO;
-using CLI;
+using Newtonsoft.Json;
 using NetTopologySuite.IO;
+using NetTopologySuite.Features;
 
 // The framework is based on the nicely written article "Creating a C++/CLI wrapper",
 // https://www.red-gate.com/simple-talk/dotnet/net-development/creating-ccli-wrapper/
@@ -43,15 +44,32 @@ namespace CSharpApplication
             //var strInputGeoJson = "";
             //var routedCables = cableRouter.RouteCable(strInputGeoJson, 25);
 
-            //
-            var strInputGeoJson = File.ReadAllText("D:\\newtest.geojson");
-            ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
-            ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
+            // AFAS
+            //var strInputGeoJson = File.ReadAllText("D:\\newtest.geojson");
+            //ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
+            //ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
+            //{
+            //    StepDistance = 20000,
+            //    MountMode = ThAFASPlacementMountModeMgd.Wall,
+            //};
+            //var features = Export2NTSFeatures(engine.Place(strInputGeoJson, context));
+
+            // Centerline
+            //var strInputGeoJson = File.ReadAllText("D:\\房间分割.Info.geojson");
+            //ThPolygonCenterLineMgd thPolygonCenterLineMgd = new ThPolygonCenterLineMgd();
+            //var features = Export2NTSFeatures(thPolygonCenterLineMgd.Generate(strInputGeoJson));
+
+            Export2NTSFeatures(File.ReadAllText("D:\\out.json"));
+        }
+
+        static FeatureCollection Export2NTSFeatures(string geojson)
+        {
+            var serializer = GeoJsonSerializer.Create();
+            using (var stringReader = new StringReader(geojson))
+            using (var jsonReader = new JsonTextReader(stringReader))
             {
-                StepDistance = 20000,
-                MountMode = ThAFASPlacementMountModeMgd.Wall,
-            };
-            var results = engine.Place(strInputGeoJson, context);
+                return serializer.Deserialize<FeatureCollection>(jsonReader);
+            }
         }
     }
 }
