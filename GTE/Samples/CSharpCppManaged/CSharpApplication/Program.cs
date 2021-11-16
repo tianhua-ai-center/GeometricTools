@@ -58,12 +58,13 @@ namespace CSharpApplication
             };
 
             //Export result to GeoJSON file
-            var features = Export2NTSFeatures(engine.Place(strInputGeoJson, context));
+            var result = engine.Place(strInputGeoJson, context);
+            var features = Export2NTSFeatures(result);
+            var geojson = Features2GeoJSON(features);
             var file = Path.Combine(
                 Path.GetDirectoryName(path),
-                Path.GetFileNameWithoutExtension(path) + ".output",
-                Path.GetExtension(path)) ;
-            Export2File(Features2GeoJSON(features, file));
+                Path.GetFileNameWithoutExtension(path) + ".output.geojson") ;
+            Export2File(geojson, file);
         }
 
         static FeatureCollection Export2NTSFeatures(string geojson)
@@ -76,20 +77,25 @@ namespace CSharpApplication
             }
         }
 
-        static string Features2GeoJSON(FeatureCollection features, string file)
+        static string Features2GeoJSON(FeatureCollection features)
         {
             var serializer = GeoJsonSerializer.Create();
             using (var stringWriter = new StringWriter())
-            using (var jsonWriter = new JsonTextWriter(stringWriter))
+            using (var jsonWriter = new JsonTextWriter(stringWriter)
+            {
+                Indentation = 4,
+                IndentChar = ' ',
+                Formatting = Formatting.Indented,
+            })
             {
                 serializer.Serialize(jsonWriter, features);
                 return stringWriter.ToString();
             }
         }
 
-        static void Export2File(string geojson)
+        static void Export2File(string geojson, string file)
         {
-            using (StreamWriter outputFile = new StreamWriter("D:\\2.Info.output.geojson"))
+            using (StreamWriter outputFile = new StreamWriter(file))
             {
                 outputFile.Write(geojson);
             }
