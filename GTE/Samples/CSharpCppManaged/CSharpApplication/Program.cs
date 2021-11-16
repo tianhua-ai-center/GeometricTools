@@ -1,4 +1,5 @@
 ﻿using CLI;
+using System;
 using System.IO;
 using Newtonsoft.Json;
 using NetTopologySuite.IO;
@@ -44,20 +45,25 @@ namespace CSharpApplication
             //var strInputGeoJson = "";
             //var routedCables = cableRouter.RouteCable(strInputGeoJson, 25);
 
+            //input
+            var path = Console.ReadLine();
+
             //AFAS
-            var strInputGeoJson = File.ReadAllText("D:\\1.Info.geojson");
+            var strInputGeoJson = File.ReadAllText(path);
             ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
             ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
             {
                 StepDistance = 20000,
                 MountMode = ThAFASPlacementMountModeMgd.Wall,
             };
-            var features = Export2NTSFeatures(engine.Place(strInputGeoJson, context));
 
-            // Centerline
-            //var strInputGeoJson = File.ReadAllText("D:\\房间分割.Info.geojson");
-            //ThPolygonCenterLineMgd thPolygonCenterLineMgd = new ThPolygonCenterLineMgd();
-            //var features = Export2NTSFeatures(thPolygonCenterLineMgd.Generate(strInputGeoJson));
+            //Export result to GeoJSON file
+            var features = Export2NTSFeatures(engine.Place(strInputGeoJson, context));
+            var file = Path.Combine(
+                Path.GetDirectoryName(path),
+                Path.GetFileNameWithoutExtension(path) + ".output",
+                Path.GetExtension(path)) ;
+            Export2File(Features2GeoJSON(features, file));
         }
 
         static FeatureCollection Export2NTSFeatures(string geojson)
@@ -67,6 +73,25 @@ namespace CSharpApplication
             using (var jsonReader = new JsonTextReader(stringReader))
             {
                 return serializer.Deserialize<FeatureCollection>(jsonReader);
+            }
+        }
+
+        static string Features2GeoJSON(FeatureCollection features, string file)
+        {
+            var serializer = GeoJsonSerializer.Create();
+            using (var stringWriter = new StringWriter())
+            using (var jsonWriter = new JsonTextWriter(stringWriter))
+            {
+                serializer.Serialize(jsonWriter, features);
+                return stringWriter.ToString();
+            }
+        }
+
+        static void Export2File(string geojson)
+        {
+            using (StreamWriter outputFile = new StreamWriter("D:\\2.Info.output.geojson"))
+            {
+                outputFile.Write(geojson);
             }
         }
     }
