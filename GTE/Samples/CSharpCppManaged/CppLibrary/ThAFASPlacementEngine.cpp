@@ -23,5 +23,5 @@ std::string ThAFASPlacementEngine::Place(const std::string& geojson, const ThAFA
         auto outi = fa.get_optim();
         output.insert(output.end(), outi.begin(), outi.end());
     }
-    return out2str(fa.get_optim());
+    return out2str(output);
 }
