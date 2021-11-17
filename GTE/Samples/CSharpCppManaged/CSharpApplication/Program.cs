@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CLI;
+using System;
 using System.IO;
-using CLI;
+using Newtonsoft.Json;
 using NetTopologySuite.IO;
+using NetTopologySuite.Features;
 
 // The framework is based on the nicely written article "Creating a C++/CLI wrapper",
 // https://www.red-gate.com/simple-talk/dotnet/net-development/creating-ccli-wrapper/
@@ -43,15 +45,60 @@ namespace CSharpApplication
             //var strInputGeoJson = "";
             //var routedCables = cableRouter.RouteCable(strInputGeoJson, 25);
 
-            //
-            var strInputGeoJson = File.ReadAllText("D:\\newtest.geojson");
+            //input
+            var path = Console.ReadLine();
+
+            //AFAS
+            var strInputGeoJson = File.ReadAllText(path);
             ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
             ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
             {
                 StepDistance = 20000,
                 MountMode = ThAFASPlacementMountModeMgd.Wall,
             };
-            var results = engine.Place(strInputGeoJson, context);
+
+            //Export result to GeoJSON file
+            var result = engine.Place(strInputGeoJson, context);
+            var features = Export2NTSFeatures(result);
+            var geojson = Features2GeoJSON(features);
+            var file = Path.Combine(
+                Path.GetDirectoryName(path),
+                Path.GetFileNameWithoutExtension(path) + ".output.geojson") ;
+            Export2File(geojson, file);
+        }
+
+        static FeatureCollection Export2NTSFeatures(string geojson)
+        {
+            var serializer = GeoJsonSerializer.Create();
+            using (var stringReader = new StringReader(geojson))
+            using (var jsonReader = new JsonTextReader(stringReader))
+            {
+                return serializer.Deserialize<FeatureCollection>(jsonReader);
+            }
+        }
+
+        static string Features2GeoJSON(FeatureCollection features)
+        {
+            var serializer = GeoJsonSerializer.Create();
+            using (var stringWriter = new StringWriter())
+            using (var jsonWriter = new JsonTextWriter(stringWriter)
+            {
+                Indentation = 4,
+                IndentChar = ' ',
+                Formatting = Formatting.Indented,
+            })
+            {
+                serializer.Serialize(jsonWriter, features);
+                return stringWriter.ToString();
+            }
+        }
+
+        static void Export2File(string geojson, string file)
+        {
+            using (StreamWriter outputFile = new StreamWriter(file))
+            {
+                outputFile.Write(geojson);
+            }
         }
     }
 }
