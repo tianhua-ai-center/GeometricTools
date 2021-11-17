@@ -54,6 +54,7 @@ namespace CSharpApplication
             ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
             {
                 StepDistance = 20000,
+                SpaceSampleLength = 1000,
                 MountMode = ThAFASPlacementMountModeMgd.Wall,
             };
 

@@ -35,6 +35,14 @@ namespace CLI
             double get();
             void set(double l);
         }
+
+        /// <summary>
+        /// 空间采样长度
+        /// </summary>
+        property double SpaceSampleLength {
+            double get();
+            void set(double l);
+        }
     };
 
     public ref class ThAFASPlacementEngineMgd : public ManagedObject<gte::ThAFASPlacementEngine>

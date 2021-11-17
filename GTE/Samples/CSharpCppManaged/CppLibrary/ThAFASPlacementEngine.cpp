@@ -9,6 +9,7 @@ using namespace AFAS;
 std::string ThAFASPlacementEngine::Place(const std::string& geojson, const ThAFASPlacementContext& context)
 {
     fire_alarm_parameters params;
+    params.slen = context.slen;
     params.length = context.length;
     params.mmode = (fire_alarm_mount_mode)context.mmode;
     parseout out = parse_geojson(geojson);

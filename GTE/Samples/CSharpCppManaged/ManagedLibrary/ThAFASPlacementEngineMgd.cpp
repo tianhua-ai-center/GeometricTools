@@ -14,6 +14,16 @@ namespace CLI
 		mInstance->length = l;
 	}
 
+	double ThAFASPlacementContextMgd::SpaceSampleLength::get()
+	{
+		return mInstance->slen;
+	}
+
+	void ThAFASPlacementContextMgd::SpaceSampleLength::set(double l)
+	{
+		mInstance->slen = l;
+	}
+
 	ThAFASPlacementMountModeMgd ThAFASPlacementContextMgd::MountMode::get()
 	{
 		return (ThAFASPlacementMountModeMgd)mInstance->mmode;
