@@ -10,4 +10,11 @@ namespace CLI
         MarshalString(input, geojson);
         return MarshalNativeString(mInstance->Generate(geojson));
     }
+
+    String^ ThPolygonCenterLineMgd::StraightSkeleton(String^ input)
+    {
+        std::string geojson;
+        MarshalString(input, geojson);
+        return MarshalNativeString(mInstance->StraightSkeleton(geojson));
+    }
 }

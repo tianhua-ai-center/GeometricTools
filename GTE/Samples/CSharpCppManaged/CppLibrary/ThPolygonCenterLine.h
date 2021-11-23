@@ -8,6 +8,7 @@ namespace gte
     {
     public:
         std::string Generate(const std::string& geojson);
+        std::string StraightSkeleton(const std::string& geojson);
     };
 }
 

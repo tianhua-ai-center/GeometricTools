@@ -14,6 +14,7 @@ namespace CLI
 		}
 	public:
 		String^ Generate(String^ geojson);
+		String^ StraightSkeleton(String^ geojson);
 	};
 }
 
