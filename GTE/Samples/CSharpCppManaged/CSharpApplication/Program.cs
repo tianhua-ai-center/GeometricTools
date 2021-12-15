@@ -48,23 +48,28 @@ namespace CSharpApplication
             //input
             var path = Console.ReadLine();
 
-            //AFAS
+            //CenterLine
             var strInputGeoJson = File.ReadAllText(path);
-            ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
-            ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
-            {
-                StepDistance = 20000,
-                SpaceSampleLength = 1000,
-                MountMode = ThAFASPlacementMountModeMgd.Wall,
-            };
+            var engine = new ThPolygonCenterLineMgd();
+            var result = engine.Generate(strInputGeoJson);
+
+            ////AFAS
+            //var strInputGeoJson = File.ReadAllText(path);
+            //ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
+            //ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
+            //{
+            //    StepDistance = 20000,
+            //    SpaceSampleLength = 1000,
+            //    MountMode = ThAFASPlacementMountModeMgd.Wall,
+            //};
+            //var result = engine.Place(strInputGeoJson, context);
 
             //Export result to GeoJSON file
-            var result = engine.Place(strInputGeoJson, context);
             var features = Export2NTSFeatures(result);
             var geojson = Features2GeoJSON(features);
             var file = Path.Combine(
                 Path.GetDirectoryName(path),
-                Path.GetFileNameWithoutExtension(path) + ".output.geojson") ;
+                Path.GetFileNameWithoutExtension(path) + ".output.geojson");
             Export2File(geojson, file);
         }
 
