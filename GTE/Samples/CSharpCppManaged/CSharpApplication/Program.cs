@@ -32,19 +32,6 @@ namespace CSharpApplication
     {
         static void Main(string[] args)
         {
-            //var prepair = new ThPolygonRepairerMgd();
-            //var wkt = prepair.MakeValid("POLYGON((0 0, 10 0, 15 5, 10 0, 10 10, 0 10, 0 0))");
-            //var wktReader = new WKTReader();
-            //var geometry = wktReader.Read(wkt);
-
-            //PipeDiagramTest t = new PipeDiagramTest(new CLI.ThPipeSystemDiagramMgd());
-            //t.TestProcessMainBranchs();
-            //t.TestProcessGrouping();
-
-            //ThCableRouterMgd cableRouter = new ThCableRouterMgd();
-            //var strInputGeoJson = "";
-            //var routedCables = cableRouter.RouteCable(strInputGeoJson, 25);
-
             //input
             var path = Console.ReadLine();
 
@@ -53,16 +40,23 @@ namespace CSharpApplication
             //var engine = new ThPolygonCenterLineMgd();
             //var result = engine.Generate(strInputGeoJson);
 
-            //AFAS
+            ////AFAS
+            //var strInputGeoJson = File.ReadAllText(path);
+            //ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
+            //ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
+            //{
+            //    StepDistance = 20000,
+            //    SpaceSampleLength = 1000,
+            //    MountMode = ThAFASPlacementMountModeMgd.Wall,
+            //};
+            //var result = engine.Place(strInputGeoJson, context);
+
+
+            // CableRoute
             var strInputGeoJson = File.ReadAllText(path);
-            ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
-            ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
-            {
-                StepDistance = 20000,
-                SpaceSampleLength = 1000,
-                MountMode = ThAFASPlacementMountModeMgd.Wall,
-            };
-            var result = engine.Place(strInputGeoJson, context);
+            ThCableRouterMgd cableRouter = new ThCableRouterMgd();
+            ThCableRouteContextMgd context = new ThCableRouteContextMgd();
+            var result = cableRouter.RouteCable(strInputGeoJson, context);
 
             //Export result to GeoJSON file
             var features = Export2NTSFeatures(result);

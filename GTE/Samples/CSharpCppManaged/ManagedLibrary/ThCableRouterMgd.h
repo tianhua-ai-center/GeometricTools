@@ -5,6 +5,25 @@ using namespace System;
 
 namespace CLI
 {
+	public ref class ThCableRouteContextMgd : public ManagedObject<gte::ThCableRouteContext>
+	{
+	public:
+		ThCableRouteContextMgd() : ManagedObject(new gte::ThCableRouteContext())
+		{
+			//
+		}
+	public:
+		property double MaxLoopCount {
+			double get();
+			void set(double l);
+		}
+		property double GAGenerationCount {
+			double get();
+			void set(double r);
+		}
+	};
+
+
 	public ref class ThCableRouterMgd : public ManagedObject<gte::ThCableRouter>
 	{
 	public:
@@ -13,6 +32,6 @@ namespace CLI
 			//
 		}
 	public:
-		String^ RouteCable(String^ geojson, int loopMaxCnt);
+		String^ RouteCable(String^ geojson, ThCableRouteContextMgd^ context);
 	};
 }

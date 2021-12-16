@@ -3,8 +3,8 @@
 
 using namespace gte;
 
-std::string ThCableRouter::Route(const std::string& geojson, int maxLoopCnt = 25)
+std::string ThCableRouter::Route(const std::string& geojson, const ThCableRouteContext& context)
 {
 	auto router = new CableRouter::CableRouteEngine();
-	return router->routing(geojson, maxLoopCnt);
+	return router->routing(geojson, context.MaxLoopCount, context.GAGenerationCount);
 }
