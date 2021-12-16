@@ -48,21 +48,21 @@ namespace CSharpApplication
             //input
             var path = Console.ReadLine();
 
-            //CenterLine
-            var strInputGeoJson = File.ReadAllText(path);
-            var engine = new ThPolygonCenterLineMgd();
-            var result = engine.Generate(strInputGeoJson);
-
-            ////AFAS
+            ////CenterLine
             //var strInputGeoJson = File.ReadAllText(path);
-            //ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
-            //ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
-            //{
-            //    StepDistance = 20000,
-            //    SpaceSampleLength = 1000,
-            //    MountMode = ThAFASPlacementMountModeMgd.Wall,
-            //};
-            //var result = engine.Place(strInputGeoJson, context);
+            //var engine = new ThPolygonCenterLineMgd();
+            //var result = engine.Generate(strInputGeoJson);
+
+            //AFAS
+            var strInputGeoJson = File.ReadAllText(path);
+            ThAFASPlacementEngineMgd engine = new ThAFASPlacementEngineMgd();
+            ThAFASPlacementContextMgd context = new ThAFASPlacementContextMgd()
+            {
+                StepDistance = 20000,
+                SpaceSampleLength = 1000,
+                MountMode = ThAFASPlacementMountModeMgd.Wall,
+            };
+            var result = engine.Place(strInputGeoJson, context);
 
             //Export result to GeoJSON file
             var features = Export2NTSFeatures(result);

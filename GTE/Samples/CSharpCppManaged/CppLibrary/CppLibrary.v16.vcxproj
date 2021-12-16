@@ -400,6 +400,7 @@
     <ClInclude Include="AFAS\include\AFAS_cgal_utils.h" />
     <ClInclude Include="AFAS\include\AFAS_data.h" />
     <ClInclude Include="AFAS\include\AFAS_IO.h" />
+    <ClInclude Include="AFAS\include\AFAS_polygon_utils.h" />
     <ClInclude Include="AFAS\include\AFAS_rbush_utils.h" />
     <ClInclude Include="AFAS\include\AFAS_set_utils.h" />
     <ClInclude Include="AFAS\include\AFAS_string_utils.h" />
@@ -504,6 +505,7 @@
     <ClCompile Include="2dVisibility\src\VisibilityCalculator.cpp" />
     <ClCompile Include="AFAS\src\AFAS_cgal_utils.cpp" />
     <ClCompile Include="AFAS\src\AFAS_IO.cpp" />
+    <ClCompile Include="AFAS\src\AFAS_polygon_utils.cpp" />
     <ClCompile Include="AFAS\src\AFAS_rbush_utils.cpp" />
     <ClCompile Include="AFAS\src\AFAS_set_utils.cpp" />
     <ClCompile Include="AFAS\src\AFAS_string_utils.cpp" />
