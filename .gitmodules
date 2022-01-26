@@ -32,3 +32,6 @@ url=https://github.com/shichongdong/Tianhua_Grouping_Pipe.git
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/LGN"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/LGN
 	url = https://github.com/shichongdong/LightningGroundNetwork.git
+[submodule "GTE/Samples/CSharpCppManaged/CppLibrary/ThCGALCore"]
+	path = GTE/Samples/CSharpCppManaged/CppLibrary/ThCGALCore
+	url = https://github.com/shichongdong/ThCGALCore.git
