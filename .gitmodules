@@ -28,7 +28,7 @@ url=https://github.com/tianhua-ai-center/PolygonCenterLine_clamping.git
 	url = https://github.com/MasterSpark1215/2DVisibility.git
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/CableRouter"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/CableRouter
-url=https://github.com/tianhua-ai-center/CableRouter.git
+url=https://git.thape.com.cn/tianhua-ai-center/CableRouter.git
 [submodule "GTE/Samples/CSharpCppManaged/CppLibrary/LGN"]
 	path = GTE/Samples/CSharpCppManaged/CppLibrary/LGN
 	url = https://github.com/shichongdong/LightningGroundNetwork.git
