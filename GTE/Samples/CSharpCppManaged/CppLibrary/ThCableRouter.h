@@ -6,6 +6,7 @@ namespace gte
 {
     struct THMODULE_EXPORT ThCableRouteContext
     {
+        bool IsConcealed = false;
         double MaxLoopCount = 25;
         double GAGenerationCount = 300;
     };

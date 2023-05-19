@@ -3,6 +3,16 @@
 
 namespace CLI
 {
+	bool ThCableRouteContextMgd::IsConcealed::get()
+	{
+		return mInstance->IsConcealed;
+	}
+
+	void ThCableRouteContextMgd::IsConcealed::set(bool b)
+	{
+		mInstance->IsConcealed = b;
+	}
+
 	double ThCableRouteContextMgd::MaxLoopCount::get()
 	{
 		return mInstance->MaxLoopCount;

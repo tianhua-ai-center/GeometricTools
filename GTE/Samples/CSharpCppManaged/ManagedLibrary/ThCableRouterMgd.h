@@ -13,6 +13,10 @@ namespace CLI
 			//
 		}
 	public:
+		property bool IsConcealed {
+			bool get();
+			void set(bool b);
+		}
 		property double MaxLoopCount {
 			double get();
 			void set(double l);

@@ -6,5 +6,5 @@ using namespace gte;
 std::string ThCableRouter::Route(const std::string& geojson, const ThCableRouteContext& context)
 {
 	auto router = new CableRouter::CableRouteEngine();
-	return router->routing(geojson, context.MaxLoopCount, context.GAGenerationCount);
+	return router->routing(geojson, context.IsConcealed, context.MaxLoopCount, context.GAGenerationCount);
 }
